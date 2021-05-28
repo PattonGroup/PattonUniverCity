@@ -1,0 +1,84 @@
+/* Hero */
+.hero-area {
+  position: relative;
+}
+
+#home.hero-area {
+  height: calc(100vh - 80px);
+}
+
+.home-wrapper {
+  position: absolute;
+  top: 60%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 25%;
+  right: 0;
+}
+
+.bg-image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-image.bg-parallax {
+  background-attachment: fixed;
+}
+
+.bg-image.overlay:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#374050),
+    to(#798696)
+  );
+  background-image: linear-gradient(to bottom, #374050 0%, #798696 100%);
+  opacity: 0.8;
+}
+
+.hero-area-tree li {
+  display: inline-block;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-area-tree li > a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-area-tree li + li:before {
+  content: "/";
+  display: inline-block;
+  margin: 0px 5px;
+  color: rgba(235, 235, 235, 0.25);
+}
+
+.hero-img {
+  background-image: url("../../assets/images/school.jpg");
+  background-size: auto;
+}
+
+.white-text {
+  color: #fff;
+  font-size: 5rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}

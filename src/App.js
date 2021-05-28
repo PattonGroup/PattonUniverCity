@@ -1,25 +1,115 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
+import { auth, googlelogin, githublogin, logout } from './services/firebase';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Login from './pages/auth/login';
+import Signup from './pages/auth/signup';
+import PattonUniverCity from './pages/home/home';
+import Axios from 'axios';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+export default function App() {
+	const [isLoggedin, setIsLoggedin] = useState(false);
+	const [loading, setLoading] = useState(false);
+	const [authenticated] = useState(true);
+	const [checkUser, setCheckUser] = useState(false);
+	const [currentUser, setCurrentUser] = useState({ cart: [] });
+	const [setUser] = useState(null);
+	const [mobile, setMobile] = useState(false);
+	const [windowDimensions, setWindowDimensions] = useState([
+		window.innerWidth,
+		window.innerHeight,
+	]);
+
+  const states = {
+		isLoggedin,
+		setIsLoggedin,
+		currentUser,
+		setCurrentUser,
+		windowDimensions,
+		checkUser,
+		setCheckUser,
+		mobile,
+		setMobile,
+	};
+
+  // Resize by device
+	function useWindowSize() {
+		const [size, setSize] = useState([0, 0]);
+		useLayoutEffect(() => {
+			function updateSize() {
+				setSize([window.innerWidth, window.innerHeight]);
+			}
+			window.addEventListener("resize", updateSize);
+			updateSize();
+			return () => window.removeEventListener("resize", updateSize);
+		}, []);
+		return size;
+	}
+
+	const [width, height] = useWindowSize();
+
+  	// Listen for Mobile Devices
+	useEffect(() => {
+		if (!mobile) {
+			if (parseInt(windowDimensions[0]) <= 1400) {
+				setMobile(true);
+			}
+		} else if (mobile) {
+			if (parseInt(windowDimensions[0]) > 1400) {
+				setMobile(false);
+			}
+		}
+	}, [windowDimensions, mobile]);
+
+  // Check if user is logged in
+  // useEffect(() => {
+	// 	if (!checkUser) {
+	// 		setLoading(true);
+	// 		Axios.get("/user/checkuser")
+	// 			.then((res) => {
+  //         console.log(res)
+	// 				if (res.data.msg === "You are logged in") {
+	// 					setIsLoggedin(true);
+	// 					setCurrentUser(res.data.user);
+  //           console.log('Start')
+  //           console.log(currentUser)
+  //           console.log('Stop')
+  //           firebaseAuth();
+	// 				} else {
+	// 					setIsLoggedin(false);
+	// 				}
+	// 				setLoading(false);
+	// 				setCheckUser(true);
+	// 			})
+	// 			.catch((err) => {
+	// 				console.log(err);
+	// 			});
+	// 	}
+	// }, [checkUser]);
+
+
+  // function firebaseAuth() {
+  //   auth.onAuthStateChanged(user => (
+  //     user ? setUser(user)
+  //     :
+  //     setUser(null)))
+  // }
+
+
+  useEffect(() => {
+		setWindowDimensions([width, height]);
+	}, [width, height]);
+
+
+    return loading === true ? <h1> Loading...</h1> : (
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" render={(props) => (<PattonUniverCity {...props} authenticated={authenticated} logout={logout} />)} />
+          <Route exact path="/login" render={(props) => (<Login props={props} {...states} currentUser={currentUser} githublogin={githublogin} googlelogin={googlelogin} authenticated={authenticated} />)} />
+          <Route exact path="/signup" render={(props) => (<Signup {...props} authenticated={authenticated} />)} />
+        </Switch>
+      </BrowserRouter>
+
+    );
+  }
+
