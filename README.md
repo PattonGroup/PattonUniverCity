@@ -4,9 +4,9 @@ Code base for the responseive web apps for [PattonUniverCity](https://pattonuniv
 
 # HOW TO CONTRIBUTE
 
-Find an [issue](https://github.com/PattonGroup/main-page/issues) and comment that you are going to handle it so we don't get duplicate effort on the same issue. If you are unable to solve the issue, let us know in the comments so someone else can take it.
+Find an [item on the backlog](https://github.com/PattonGroup/PattonUniverCity/projects/1) and move it to the to do column.
 
-Communicate through email communicating how your progress is going or if you need assistance on the part of the project you picked up.
+Communicate through discord during stand up time. Communicating how your progress is going or if you need assistance on the part of the project you picked up.
 
 # PULL REQUEST
 
