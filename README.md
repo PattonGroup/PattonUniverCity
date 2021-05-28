@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Patton Group
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Code base for the responseive web apps for [PattonUniverCity](https://pattonunivcity.com/)
 
-## Available Scripts
+# HOW TO CONTRIBUTE
 
-In the project directory, you can run:
+Find an [issue](https://github.com/PattonGroup/main-page/issues) and comment that you are going to handle it so we don't get duplicate effort on the same issue. If you are unable to solve the issue, let us know in the comments so someone else can take it.
 
-### `npm start`
+Communicate through email communicating how your progress is going or if you need assistance on the part of the project you picked up.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# PULL REQUEST
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+If you clone this repo and realize you do not have permission to push directly to this repo [watch how here](https://www.youtube.com/watch?v=rgbCcBNZcdQ) to learn how to fork and make a pull request
 
-### `npm test`
+## Want to report a bug or issue with the website?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Use the [issues](https://github.com/PattonGroup/main-page/issues) section on this page to let us know.
 
-### `npm run build`
+## How To Contribute Code
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The app is built with JavaScript programming language, React, and Node.js. The teams prefence for this project will be using the IDE VScode often know as Visual Studio Code.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Node.js Resources:
+Description: Node. js is a runtime environment that allows software developers to launch
+both the frontend and backend of web apps using JavaScript. Although JS underpins all the
+processes for app assembly, as a backend development environment.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+How to install Node.js in VScode:https://www.youtube.com/watch?v=sJ7nDNNpOMA
 
-### `npm run eject`
+React Resources :
+Description:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+What are React Features : https://www.youtube.com/watch?v=hQAHSlTtcmY
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+How to use React: https://www.youtube.com/watch?v=w7ejDZ8SWv8
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## What do I need to know to contribute code?
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**Absolutely Critical**: JavaScript
 
-## Learn More
+**Helps a lot**: Git/GitHub, React/React Native
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## How to get started coding on this app
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+    # clone the repo
+    https://github.com/PattonGroup/main-page.git
 
-### Code Splitting
+    # change your directory into the FRONTEND repo
+    cd FRONT-END
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    # install node modules
+    npm install
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    # run react-app
+    # this should make http://localhost:3000 available in your web browser
+    npm start
+```
