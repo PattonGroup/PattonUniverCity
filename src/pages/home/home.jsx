@@ -1,10 +1,13 @@
 import React from 'react';
+import Contentbar from '../../components/navbar/content';
+import Navbar from '../../components/navbar/navbar';
 import './home.css';
 
 const PattonUniverCity = ({ authenticated, logout }) => {
     return (
-        <>
-           
+        <> 
+            <Contentbar/>
+            <Navbar authenticated={authenticated} logout={logout} />
             <div id="home" className="hero-area">
                 <div className="bg-image bg-parallax overlay hero-img"></div>
                 <div className="home-wrapper">

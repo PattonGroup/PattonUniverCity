@@ -61,39 +61,39 @@ export default function App() {
 		}
 	}, [windowDimensions, mobile]);
 
-  // Check if user is logged in
-  // useEffect(() => {
-	// 	if (!checkUser) {
-	// 		setLoading(true);
-	// 		Axios.get("/user/checkuser")
-	// 			.then((res) => {
-  //         console.log(res)
-	// 				if (res.data.msg === "You are logged in") {
-	// 					setIsLoggedin(true);
-	// 					setCurrentUser(res.data.user);
-  //           console.log('Start')
-  //           console.log(currentUser)
-  //           console.log('Stop')
-  //           firebaseAuth();
-	// 				} else {
-	// 					setIsLoggedin(false);
-	// 				}
-	// 				setLoading(false);
-	// 				setCheckUser(true);
-	// 			})
-	// 			.catch((err) => {
-	// 				console.log(err);
-	// 			});
-	// 	}
-	// }, [checkUser]);
+//Check if user is logged in
+  useEffect(() => {
+		if (!checkUser) {
+			setLoading(true);
+			Axios.get("/user/checkuser")
+				.then((res) => {
+          console.log(res)
+					if (res.data.msg === "You are logged in") {
+						setIsLoggedin(true);
+						setCurrentUser(res.data.user);
+            console.log('Start')
+            console.log(currentUser)
+            console.log('Stop')
+            firebaseAuth();
+					} else {
+						setIsLoggedin(false);
+					}
+					setLoading(false);
+					setCheckUser(true);
+				})
+				.catch((err) => {
+					console.log(err);
+				});
+		}
+	}, [checkUser]);
 
 
-  // function firebaseAuth() {
-  //   auth.onAuthStateChanged(user => (
-  //     user ? setUser(user)
-  //     :
-  //     setUser(null)))
-  // }
+  function firebaseAuth() {
+    auth.onAuthStateChanged(user => (
+      user ? setUser(user)
+      :
+      setUser(null)))
+  }
 
 
   useEffect(() => {
@@ -101,7 +101,9 @@ export default function App() {
 	}, [width, height]);
 
 
-    return loading === true ? <h1> Loading...</h1> : (
+    return (
+	// loading ? <h1> Loading...</h1> : 
+	//(
       <BrowserRouter>
         <Switch>
           <Route exact path="/" render={(props) => (<PattonUniverCity {...props} authenticated={authenticated} logout={logout} />)} />
