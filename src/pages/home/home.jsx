@@ -14,7 +14,7 @@ const PattonUniverCity = ({ authenticated, logout }) => {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12 text-align-center">
-                                <h1 className="white-text">Patton UniverCity</h1>
+                                <h1 className="hero-text">Patton UniverCity</h1>
                             </div>
                         </div>
                     </div>

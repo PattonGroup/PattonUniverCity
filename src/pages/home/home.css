@@ -1,4 +1,3 @@
-/* Hero */
 .hero-area {
   position: relative;
 }
@@ -38,7 +37,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background-image: -webkit-gradient(
+  background-image: -webkit-linear-gradient(
     linear,
     left top,
     left bottom,
@@ -73,7 +72,7 @@
   background-size: auto;
 }
 
-.white-text {
+.hero-text {
   color: #fff;
   font-size: 5rem;
   text-align: center;
