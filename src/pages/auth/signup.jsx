@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Alert } from 'react-bootstrap';
-import { Redirect, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import './signup.css';
 import { signup } from '../../services/firebase';
 import axios from 'axios'

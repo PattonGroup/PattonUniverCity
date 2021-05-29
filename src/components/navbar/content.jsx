@@ -11,7 +11,7 @@ const Contentbar = () => {
                     <a className="py-2 d-none d-md-inline-block" href="/give">Give</a>
                     <a className="py-2 d-none d-md-inline-block" href="/students">Students</a>
                     <a className="py-2 d-none d-md-inline-block" href="/parents">Parents</a>
-                    <a className="py-2 d-none d-md-inline-block" href="/faculityandstaff">Faculity & Staff Patton U</a>
+                    <a className="py-2 d-none d-md-inline-block" href="/faculityandstaff">Faculity &#38; Staff</a>
                 </div> 
             </div>
         </div>

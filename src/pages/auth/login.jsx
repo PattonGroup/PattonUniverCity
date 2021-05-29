@@ -11,7 +11,7 @@ const Login = (props) => {
     const emailRef = useRef();
     const passwordRef = useRef();
     const [error, setError] = useState('');
-    const [loading, setLoading] = useState(false);
+    const [setLoading] = useState(false);
     const history = useHistory();
 
     // Handle login for both firebase or database
@@ -107,7 +107,7 @@ const Login = (props) => {
                                         <div className="custom-control custom-checkbox custom-control-inline">
                                             <input id="chk1" type="checkbox" name="chk" className="custom-control-input" />
                                             <label for="chk1" className="custom-control-label text-sm">Remember me</label>
-                                        </div> <a href="#" onSubmit={resetpassword} className="text-sm">Forgot Password?</a>
+                                        </div> <a href="/" onSubmit={resetpassword} className="text-sm">Forgot Password?</a>
                                     </div>
                                     <div className="form-group  pt-3 mt-2">
                                         <small className="font-weight-bold">Don't have an account? <a className="text-sm" href="/signup">Register</a>

@@ -21,6 +21,7 @@ export default function App() {
 	]);
 
   const states = {
+		loading,
 		isLoggedin,
 		setIsLoggedin,
 		currentUser,
@@ -74,6 +75,12 @@ export default function App() {
             console.log('Start')
             console.log(currentUser)
             console.log('Stop')
+			function firebaseAuth() {
+				auth.onAuthStateChanged(user => (
+				  user ? setUser(user)
+				  :
+				  setUser(null)))
+			  }
             firebaseAuth();
 					} else {
 						setIsLoggedin(false);
@@ -85,15 +92,10 @@ export default function App() {
 					console.log(err);
 				});
 		}
-	}, [checkUser]);
+	}, [checkUser, currentUser, setUser]);
 
 
-  function firebaseAuth() {
-    auth.onAuthStateChanged(user => (
-      user ? setUser(user)
-      :
-      setUser(null)))
-  }
+  
 
 
   useEffect(() => {

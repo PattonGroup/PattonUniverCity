@@ -1,9 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Logo from '../../assets/images/logo.png'
 import Hamburger from '../../assets/svg/bar.svg'
-import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
-import * as IoIcons from 'react-icons/io';
 import { SidebarData } from '../../utils/sidebarData';
 import { Link } from 'react-router-dom';
 
@@ -54,7 +52,7 @@ const Navbar = (props) => {
                         <a href="/innovation">Innovation</a>
                         <a href="/news">News</a>
                         <a href="/Alumni">Alumni</a>
-                        <a style={{ color: "white" }} onClick={props.logout}>Logout</a>
+                        <Link style={{ color: "white" }} onClick={props.logout}>Logout</Link>
                     </>
                     :
                     <>
@@ -75,12 +73,12 @@ const Navbar = (props) => {
                                 <AiIcons.AiOutlineClose />
                             </Link>
                             </li>
-                            {SidebarData.map((item, index) => {
+                            {SidebarData.map((link, index) => {
                             return (
-                                <li key={index} className={item.cName}>
-                                <Link to={item.path}>
-                                    {item.icon}
-                                    <span>{item.title}</span>
+                                <li key={index} className={link.cName}>
+                                <Link to={link.path}>
+                                    {link.icon}
+                                    <span>{link.title}</span>
                                 </Link>
                                 </li>
                             );
