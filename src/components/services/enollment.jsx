@@ -1,5 +1,6 @@
 import React from 'react';
 import Spolight from '../../assets/images/spotlight.jpeg';
+import './services.css';
 
 const Enrollment = () => {
     return (

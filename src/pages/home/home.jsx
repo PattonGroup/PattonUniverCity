@@ -5,6 +5,7 @@ import QuoteHomeFeat from '../../components/quotes/quoteHomeFeat';
 import TechSuite from '../../components/services/techSuite';
 import EventOverview from '../../components/schoolevents/event';
 import Stories from '../../components/grid/stories';
+import GradSchoolSuite from '../../components/services/gradSchoolSuite';
 import Enrollment from '../../components/services/enollment';
 import AdmissionApply from '../../components/form/admissionApply';
 import Footer from '../../components/footer/footer';
@@ -29,6 +30,7 @@ const PattonUniverCity = ({ authenticated, logout }) => {
             </div>
             <QuoteHomeFeat/>
             <Stories/>
+            <GradSchoolSuite/>
             <Enrollment/>
             <TechSuite/>
             <EventOverview/>
