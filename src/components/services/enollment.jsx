@@ -5,7 +5,7 @@ import './services.css';
 const Enrollment = () => {
     return (
         <>
-             <section className="enroll-section set-bg mt-5" data-setbg={Spolight}>
+             <section className="enroll-section set-bg" data-setbg={Spolight}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-5">
