@@ -21,21 +21,20 @@ export default function Signup(props) {
 
     async function handleSubmit(e) {
         e.preventDefault();
-
+        
         if (passwordConfirmRef.current.value !== passwordRef.current.value) {
             return setError("Passwords do not match")
         }
-
         try {
-            register( e, emailRef.current.value, passwordRef.current.value, history);
+            // register( e, emailRef.current.value, passwordRef.current.value, history);
 
             setError('')
             setLoading(true)
             await signup(emailRef.current.value, passwordRef.current.value).then(() => {
                 /* user info is stored in a mongodb not in the firebasedb */
-                axios.post('/api/registerUser', { email: emailRef.current.value, fname:fnameRef.current.value, lname:lnameRef.current.value, fullname: `${fnameRef.current.value} ${lnameRef.current.value}`})
+                axios.post('/api/registerUser', { password: passwordRef.current.value, username:usernameRef.current.value, email: emailRef.current.value, fname:fnameRef.current.value, lname:lnameRef.current.value, fullname: `${fnameRef.current.value} ${lnameRef.current.value}`})
             })
-            history.push('/dashboard')
+        //     history.push('/dashboard')
         } catch (err) {
             console.log(err)
             setError("Failed to create an account")

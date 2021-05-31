@@ -1,21 +1,22 @@
 import Axios from "axios";
 
 const register = (props) => {
-	const { event, regUsername, regPassword, history } = props;
-	event.preventDefault();
-	Axios.post("/user/register", {
+	const { e, regUsername, regPassword, history } = props;
+	// e.preventDefault();
+	console.log(props)
+	Axios.post("http://localhost:3001/user/register ", {
 		username: regUsername,
 		password: regPassword,
 	})
-		.then((res) => {
-			console.log(res.data.msg);
-			if (res.data.msg === "User created") {
-				history.push("/login");
-			}
-		})
-		.catch((err) => {
-			console.log(err);
-		});
+		// .then((res) => {
+		// 	console.log(res.data.msg);
+		// 	if (res.data.msg === "User created") {
+		// 		history.push("/login");
+		// 	}
+		// })
+		// .catch((err) => {
+		// 	console.log(err);
+		// });
 };
 
 

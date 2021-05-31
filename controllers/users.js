@@ -31,49 +31,56 @@ const logout = (req, res) => {
 	res.send({ msg: "Successfully logged out" });
 };
 
+
 const register = async (req, res) => {
-	const { email, username, password } = req.body;
-	await User.findOne({ username }, async (err, doc) => {
-		if (err) throw err;
-		if (doc) res.send({ msg: "User already exists" });
-		if (!doc) {
-			const hashedPassword = await bcrypt.hash(password, 10);
-			if (username === "admin") {
-				const newUser = new User({
-					_id: new mongoose.Types.ObjectId(),
-					username: username,
-					password: hashedPassword,
-					cart: { items: [], total_price: 0 },
-					isAdmin: true,
-				});
-				await newUser.save();
-				res.send({ msg: "User created" });
-			} else {
-				const newUser = new User({
-					_id: new mongoose.Types.ObjectId(),
-					username: username,
-					password: hashedPassword,
-					cart: { items: [], total_price: 0 },
-					isAdmin: false,
-				});
-				await newUser.save();
-				res.send({ msg: "User created" });
+	try {
+		const { email, username, password, fname, lname, fullname } = req.body;
+		await User.findOne({ username }, async (err, doc) => {
+			if (err) throw err;
+			if (doc) res.send({ msg: "User already exists" });
+			if (!doc) {
+				const hashedPassword = await bcrypt.hash(password, 10);
+				if (username === "admin") {
+					const newUser = new User({
+						_id: new mongoose.Types.ObjectId(),
+						username: username,
+						password: hashedPassword,
+						email: email,
+						fname: fname,
+						lname: lname,
+						fullname: fullname,
+						cart: { items: [], total_price: 0 },
+						isAdmin: true,
+					});
+					await newUser.save();
+					res.send({ msg: "User created" });
+				} else {
+					const newUser = new User({
+						_id: new mongoose.Types.ObjectId(),
+						username: username,
+						password: hashedPassword,
+						email: email,
+						fname: fname,
+						lname: lname,
+						fullname: fullname,
+						cart: { items: [], total_price: 0 },
+						isAdmin: false,
+					});
+					await newUser.save();
+					res.send({ msg: "User created" });
+				}
 			}
-		}
-	});
+		});
+	} catch (err) {
+		console.log(err)
+        return res.status(400).json({ msg: err.message })
+    }
+	
+
 };
 
 const checkUser = async (req, res) => {
-	// FOR DEV PURPOSES UNCOMMENT THESE 2 LINES.
-	// req.session.user = "6087ad243c08e30df7a0c0c5"; //THIS IS THE ADMIN ID
-	// req.session.isAdmin = true;
-
-	// FOR DEV PURPOSES ONLY, THIS IS THE 'test' USER ID
-	// req.session.user = "6087ad273c08e30df7a0c0c7";
-	// const user = await User.findById(req.user.id).select('-password')
-
 	const userId = req.session.user;
-	console.log(userId)
 	if (userId) {
 		User.findById({ _id: userId })
 			.populate("transactions")

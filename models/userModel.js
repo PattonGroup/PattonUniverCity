@@ -40,15 +40,6 @@ const userSchema = new Schema({
 	transactions: [{ type: Schema.Types.ObjectId, ref: "Transaction" }],
 });
 
-// userSchema.virtual("transactions", {
-// 	ref: "Transaction",
-// 	localField: "_id",
-// 	foreignField: "user",
-// 	justOne: false,
-// });
-// userSchema.set("toObject", { virtuals: true });
-// userSchema.set("toJSON", { virtuals: true });
-
 const User = mongoose.model("User", userSchema);
 
 User.createIndexes()

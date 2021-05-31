@@ -69,7 +69,6 @@ nav a:first-child {
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
   font-size: 1.5rem;
-  padding-right: 14%;
   height: 6rem;
 }
 
@@ -82,6 +81,7 @@ nav a:first-child {
 
 .content-links a {
   text-decoration: none;
+  font-size: 1.2rem;
 }
 
 .nav-header a,
