@@ -1,6 +1,7 @@
 import React from 'react';
 import Contentbar from '../../components/navbar/content';
 import Navbar from '../../components/navbar/navbar';
+import Footer from '../../components/footer/footer';
 import './home.css';
 
 const PattonUniverCity = ({ authenticated, logout }) => {
@@ -20,6 +21,7 @@ const PattonUniverCity = ({ authenticated, logout }) => {
                     </div>
                 </div>
             </div>
+            <Footer/>
            
         </>
     )
