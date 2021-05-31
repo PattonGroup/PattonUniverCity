@@ -1,10 +1,11 @@
 import React from 'react';
 import Contentbar from '../../components/navbar/content';
 import Navbar from '../../components/navbar/navbar';
-import Footer from '../../components/footer/footer';
-import AdmissionApply from '../../components/form/admissionApply';
-import './home.css';
+import TechSuite from '../../components/services/techSuite';
 import EventOverview from '../../components/schoolevents/event';
+import AdmissionApply from '../../components/form/admissionApply';
+import Footer from '../../components/footer/footer';
+import './home.css';
 
 const PattonUniverCity = ({ authenticated, logout }) => {
     return (
@@ -23,6 +24,7 @@ const PattonUniverCity = ({ authenticated, logout }) => {
                     </div>
                 </div>
             </div>
+            <TechSuite/>
             <EventOverview/>
             <AdmissionApply/>
             <Footer/>

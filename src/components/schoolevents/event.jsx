@@ -33,6 +33,7 @@ const EventOverview = () => {
                                 <img className="event-img" src={BookClub} alt="BookClub"  width="600px" height="250px"/>
                                 <br/><br/>
                                 <p>Events desrciption</p>
+                                <p>Student desrciption</p>
                             </div>
                         </div>
                     </div>
@@ -51,7 +52,7 @@ const EventOverview = () => {
                            <h5 style={{fontSize: '3rem'}}>|</h5>
                         </div>
                         <div className="col-sm-4">
-                           <h5>Some Event</h5>
+                            <h5><a href="/" className="event-links">Some Event</a></h5>
                         </div>
                         <div className="col-sm-1">
                             <div>
@@ -63,7 +64,7 @@ const EventOverview = () => {
                            <h5 style={{fontSize: '3rem'}}>|</h5>
                         </div>
                         <div className="col-sm-4">
-                           <h5>Some Event</h5>
+                           <h5><a href="/" className="event-links">Some Event</a></h5>
                         </div>
                     </div>
                 </div>

@@ -12,3 +12,7 @@
   width: 100%;
   height: 40vh;
 }
+
+.event-links {
+  text-decoration: none;
+}
