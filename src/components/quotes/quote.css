@@ -1,0 +1,100 @@
+.quote-section {
+  background-color: whitesmoke;
+  padding: 4%;
+}
+
+.feature-one {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 8%;
+  padding-bottom: 12%;
+  width: 90%;
+}
+
+.feature-one div p {
+  position: relative;
+  width: 100%;
+}
+
+.feature-one div:first-child img {
+  height: 50rem;
+  width: 85%;
+}
+
+.quote-info {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.quote-info-contact {
+  font-size: 2rem;
+}
+
+.feature-one div:last-child p:first-child::before {
+  content: "\201C";
+  font-size: 15rem;
+  line-height: 1;
+  position: absolute;
+  top: -15%;
+  left: -8%;
+  z-index: 1;
+  font-family: sans-serif, serif;
+  color: #ccc;
+  opacity: 0.5;
+}
+
+.feature-one div:last-child {
+  align-self: flex-end;
+}
+
+.feature-one div:last-child div a {
+  padding-left: 4%;
+}
+
+.quote-link {
+  font-size: 2rem;
+  color: gray;
+}
+
+.quote-btn {
+  margin-top: 5%;
+  border-radius: 50%;
+  width: 5rem;
+  padding: 1%;
+  font-size: 2.5rem;
+  color: white;
+  background: gray;
+  border: none;
+}
+
+@media (max-width: 1000px) {
+  .quote-info {
+    font-size: 2.5rem;
+    padding: 4%;
+  }
+  .quote-info-contact {
+    font-size: 1.5rem;
+    padding: 4%;
+  }
+  .quote-link {
+    font-size: 1rem;
+    padding: 4%;
+  }
+  .quote-btn {
+    width: 3rem;
+    font-size: 1.5rem;
+  }
+  .feature-one div:last-child p:first-child::before {
+    font-size: 10rem;
+    top: -3%;
+    left: -4%;
+  }
+}
+
+@media (max-width: 769px) {
+  .feature-one div:first-child img {
+    height: 35rem;
+    width: 95%;
+    padding-bottom: 8%;
+  }
+}

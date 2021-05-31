@@ -1,6 +1,5 @@
 import React from 'react';
 import Spolight from '../../assets/images/spotlight.jpeg';
-import BookClub from '../../assets/images/bookClub.jpg';
 import './services.css';
 
 const TechSuite = () => {
@@ -27,7 +26,7 @@ const TechSuite = () => {
                         </div>
                         <div className="col-md-4 services-item">
                             <div className="">
-                                <img className="services-img" src={BookClub} alt="BookClub"  />
+                                <img className="services-img" src={Spolight} alt="BookClub"  />
                                 <br/><br/>
                                 <h5 className="services-subtitle">Blockchain</h5>
                                 <p>Events desrciption</p>
@@ -36,7 +35,7 @@ const TechSuite = () => {
                         </div>
                         <div className="col-md-4 services-item">
                             <div className="">
-                                <img className="services-img" src={BookClub} alt="BookClub"  />
+                                <img className="services-img" src={Spolight} alt="BookClub"  />
                                 <br/><br/>
                                 <h5 className="services-subtitle">Machine Learning</h5>
                                 <p>Events desrciption</p>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import Spolight from '../../assets/images/spotlight.jpeg';
 import BookClub from '../../assets/images/bookClub.jpg';

@@ -1,6 +1,7 @@
 import React from 'react';
 import Contentbar from '../../components/navbar/content';
 import Navbar from '../../components/navbar/navbar';
+import QuoteHomeFeat from '../../components/quotes/quoteHomeFeat';
 import TechSuite from '../../components/services/techSuite';
 import EventOverview from '../../components/schoolevents/event';
 import AdmissionApply from '../../components/form/admissionApply';
@@ -24,6 +25,7 @@ const PattonUniverCity = ({ authenticated, logout }) => {
                     </div>
                 </div>
             </div>
+            <QuoteHomeFeat/>
             <TechSuite/>
             <EventOverview/>
             <AdmissionApply/>
