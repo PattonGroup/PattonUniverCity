@@ -1,0 +1,87 @@
+.story-feature {
+  background: white;
+  padding-top: 4%;
+  padding-bottom: 12%;
+  padding: 4%;
+}
+
+.story-feature h2:first-child {
+  text-align: center;
+  font-size: 4rem;
+  padding-bottom: 2%;
+}
+.story-subheading {
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 2%;
+}
+
+.article-one {
+  position: relative;
+  width: 100%;
+}
+
+.article-one-title {
+  position: absolute;
+  top: 75%;
+  left: 0;
+  width: 100%;
+}
+
+.article-one-title span {
+  color: white;
+  font: bold 1.2rem Helvetica, Sans-Serif;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding: 10px;
+}
+.article-one-subtitle {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  width: 100%;
+}
+
+.article-one-subtitle span {
+  color: white;
+  font: bold 1.8rem Helvetica, Sans-Serif;
+  letter-spacing: -1px;
+  padding: 10px;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+.story-grid > article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+.story-grid > article img {
+  max-width: 100%;
+}
+.story-text {
+  padding: 0 20px 20px;
+}
+.story-text h3 {
+  padding-bottom: 4%;
+}
+.story-text > button {
+  background: gray;
+  border: 0;
+  color: white;
+  padding: 10px;
+  width: 100%;
+}
+.story-grid > article:nth-child(1) {
+  grid-column: span 2;
+}
+.story-grid > article:last-child {
+  grid-column: span 2;
+}
+
+.article-one {
+  border: none !important;
+  box-shadow: none !important;
+}

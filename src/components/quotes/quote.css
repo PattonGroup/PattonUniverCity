@@ -17,25 +17,25 @@
 }
 
 .feature-one div:first-child img {
-  height: 50rem;
+  height: 35rem;
   width: 85%;
 }
 
 .quote-info {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 600;
 }
 
 .quote-info-contact {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .feature-one div:last-child p:first-child::before {
   content: "\201C";
-  font-size: 15rem;
+  font-size: 13rem;
   line-height: 1;
   position: absolute;
-  top: -15%;
+  top: -13%;
   left: -8%;
   z-index: 1;
   font-family: sans-serif, serif;
@@ -52,16 +52,16 @@
 }
 
 .quote-link {
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: gray;
 }
 
 .quote-btn {
   margin-top: 5%;
   border-radius: 50%;
-  width: 5rem;
+  width: 4rem;
   padding: 1%;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: white;
   background: gray;
   border: none;

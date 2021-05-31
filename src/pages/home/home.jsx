@@ -7,6 +7,7 @@ import EventOverview from '../../components/schoolevents/event';
 import AdmissionApply from '../../components/form/admissionApply';
 import Footer from '../../components/footer/footer';
 import './home.css';
+import Stories from '../../components/grid/stories';
 
 const PattonUniverCity = ({ authenticated, logout }) => {
     return (
@@ -26,6 +27,7 @@ const PattonUniverCity = ({ authenticated, logout }) => {
                 </div>
             </div>
             <QuoteHomeFeat/>
+            <Stories/>
             <TechSuite/>
             <EventOverview/>
             <AdmissionApply/>
