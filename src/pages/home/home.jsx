@@ -4,10 +4,11 @@ import Navbar from '../../components/navbar/navbar';
 import QuoteHomeFeat from '../../components/quotes/quoteHomeFeat';
 import TechSuite from '../../components/services/techSuite';
 import EventOverview from '../../components/schoolevents/event';
+import Stories from '../../components/grid/stories';
+import Enrollment from '../../components/services/enollment';
 import AdmissionApply from '../../components/form/admissionApply';
 import Footer from '../../components/footer/footer';
 import './home.css';
-import Stories from '../../components/grid/stories';
 
 const PattonUniverCity = ({ authenticated, logout }) => {
     return (
@@ -28,6 +29,7 @@ const PattonUniverCity = ({ authenticated, logout }) => {
             </div>
             <QuoteHomeFeat/>
             <Stories/>
+            <Enrollment/>
             <TechSuite/>
             <EventOverview/>
             <AdmissionApply/>
