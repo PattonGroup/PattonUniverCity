@@ -4,6 +4,7 @@ import Navbar from '../../components/navbar/navbar';
 import Footer from '../../components/footer/footer';
 import AdmissionApply from '../../components/form/admissionApply';
 import './home.css';
+import EventOverview from '../../components/schoolevents/event';
 
 const PattonUniverCity = ({ authenticated, logout }) => {
     return (
@@ -22,6 +23,7 @@ const PattonUniverCity = ({ authenticated, logout }) => {
                     </div>
                 </div>
             </div>
+            <EventOverview/>
             <AdmissionApply/>
             <Footer/>
            

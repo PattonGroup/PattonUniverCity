@@ -1,0 +1,14 @@
+.event-section {
+  padding-top: 4%;
+  padding-bottom: 4%;
+  overflow-x: hidden;
+}
+
+.event-item {
+  margin-bottom: 50px;
+}
+
+.event-img {
+  width: 100%;
+  height: 40vh;
+}
