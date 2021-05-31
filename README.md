@@ -63,3 +63,5 @@ How to use React: https://www.youtube.com/watch?v=w7ejDZ8SWv8
     # run server
     nodemon server.js or node server.js
 ```
+
+For more information on contributing please see [CONTRIBUTION.md](https://github.com/PattonGroup/PattonUniverCity/blob/main/CONTRIBUTION.md)
