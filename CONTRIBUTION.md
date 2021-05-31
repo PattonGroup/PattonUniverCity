@@ -1,3 +1,20 @@
+### Contributing guidelines
+
+In general, we follow the "fork-and-pull" Git workflow:
+
+1.  **Fork and clone** the repo on GitHub.
+2.  **Configure and install** the dependencies `npm install`.
+3.  **Create** a new branch: `git checkout -b branch-name`.
+4.  **Commit** all your changes to your branch. Please write a good commit message see commit messages below.
+5.  **Push** your work back up to your fork.
+6.  **Submit a Pull Request** so that I can review your changes. Please add documentation and some details to the PR.
+
+Keep your changes as focused as possible. If there are multiple changes you would like to make that are not dependent upon each other, consider submitting them as separate pull requests. Work in Progress pull requests are also welcome to get feedback early on, or if there is something blocked you.
+
+## Resources
+
+- [Using Pull Requests](https://help.github.com/articles/about-pull-requests/)
+
 ## Commit Message Guidelines
 
 #### Commit Message Examples
