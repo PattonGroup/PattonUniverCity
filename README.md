@@ -32,7 +32,6 @@ processes for app assembly, as a backend development environment.
 How to install Node.js in VScode:https://www.youtube.com/watch?v=sJ7nDNNpOMA
 
 React Resources :
-Description:
 
 What are React Features : https://www.youtube.com/watch?v=hQAHSlTtcmY
 
@@ -52,10 +51,7 @@ How to use React: https://www.youtube.com/watch?v=w7ejDZ8SWv8
 
 ```sh
     # clone the repo
-    https://github.com/PattonGroup/main-page.git
-
-    # change your directory into the FRONTEND repo
-    cd FRONT-END
+    https://github.com/PattonGroup/PattonUniverCity.git
 
     # install node modules
     npm install
@@ -63,4 +59,7 @@ How to use React: https://www.youtube.com/watch?v=w7ejDZ8SWv8
     # run react-app
     # this should make http://localhost:3000 available in your web browser
     npm start
+
+    # run server
+    nodemon server.js or node server.js
 ```
