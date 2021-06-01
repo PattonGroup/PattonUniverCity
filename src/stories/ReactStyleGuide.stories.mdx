@@ -8,7 +8,7 @@ import Plugin from "./assets/plugin.svg";
 import Repo from "./assets/repo.svg";
 import StackAlt from "./assets/stackalt.svg";
 
-<Meta title="Welcome/Style Guide" />
+<Meta title="Welcome/Guides/React" />
 
 <style>{`
   .subheading {
@@ -114,7 +114,7 @@ import StackAlt from "./assets/stackalt.svg";
   
 `}</style>
 
-# Styling Guide
+# React Style Guide
 
 This guide is created based off the styling of Airbnb. Please read below to get more information on the styling guide.
 
@@ -131,15 +131,22 @@ This style guide is mostly based on the standards that are currently prevalent i
 1. [Basic Rules](#basic-rules)
 1. [Class vs `React.createClass` vs stateless](#class-vs-reactcreateclass-vs-stateless)
 1. [Naming](#naming)
+1. [Ternary](#ternary)
+1. [Object Literals](#object-literals)
+1. [Template Literals]($template-literals)
 1. [Declaration](#declaration)
+1. [Object Destructuring](object-destructuring)
+1. [Implicit return](#implicit-return)
 1. [Alignment](#alignment)
 1. [Quotes](#quotes)
+1. [Fragments](#fragments)
 1. [Spacing](#spacing)
 1. [Props](#props)
 1. [Refs](#refs)
 1. [Parentheses](#parentheses)
 1. [Tags](#tags)
 1. [Methods](#methods)
+1. [Functions](#functions)
 1. [Ordering](#ordering)
 
 ## Basic Rules
@@ -265,20 +272,122 @@ This style guide is mostly based on the standards that are currently prevalent i
   <MyComponent variant="fancy" />
   ```
 
+## Ternary
+
+- Do not use `if` and `else` for conditional statements. Instead use a ternary operator.
+
+  ```jsx
+  // bad
+  const { role } = user;
+
+  if (role === ADMIN) {
+    return <AdminUser />;
+  } else {
+    return <NormalUser />;
+  }
+
+  // good
+  const { role } = user;
+
+  return role === ADMIN ? <AdminUser /> : <NormalUser />;
+  ```
+
+## Object Literals
+
+- Object literals can help make our code more readable.
+- Ideal for options greater than two where ternary operator cannot apply.
+
+  ```jsx
+  // bad
+  const { role } = user;
+
+  switch (role) {
+    case ADMIN:
+      return <AdminUser />;
+    case EMPLOYEE:
+      return <EmployeeUser />;
+    case USER:
+      return <NormalUser />;
+  }
+
+  // good
+  const { role } = user;
+
+  const components = {
+    ADMIN: AdminUser,
+    EMPLOYEE: EmployeeUser,
+    USER: NormalUser,
+  };
+
+  const Component = components[role];
+
+  return <Componenent />;
+  ```
+
+## Template Literals
+
+- Use template literals to build large strings.
+
+  ```jsx
+  // bad
+  const userDetails = user.name + "'s profession is" + user.proffession;
+
+  return <div> {userDetails} </div>;
+
+  // good
+  const userDetails = `${user.name}'s profession is ${user.proffession}`;
+
+  return <div> {userDetails} </div>;
+  ```
+
 ## Declaration
 
 - Do not use `displayName` for naming components. Instead, name the component by reference.
 
-  ```jsx
-  // bad
-  export default React.createClass({
-    displayName: "ReservationCard",
-    // stuff goes here
-  });
+```jsx
+// bad
+export default React.createClass({
+  displayName: "ReservationCard",
+  // stuff goes here
+});
 
-  // good
-  export default class ReservationCard extends React.Component {}
-  ```
+// good
+export default class ReservationCard extends React.Component {}
+```
+
+## Object Destructuring
+
+```jsx
+// bad
+return (
+  <>
+    <div> {user.name} </div>
+    <div> {user.age} </div>
+  </>
+);
+
+// good
+const { name, age } = user;
+
+return (
+  <>
+    <div> {name} </div>
+    <div> {age} </div>
+  </>
+);
+```
+
+## Implicit return
+
+```jsx
+// bad
+const add = (a, b) => {
+  return a + b;
+};
+
+// good
+const add = (a, b) => a + b;
+```
 
 ## Alignment
 
@@ -365,6 +474,32 @@ This style guide is mostly based on the standards that are currently prevalent i
 
   // good
   <Foo style={{ left: '20px' }} />
+  ```
+
+## Fragments
+
+- Always use Fragment over Div.
+
+  > Why? For performance because one less node is created in the virtual DOM.
+
+  ```jsx
+  // bad
+  return (
+    <div>
+      <Component1 />
+      <Component2 />
+      <Component3 />
+    </div>
+  );
+
+  // good
+  return (
+    <>
+      <Component1 />
+      <Component2 />
+      <Component3 />
+    </>
+  );
   ```
 
 ## Spacing
@@ -770,6 +905,25 @@ render() {
   render() {
     return (<div />);
   }
+  ```
+
+## Functions
+
+- Don’t define a function inside render.
+
+  ```jsx
+  // bad
+  return (
+    <button onClick={() => dispatch(ACTION_TO_SEND_DATA)}>
+      {" "}
+      // NOTICE HERE This is a bad example
+    </button>
+  );
+
+  // good
+  const submitData = () => dispatch(ACTION_TO_SEND_DATA);
+
+  return <button onClick={submitData}>This is a good example</button>;
   ```
 
 ## Ordering
