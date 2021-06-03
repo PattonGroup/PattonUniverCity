@@ -1,0 +1,270 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import Code from "./assets/code-brackets.svg";
+import Colors from "./assets/colors.svg";
+import Comments from "./assets/comments.svg";
+import Direction from "./assets/direction.svg";
+import Flow from "./assets/flow.svg";
+import Plugin from "./assets/plugin.svg";
+import Repo from "./assets/repo.svg";
+import StackAlt from "./assets/stackalt.svg";
+
+<Meta title="Getting Started/Developer" />
+
+<style>{`
+  .subheading {
+    --mediumdark: '#999999';
+    font-weight: 900;
+    font-size: 13px;
+    color: #999;
+    letter-spacing: 6px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    margin-top: 40px;
+  }
+
+  .link-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10px;
+  }
+
+  @media (min-width: 620px) {
+    .link-list {
+      row-gap: 20px;
+      column-gap: 20px;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media all and (-ms-high-contrast:none) {
+  .link-list {
+      display: -ms-grid;
+      -ms-grid-columns: 1fr 1fr;
+      -ms-grid-rows: 1fr 1fr;
+    }
+  }
+
+  .link-item {
+    display: block;
+    padding: 20px 30px 20px 15px;
+    border: 1px solid #00000010;
+    border-radius: 5px;
+    transition: background 150ms ease-out, border 150ms ease-out, transform 150ms ease-out;
+    color: #333333;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .link-item:hover {
+    border-color: #1EA7FD50;
+    transform: translate3d(0, -3px, 0);
+    box-shadow: rgba(0, 0, 0, 0.08) 0 3px 10px 0;
+  }
+
+  .link-item:active {
+    border-color: #1EA7FD;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .link-item strong {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 2px;
+  }
+  
+  .link-item img {
+    height: 40px;
+    width: 40px;
+    margin-right: 15px;
+    flex: none;
+  }
+
+  .link-item span {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .tip {
+    display: inline-block;
+    border-radius: 1em;
+    font-size: 11px;
+    line-height: 12px;
+    font-weight: 700;
+    background: #E7FDD8;
+    color: #66BF3C;
+    padding: 4px 12px;
+    margin-right: 10px;
+    vertical-align: top;
+  }
+
+  .tip-wrapper {
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .tip-wrapper code {
+    font-size: 12px;
+    display: inline-block;
+  }
+
+  
+`}</style>
+
+# Getting Started Guide for Developers
+
+The Audi Design System contains a collection of React components that can be used to build accessible and performant
+React applications consistent with Audi brand guidelines. This getting started guide provides the basic instructions
+to install the Audi Design System components as a dependency in your application and begin using those components.
+The documentation for each individual component provides more detailed information including:
+
+- An overview with contextual usage guidance and best practices
+- Examples of common variations of the component such as sizes and states
+- Guidance for using the components with accessiblity in mind
+- A detailed description of available React props along with an interactive playground environment
+
+## Using this project
+
+The Audi Design System is typically installed into a project managed by npm or yarn as a JavaScript package from the Audi GitHub Package Registry.
+
+Add the Audi scoped package registry to your list of available registries through a .npmrc file located at the root of your project:
+
+```
+always-auth=true
+@audi:registry=https://npm.pkg.github.com
+```
+
+Note: Since the repository is currently private, remember to authenticate for GitHub following this guide. To sign up for an access token,
+please contact DesignOps and provide the following information:
+
+- Email
+- Name
+- Agency/employer
+- Github username (optional)
+
+Now add this project as a dependency of your project with:
+
+```
+npm install --save @audi/audi-ui-react
+```
+
+or if you are using Yarn:
+
+```
+yarn add @audi/audi-ui-react
+```
+
+### The <AudiPlatformProvider> component
+
+To use components from Audi UI React, you need to wrap your app with a <AudiPlatformProvider> component.
+
+```
+import { AudiPlatformProvider } from '@audi/audi-ui-react'
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
+
+ReactDOM.render(
+  <AudiPlatformProvider>
+    <App />
+  </AudiPlatformProvider>,
+  container
+)
+```
+
+The <AudiPlatformProvider> component does a few things:
+
+- @font-family definitions for AudiType fonts are established
+- The Audi theme is provided to styled-components descendents of <AudiPlatformProvider> regardless of how deep.
+
+### Using components
+
+The following is a basic example of the use of the Button component. Please see individual component documentation pages for detailed usage instructions.
+
+```
+import { Button } from '@audi/audi-ui-react'
+
+const MyComponent = () => (
+  <Button variant="primary" size="small">
+    Hello there!
+  </Button>
+)
+```
+
+## Advanced
+
+### Overcoming issues with specificity
+
+In some cases Audi UI components will be integrated into systems with existing CSS. In these cases it is possible that existing CSS rules may have higher
+specificity than Audi UI components, resulting in unexpected styles. In order to overcome style specificity issues it is possible to use the StyleSheetManager from
+styled-components in conjunction with a stylis plugin that adds extra scope to each CSS rule, such as stylis-plugin-extra-scope.
+
+```
+import { StyleSheetManager } from 'styled-components'
+import extraScopePlugin from 'stylis-plugin-extra-scope'
+
+const MyApp = () => (
+  <StyleSheetManager stylisPlugins={[extraScopePlugin('#myapp')]}>
+    <AudiPlatformProvider>...</AudiPlatformProvider>
+  </StyleSheetManager>
+)
+```
+
+#### Using (private) packages from different GitHub organizations
+
+In some project settings it may be required to use packages from more than one GitHub organization. The method for authentication mentioned above works only
+if you don't have to install any other packages from the GitHub Package Registry that require authentication. In order to authenticate to multiple namespaces you have to
+adjust your projects .npmrc:
+
+```
+always-auth=true
+
+@foo:registry=https://npm.pkg.github.com/
+@audi:registry=https://npm.pkg.github.com/audi/
+```
+
+And in your global ~/.npmrc file adjust the path accordingly as well and replace AUDI_ORGANIZATION_TOKEN by the token you received from DesignOps:
+
+```
+//npm.pkg.github.com/:_authToken=<USER_TOKEN>
+//npm.pkg.github.com/audi/:_authToken=<AUDI_ORGANIZATION_TOKEN>
+```
+
+Note: This kind of authentication does not work with yarn. At the moment GitHub officially supports only npm.
+
+### Peer Dependencies
+
+If your application has a dependency on React or Styled Components, Audi Design System will use those instances.
+
+However, versions of Styled Components starting with 5.2.0 are not compatible with the Audi Design System due to breaking
+changes that were introduced in that version.
+
+Styled Components 5.2.0 is not backward compatible with 5.1.1. This minor version increase does not adhere to semver semantics,
+and should be viewed as a major version release of Styled Components.
+
+If your project currently requires styled-components ^5.2.0 and you wish to use the Audi Design System, you must change your
+application to depend on a version of styled-components that matches ~5.1.0 or remove your project's dependency on styled-components.
+When selecting version 5.1.1, it is recommended that you pay special attention to styled components that make use of nested & selectors
+to ensure that no regressions are introduced.
+
+### Configuring Babel
+
+We ship two types of module formats: CommonJS and ESModules. Most modern build tools will use the latter resolved from the package.json
+module entry. To keep our module code as clean as possible, we try to use the latest possible ECMAScript version as target for our
+transpilation. So if you have to support browsers that don't support certain modern ECMAScript features, you may want to configure your build
+tools accordingly. Here's an example for babel:
+
+```
+
+// babel.config.js
+const path = require('path');
+module.exports {
+  include: [
+    ...,
+    path.resolve('node_modules/@audi/audi-ui-react'),
+  ],
+  ...
+}
+```
