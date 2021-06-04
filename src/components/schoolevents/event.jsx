@@ -1,11 +1,28 @@
-import React from 'react';
+import React, { useState } from "react";
 
 import Spolight from '../../assets/images/spotlight.jpeg';
 import BookClub from '../../assets/images/bookClub.jpg';
+import eventData from './eventData';
 import './event.css';
 
 const EventOverview = () => {
+    const [currentEvent, setCurrentEvent] = useState(0);
+    const [isLeftArrow, setIsLeftArrow] = useState(false);
+    const [isRightArrow, setIsRightArrow] = useState(false);
+    const length = eventData.length;
     
+    const nextSlide = () =>{
+        setIsLeftArrow(false);
+        setIsRightArrow(true);
+        setCurrentEvent(currentEvent === length - 1 ? 0 : currentEvent + 1);
+    }
+    const previousSlide = () =>{
+        setIsRightArrow(false);
+        setIsLeftArrow(true);
+        setCurrentEvent(currentEvent === 0? length - 1 : currentEvent - 1);
+    }
+    
+
     return (
         <>
             <section className="event-section">
@@ -25,15 +42,30 @@ const EventOverview = () => {
                                 <div style={{display: 'flex', justifyContent: 'space-between'}}>
                                     <h5>Online Events</h5>
                                     <div>
-                                        <span>← </span>
-                                        
-                                        <span> →</span>
+                                        <span className = {isLeftArrow === true ? "carousel-left-arrow active" : "carousel-left-arrow"} onClick = {previousSlide}>&lt; </span>
+                                        <span className = {isRightArrow === true ? "carousel-right-arrow active" : "carousel-right-arrow"} onClick = {nextSlide}> &gt;</span>
                                     </div>
                                 </div>
-                                <img className="event-img" src={BookClub} alt="BookClub"  width="600px" height="250px"/>
-                                <br/><br/>
-                                <p>Events desrciption</p>
-                                <p>Student desrciption</p>
+                                {
+                                    eventData.map((e, i) => {
+                                        return(
+                                           <div className = {i === currentEvent ? "event-carousel active":"event-carousel"} key = {i}>
+                                                {i === currentEvent && (
+                                                    <>
+                                                    <img className="event-img" src={e.img_url} alt="event1"  width="600px" height="250px"/>   
+                                                    <br/><br/>
+                                                    <p>{e.event_description}</p>
+                                                    <p>{e.student_desrciption}</p>    
+                                                    </>
+                                                )}
+                                            </div>        
+                                        )
+                                    })
+                                }
+                    
+
+                                       
+                                
                             </div>
                         </div>
                     </div>

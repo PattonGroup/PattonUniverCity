@@ -16,3 +16,29 @@
 .event-links {
   text-decoration: none;
 }
+
+.carousel-left-arrow, .carousel-right-arrow{
+  cursor: pointer;
+  border: 1px solid #F4F4F4;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+} 
+
+.carousel-left-arrow.active, .carousel-right-arrow.active, .carousel-left-arrow:hover, .carousel-right-arrow:hover{
+  color:white;
+  background-color: #B32825;
+} 
+
+.event-carousel{
+  opacity: 0;
+  transition-duration: 2s ease;
+}
+
+.event-carousel.active{
+  opacity: 1;
+  transition-duration: 2s;
+}
