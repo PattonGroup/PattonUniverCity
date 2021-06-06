@@ -72,6 +72,7 @@ const Navbar = (props) => {
                             <Link to='#' className='menu-bars' >
                                 <AiIcons.AiOutlineClose />
                             </Link>
+                            <h2 className="logo-title mt-4 " style={{ color: "white", maxHeight: 75, maxWidth: 50 }}><span>PATTON</span> <br/><span>UNIVERCITY</span></h2>
                             </li>
                             {SidebarData.map((link, index) => {
                             return (

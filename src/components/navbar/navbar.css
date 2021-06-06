@@ -157,7 +157,7 @@ nav a:first-child {
   }
 
   .nav-menu.active {
-    left: 80%;
+    left: 78%; /* makes all of the logo text fit on sidebar */
     transition: 350ms;
   }
 
@@ -165,7 +165,7 @@ nav a:first-child {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 8px 0px 8px 16px;
+    padding: 58px 0px 8px 16px; /* puts space between logo text and Home */
     list-style: none;
     height: 4rem;
   }
@@ -173,6 +173,7 @@ nav a:first-child {
   .nav-text a {
     text-decoration: none;
     color: #f5f5f5;
+    /* font-size: 1.2rem; */
     font-size: 1.2rem;
     width: 95%;
     height: 100%;
@@ -197,6 +198,10 @@ nav a:first-child {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+  }
+
+  span {
+    margin-left: 14px; /* put space between menu icons and titles */
   }
 }
 
