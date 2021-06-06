@@ -32,11 +32,11 @@ const Navbar = (props) => {
     return (
         <>
         <header className={`nav-header sticky-top ${ backgroundOn ? "bg-black" : null}`}>
-            <nav className="container-fluid d-flex flex-column flex-md-row justify-content-between ">
-                    <a className="py-2" href="/" >
+            <nav className="container-fluid d-flex flex-column flex-md-row justify-content-between">
+                    <a className="py-2" href="/">
                         <div style={{display: 'flex', alignItems: 'center'}}>
                             <img src={Logo} alt="Patton U Logo" width="150px"/>
-                            <h2 className="logo-title"><span>PATTTON</span> <br/><span>UNIVERCITY</span> </h2>
+                            <h2 className="logo-title"><span>PATTON</span> <br/><span>UNIVERCITY</span> </h2>
                         </div>
                     </a>
                 {
@@ -52,7 +52,7 @@ const Navbar = (props) => {
                         <a href="/innovation">Innovation</a>
                         <a href="/news">News</a>
                         <a href="/Alumni">Alumni</a>
-                        <Link style={{ color: "white" }} onClick={props.logout}>Logout</Link>
+                        <Link style={{ color: "white"}} onClick={props.logout}>Logout</Link>
                     </>
                     :
                     <>
@@ -61,15 +61,15 @@ const Navbar = (props) => {
                     </>
                 }
             </nav>
-            <div class="mobile-overlay">
+            <div class="mobile-overlay" >
                     <div class="main-nav-mobile">
                         <img id="mobile-logo" src={Logo} alt="Logo" />
-                        <img id="hamburger" src={Hamburger} alt="Hamurger bar" onClick={showSidebar}/>
+                        <img id="hamburger" src={Hamburger} alt="Hamburger bar" onClick={showSidebar}/>
                     </div>
-                    <div className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-                        <ul className='nav-menu-items' onClick={showSidebar}>
-                            <li className='navbar-toggle'>
-                            <Link to='#' className='menu-bars'>
+                    <div className={sidebar ? 'nav-menu active' : 'nav-menu'}  >
+                        <ul className='nav-menu-items' onClick={showSidebar} style={{ backgroundColor: 'black'}}>
+                            <li className='navbar-toggle' style={{ backgroundColor: 'black' }}>
+                            <Link to='#' className='menu-bars' >
                                 <AiIcons.AiOutlineClose />
                             </Link>
                             </li>
@@ -84,7 +84,7 @@ const Navbar = (props) => {
                             );
                             })}
                         </ul>
-                    </div>
+                    </div>       
                 </div>
         </header>
       </>
