@@ -8,7 +8,7 @@ import Plugin from "./assets/plugin.svg";
 import Repo from "./assets/repo.svg";
 import StackAlt from "./assets/stackalt.svg";
 
-<Meta title="Welcome/Guides/React" />
+<Meta title="Welcome/Guides/React Style Guide" />
 
 <style>{`
   .subheading {
@@ -130,6 +130,7 @@ This style guide is mostly based on the standards that are currently prevalent i
 
 1. [Basic Rules](#basic-rules)
 1. [Class vs `React.createClass` vs stateless](#class-vs-reactcreateclass-vs-stateless)
+1. [Never Nest Hooks](#never-nest-hooks)
 1. [Naming](#naming)
 1. [Ternary](#ternary)
 1. [Object Literals](#object-literals)
@@ -195,6 +196,28 @@ This style guide is mostly based on the standards that are currently prevalent i
   // good
   function Listing({ hello }) {
     return <div>{hello}</div>;
+  }
+  ```
+
+## Never Nest Hooks
+
+Since React components are re-rendered each time the data changes, this means the exact same hooks
+must be called in the exact same order on every single render. If we wrapped our hooks in a conditional or
+function, the state would sometimes be created and other times wouldn’t.
+
+- Only call hooks at the top level—do not nest your hooks in any logic.
+- Only call hooks from React functions or custom hooks.
+
+  ```jsx
+  // bad
+  if (bool) {
+    const [counter, incrementCounter] = useState(0);
+  }
+
+  // good
+  const [counter, incrementCounter] = useState(0);
+  if (counter) {
+    // do something
   }
   ```
 
