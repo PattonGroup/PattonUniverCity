@@ -1,25 +1,30 @@
-const User = require('../models/userModel');
-const bcrypt = require('bcryptjs');
-const mongoose = require('mongoose');
-const jwt = require('jsonwebtoken');
+import User from '../models/userModel.js';
+import mongoose from 'mongoose';
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
+import asyncHandler from 'express-async-handler';
 
-const login = async (req, res, next) => {
-  try {
-    const { email, password } = req.body;
-    const user = await User.findOne({ email });
-    if (!user) return res.status(400).json({ msh: 'User does not exist.' });
+const login = asyncHandler(async (req, res, next) => {
+  const { email, password } = req.body;
+  const user = await User.findOne({ email });
 
-    const isMatch = await bcrypt.compare(password, user.password);
-    if (!isMatch) return res.status(400).json({ msh: 'Invalid password' });
-
-    const accesstoken = createAccessToken({ id: user._id });
-    const refreshtoken = createRefreshToken({ id: user._id });
-
-    res.json({ accesstoken, msg: 'Logged in' });
-  } catch (err) {
-    return res.status(500).json({ msg: err.message });
+  if (user && (await user.matchPassword(password))) {
+    res.json({
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      isAdmin: user.isAdmin,
+      token: generateToken(user._id),
+    });
+  } else {
+    res.status(401);
+    throw new Error('Invalid email or password');
   }
-};
+  const accesstoken = createAccessToken({ id: user._id });
+  // const refreshtoken = createRefreshToken({ id: user._id });
+
+  res.json({ accesstoken, msg: 'Logged in' });
+});
 
 const logout = (req, res) => {
   req.logout();
@@ -72,20 +77,8 @@ const register = async (req, res) => {
   }
 };
 
-const checkUser = async (req, res) => {
-  const userId = req.session.user;
-  if (userId) {
-    User.findById({ _id: userId })
-      .populate('transactions')
-      .exec((err, user) => {
-        if (err) res.send({ msg: 'Error in populating transactions' });
-        else if (user) {
-          res.send({ msg: 'You are logged in', user: user });
-        }
-      });
-  } else {
-    res.send({ msg: 'No user logged in' });
-  }
+const currentUser = async (req, res) => {
+  res.send({ currentUser: req.currentUser || null });
 };
 
 const createAccessToken = (user) => {
@@ -97,7 +90,7 @@ const createRefreshToken = (user) => {
 
 const userCtrl = {
   login,
-  checkUser,
+  currentUser,
   logout,
   register,
 };
