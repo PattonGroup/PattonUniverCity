@@ -6,7 +6,6 @@ import Signup from './pages/auth/signup';
 import PattonUniverCity from './pages/home/home';
 import Axios from 'axios';
 
-
 export default function App() {
 	const [isLoggedin, setIsLoggedin] = useState(false);
 	const [loading, setLoading] = useState(false);
