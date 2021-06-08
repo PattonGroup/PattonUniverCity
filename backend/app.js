@@ -4,11 +4,10 @@ import dotenv from 'dotenv';
 import morgan from 'morgan';
 import cors from 'cors';
 import 'express-async-errors';
-import { json, urlencoded } from 'body-parser';
 import cookieSession from 'cookie-session';
-import userRoutes from './routes/userRoutes';
-import { notFound, errorHandler } from './middleware/errorMiddleware.js';
-import connectDB from './config/database';
+import userRoutes from './routes/userRoutes.js';
+import { notFound, errorHandler } from './middlewares/errorMiddleware.js';
+import connectDB from './config/database.js';
 
 dotenv.config();
 connectDB();
@@ -17,20 +16,19 @@ const app = express();
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
-app.set('trust proxy', true);
 
 //---------------------Middlewares--------------------------------
 
 app.use(cors({ exposedHeaders: '*' }));
-app.use(urlencoded({ extended: true }));
-app.use(json({ limit: '50mb' }));
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ extended: true }));
+
 app.use(
   cookieSession({
     signed: false,
     secure: process.env.NODE_ENV !== 'development',
     maxAge: 3600000,
     httpOnly: true,
-    secret: 'smdljkfgslkdjfglksjdflkgjsdf21525s54d45fgs',
   })
 );
 

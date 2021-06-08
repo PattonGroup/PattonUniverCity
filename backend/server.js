@@ -1,13 +1,25 @@
-import { app } from './app';
+import { app } from './app.js';
 import colors from 'colors';
 
-// Configure to use port 3001 instead of 3000 during
-// development to avoid collision with React's dev server
-const PORT = process.env.PORT || 5000;
+const start = async () => {
+  if (!process.env.ACCESS_TOKEN_SECRET) {
+    throw new Error('JWT KEY must be defined');
+  }
+  if (!process.env.REFRESH_TOKEN_SECRET) {
+    throw new Error('REFRESH TOKEN must be defined');
+  }
+  if (!process.env.MONGO_URI) {
+    throw new Error('MONGO_URI must be defined');
+  }
+  const PORT = process.env.PORT || 5000;
 
-app.listen(
-  PORT,
-  console.log(
-    `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
-  )
-);
+  app.listen(
+    PORT,
+    console.log(
+      `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow
+        .bold
+    )
+  );
+};
+
+start();

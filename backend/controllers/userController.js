@@ -11,10 +11,10 @@ const login = asyncHandler(async (req, res) => {
   const user = await User.findOne({ email });
 
   if (user && (await user.matchPassword(password))) {
-    req.session = { jwt: generateToken(user._id) };
+    req.session = { jwt: generateToken(user._id, user.email) };
     res.json({
       _id: user._id,
-      name: user.name,
+      fname: user.name,
       email: user.email,
       isAdmin: user.isAdmin,
     });
@@ -57,11 +57,11 @@ const register = asyncHandler(async (req, res) => {
     await user.save();
     // Store it on session object
     req.session = {
-      jwt: generateToken(user._id),
+      jwt: generateToken(user._id, user.email),
     };
     res.status(201).json({
       _id: user._id,
-      name: user.name,
+      fullname: user.name,
       email: user.email,
       isAdmin: user.isAdmin,
     });
@@ -72,7 +72,8 @@ const register = asyncHandler(async (req, res) => {
 });
 
 const checkUser = asyncHandler(async (req, res) => {
-  res.send({ currentUser: req.currentUser || null });
+  console.log(req.session.jwt);
+  res.send({ currentUser: req.session.jwt || null });
 });
 
 export { login, checkUser, logout, register };
