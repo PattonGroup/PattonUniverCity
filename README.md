@@ -2,17 +2,21 @@
 
 Code base for the responseive web apps for [PattonUniverCity](https://pattonunivcity.com/)
 
-# HOW TO CONTRIBUTE
-
-Find an [item on the backlog](https://github.com/PattonGroup/PattonUniverCity/projects/1) and move it to the to do column. See [CONTRIBUTION.md](https://github.com/PattonGroup/PattonUniverCity/blob/main/CONTRIBUTION.md) for more info.
-
-Communicate through discord during stand up time. Communicating how your progress is going or if you need assistance on the part of the project you picked up.
-
 # PULL REQUEST
 
 If you clone this repo and realize you do not have permission to push directly to this repo [watch how here](https://www.youtube.com/watch?v=rgbCcBNZcdQ) to learn how to fork and make a pull request
 
 ---
+
+# HOW TO CONTRIBUTE
+
+Find an [item on the backlog](https://github.com/PattonGroup/PattonUniverCity/projects/1) and move it to the to do column. See [CONTRIBUTION.md](CONTRIBUTION.md) for more info.
+
+Communicate through discord during stand up time. Communicating how your progress is going or if you need assistance on the part of the project you picked up.
+
+# HOW TO VIEW CHANGES
+
+Find an changes to documentation, new features, fixes, refactors and bugs directly on the [changelog](CHANGELOG.md). Keep in mind the changelog is timestamped if you are curious about the most up to date changes.
 
 ## Want to report a bug or issue with the website?
 
@@ -64,4 +68,15 @@ How to use React: https://www.youtube.com/watch?v=w7ejDZ8SWv8
     nodemon server.js or node server.js
 ```
 
-For more information on contributing please see [CONTRIBUTION.md](https://github.com/PattonGroup/PattonUniverCity/blob/main/CONTRIBUTION.md)
+## How to view our local docs
+
+```sh
+    # install new dependencies
+    npm install
+
+    # run storybook
+    # this should make http://localhost:6006 available in your web browser
+    npm run storybook
+```
+
+For more information on contributing please see [CONTRIBUTION.md](CONTRIBUTION.md)
