@@ -2,6 +2,7 @@
   "name": "pattonunivercity",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
@@ -10,11 +11,12 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "bootstrap": "^5.0.1",
-    "cookie-parser": "^1.4.5",
+    "colors": "^1.4.0",
+    "cookie-session": "^1.4.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "express-session": "^1.17.2",
+    "express-async-handler": "^1.1.4",
     "firebase": "^8.6.3",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.12",
@@ -33,7 +35,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "node backend/server"
   },
   "eslintConfig": {
     "extends": [
