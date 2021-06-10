@@ -13,14 +13,16 @@ header {
   background: #283e4a;
   position: relative;
   height: 0;
+  width: 100%;
   box-shadow: 0px 4px 13px 1px rgb(167 167 167 / 80%);
 }
 
 .bg-black nav {
   background-color: black;
-  width: 100vw;
   padding-top: 1%;
 }
+
+
 
 nav {
   align-items: center;
@@ -188,12 +190,16 @@ nav a:first-child {
     height: 100%;
     display: flex;
     align-items: center;
-    padding: 0 16px;
-    border-radius: 4px;
+    justify-content: flex-start;
+    /* padding: 0 16px;
+    border-radius: 4px; */
   }
 
   .nav-text a:hover {
     background-color: #1a83ff;
+  }
+  span {
+    margin-left: 14px; /* put space between menu icons and titles */
   }
 
   .nav-menu-items {
@@ -215,6 +221,7 @@ nav a:first-child {
     margin-left: 14px; /* put space between menu icons and titles */
   }
 }
+
 
 @media (min-width: 768px) {
   .flex-md-equal > * {
@@ -247,3 +254,5 @@ nav a:first-child {
     transition: 350ms;
   }
 }
+
+
