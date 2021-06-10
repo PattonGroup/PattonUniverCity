@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import Logo from '../../assets/images/logo.png'
+import Logo from '../../assets/svg/Untitled design.svg'
 import Hamburger from '../../assets/svg/bar.svg'
 import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from '../../utils/sidebarData';
@@ -32,26 +32,26 @@ const Navbar = (props) => {
         <>
         <header className={`nav-header sticky-top ${ backgroundOn ? "bg-black" : null}`}>
             <nav className="navbar navbar-default navbar-fixed-top"> 
-                    <a className="py-2" href="/" >
+                    <a className="py-5" href="/" >
                         <div style={{display: 'flex', alignItems: 'center'}}>
                             <img src={Logo} className="img-respo" alt="Patton U Logo" width="150px"/>
-                            <h2 className="logo-title"><span>PATTTON</span> <br/><span>UNIVERCITY</span> </h2>
+                            <h2 className="logo-title"><span className={`${ backgroundOn ? "bg-black" : null}`}>PATTTON</span> <br/><span className={`${ backgroundOn ? "bg-black" : null}`}>UNIVERCITY</span> </h2>
                         </div>
                     </a>
                 {
-                    props.authenticated ? <a href="/dashboard">Dashboard</a>
+                    props.authenticated ? <a className={`${ backgroundOn ? "bg-black" : null}`} href="/dashboard">Dashboard</a>
                         :
                         null
                 }
 
                 {props.authenticated ?
                     <>
-                        <a href="/education">Education</a>
-                        <a href="/research">Research</a>
-                        <a href="/innovation">Innovation</a>
-                        <a href="/news">News</a>
-                        <a href="/Alumni">Alumni</a>
-                        <Link style={{ color: "white" }} onClick={props.logout}>Logout</Link>
+                        <a className={`${ backgroundOn ? "bg-black" : null}`} href="/education">Education</a>
+                        <a className={`${ backgroundOn ? "bg-black" : null}`} href="/research">Research</a>
+                        <a className={`${ backgroundOn ? "bg-black" : null}`} href="/innovation">Innovation</a>
+                        <a className={`${ backgroundOn ? "bg-black" : null}`} href="/news">News</a>
+                        <a className={`${ backgroundOn ? "bg-black" : null}`} href="/Alumni">Alumni</a>
+                        <Link className={`${ backgroundOn ? "bg-black" : null}`} onClick={props.logout}>Logout</Link>
                     </>
                     :
                     <>
