@@ -9,6 +9,7 @@ import GradSchoolSuite from '../../components/services/gradSchoolSuite';
 import Enrollment from '../../components/services/enollment';
 import AdmissionApply from '../../components/form/admissionApply';
 import Footer from '../../components/footer/footer';
+import eventData from '../../components/schoolevents/eventData';
 import './home.css';
 
 const PattonUniverCity = ({ authenticated, logout }) => {
