@@ -1,0 +1,207 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import Code from "./assets/code-brackets.svg";
+import Colors from "./assets/colors.svg";
+import Comments from "./assets/comments.svg";
+import Direction from "./assets/direction.svg";
+import Flow from "./assets/flow.svg";
+import Plugin from "./assets/plugin.svg";
+import Repo from "./assets/repo.svg";
+import StackAlt from "./assets/stackalt.svg";
+
+<Meta title="In Progress/Welcome/Tooling" />
+
+<style>{`
+  .subheading {
+    --mediumdark: '#999999';
+    font-weight: 900;
+    font-size: 13px;
+    color: #999;
+    letter-spacing: 6px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    margin-top: 40px;
+  }
+
+  .link-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10px;
+  }
+
+  @media (min-width: 620px) {
+    .link-list {
+      row-gap: 20px;
+      column-gap: 20px;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media all and (-ms-high-contrast:none) {
+  .link-list {
+      display: -ms-grid;
+      -ms-grid-columns: 1fr 1fr;
+      -ms-grid-rows: 1fr 1fr;
+    }
+  }
+
+  .link-item {
+    display: block;
+    padding: 20px 30px 20px 15px;
+    border: 1px solid #00000010;
+    border-radius: 5px;
+    transition: background 150ms ease-out, border 150ms ease-out, transform 150ms ease-out;
+    color: #333333;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .link-item:hover {
+    border-color: #1EA7FD50;
+    transform: translate3d(0, -3px, 0);
+    box-shadow: rgba(0, 0, 0, 0.08) 0 3px 10px 0;
+  }
+
+  .link-item:active {
+    border-color: #1EA7FD;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .link-item strong {
+    font-weight: 700;
+    display: block;
+    margin-bottom: 2px;
+  }
+  
+  .link-item img {
+    height: 40px;
+    width: 40px;
+    margin-right: 15px;
+    flex: none;
+  }
+
+  .link-item span {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .tip {
+    display: inline-block;
+    border-radius: 1em;
+    font-size: 11px;
+    line-height: 12px;
+    font-weight: 700;
+    background: #E7FDD8;
+    color: #66BF3C;
+    padding: 4px 12px;
+    margin-right: 10px;
+    vertical-align: top;
+  }
+
+  .tip-wrapper {
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .tip-wrapper code {
+    font-size: 12px;
+    display: inline-block;
+  }
+
+  
+`}</style>
+
+# Tooling Sources
+
+<p>&nbsp;</p>
+
+## Firebase
+
+What is Firebase?
+
+Tools from Google for building app infrastructure, improving app quality, and growing your business
+
+[Firebase](https://console.firebase.google.com/u/0/)
+
+## Bootstrap
+
+What is Bootstrap?
+
+The most popular CSS Framework for developing responsive and mobile-first websites. An open source toolkit, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
+
+[Bootstrap](https://getbootstrap.com/)
+
+## Prettier
+
+What is prettier?
+
+Prettier enforces a consistent code style (i.e. code formatting that won’t affect
+the AST) across your entire codebase because it disregards the original styling\*
+by parsing it away and re-printing the parsed AST with its own rules that take the
+maximum line length into account, wrapping code when necessary.
+
+Why are we using it?
+
+Prettier enforces standards from the development team of React, [Facebook](https://facebook.github.io/jsx/).
+This allows for the codebase to be more uniformity and legible under one set standard. The beauty of having an unopinionated
+language is the ability to decide how you want your code. However, when you start to work with large teams you need a set standard.
+
+<p>&nbsp;</p>
+
+Read more here: [Prettier](https://prettier.io/)
+
+## ES Lint
+
+[ES Lint](https://eslint.org/)
+
+## ES Lint Config Airbnb
+
+[eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
+
+## Storybook
+
+[Storybook](https://storybook.js.org/tutorials/intro-to-storybook/react/en/get-started/)
+
+## Setup for our styleguide
+
+### 1. Install ESLint & Prettier extensions for VSCode
+
+Optional - Set format on save and any global prettier options
+
+### 2. Install Packages
+
+```
+npm i -D eslint prettier eslint-plugin-prettier eslint-config-prettier eslint-plugin-node eslint-config-node
+```
+
+```
+npx install-peerdeps --dev eslint-config-airbnb
+```
+
+### 3. A .prettierrc for prettier rules (semicolons, quotes, etc) and .eslintrc.json file is setup for you
+
+```
+{
+  "extends": ["airbnb", "prettier", "plugin:node/recommended"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "func-names": "off",
+    "no-process-exit": "off",
+    "object-shorthand": "off",
+    "class-methods-use-this": "off"
+  }
+}
+```
+
+### Reference
+
+- ESLint Rules - https://eslint.org/docs/rules/
+- Prettier Options - https://prettier.io/docs/en/options.html
+- Airbnb Style Guide - https://github.com/airbnb/javascript
+- Setup Guide - https://gist.github.com/bradtraversy/aab26d1e8983d9f8d79be1a9ca894ab4
