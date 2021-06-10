@@ -8,10 +8,10 @@ const QuoteHomeFeat = () => {
         <div className="quote-section pt-5 p-b5">
             <div className="container-fluid">
                     <div className="feature-one row">
-                        <div className="col-md-6">
-                            <img src={Elvonte} alt="President Elvonte" />
+                        <div className="col-md-6 col-xs-12">
+                            <img src={Elvonte} className="img-fluid img-responsive" alt="President Elvonte" />
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-md-6 col-xs-12">
                             <p className="quote-info">
                             Mindfulness is the simple process of noticing new things about the familiar. 
                             When we notice actively, we become sensitive to perspective and change.”

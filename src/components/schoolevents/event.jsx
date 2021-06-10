@@ -24,13 +24,13 @@ const EventOverview = () => {
 
     return (
         <>
-            <section className="event-section">
+          <section className="event-section">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6 event-item">
-                            <div className="">
+                            <div>
                                 <h5>Spotlight</h5>                                   
-                                <img className="event-img" src={Spolight} alt="TentCity" width="600px" height="250px"/>
+                                <img className="event-img img-fluid img-thumbnail" src={Spolight} alt="TentCity" width="600px" height="250px"/>
                                 <br/><br/>
                                 <p>Student Name</p>
                                 <p>Student desrciption</p>
@@ -52,6 +52,7 @@ const EventOverview = () => {
                                                 {i === currentEvent && (
                                                     <>
                                                     <img className="event-img" src={e.img_url} alt="event1" width="600px" height="250px" />   
+                                                    <img className="event-img img-fluid img-thumbnail" src={e.img_url} alt="event1" width="600px" height="250px" />   
                                                     <br/><br/>
                                                     <p>{e.event_description}</p>
                                                     <p>{e.student_desrciption}</p>    
@@ -61,10 +62,7 @@ const EventOverview = () => {
                                         )
                                     })
                                 }
-                    
 
-                                       
-                                
                             </div>
                         </div>
                     </div>
