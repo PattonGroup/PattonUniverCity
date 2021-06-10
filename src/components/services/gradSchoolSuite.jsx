@@ -18,7 +18,7 @@ const GradSchoolSuite = () => {
                     <div className="row mt-5">
                         <div className="col-md-4 services-item">
                             <div className="">
-                                <img className="services-img" src={Spolight} alt="TentCity" width="600px" height="250px"/>
+                                <img className="services-img img-fluid img-thumbnail" src={Spolight} alt="TentCity" width="600px" height="250px"/>
                                 <br/><br/>
                                 <h5 className="services-subtitle">Tutoring</h5>                                   
                                 <p>Student desrciption</p>
@@ -28,16 +28,16 @@ const GradSchoolSuite = () => {
                         </div>
                         <div className="col-md-4 services-item">
                             <div className="">
-                                <img className="services-img" src={BookClub} alt="BookClub"  width="600px" height="250px"/>
+                                <img className="services-img img-fluid img-thumbnail" src={Spolight} alt="BookClub"  width="600px" height="250px"/>
                                 <br/><br/>
                                 <h5 className="services-subtitle">College Coachnig</h5>
                                 <p>Events desrciption</p>
-                                <a className="services-link" href="/">College Coachnig {'>'}</a>
+                                <a className="services-link " href="/">College Coachnig {'>'}</a>
                             </div>
                         </div>
                         <div className="col-md-4 services-item">
                             <div className="">
-                                <img className="services-img" src={BookClub} alt="BookClub"  width="600px" height="250px"/>
+                                <img className="services-img img-fluid img-thumbnail" src={Spolight} alt="BookClub"  width="600px" height="250px"/>
                                 <br/><br/>
                                 <p>Events desrciption</p>
                                 <h5 className="services-subtitle">Mentoring</h5>
