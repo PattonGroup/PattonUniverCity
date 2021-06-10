@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-
+import React, { useState } from 'react';
 import Spolight from '../../assets/images/spotlight.jpeg';
 import BookClub from '../../assets/images/bookClub.jpg';
 import eventData from './eventData';
@@ -11,12 +10,12 @@ const EventOverview = () => {
     const [isRightArrow, setIsRightArrow] = useState(false);
     const length = eventData.length;
     
-    const nextSlide = () =>{
+    const nextSlide = () => {
         setIsLeftArrow(false);
         setIsRightArrow(true);
         setCurrentEvent(currentEvent === length - 1 ? 0 : currentEvent + 1);
     }
-    const previousSlide = () =>{
+    const previousSlide = () => {
         setIsRightArrow(false);
         setIsLeftArrow(true);
         setCurrentEvent(currentEvent === 0? length - 1 : currentEvent - 1);
@@ -52,7 +51,7 @@ const EventOverview = () => {
                                            <div className = {i === currentEvent ? "event-carousel active":"event-carousel"} key = {i}>
                                                 {i === currentEvent && (
                                                     <>
-                                                    <img className="event-img" src={e.img_url} alt="event1"  width="600px" height="250px"/>   
+                                                    <img className="event-img" src={e.img_url} alt="event1" width="600px" height="250px" />   
                                                     <br/><br/>
                                                     <p>{e.event_description}</p>
                                                     <p>{e.student_desrciption}</p>    
