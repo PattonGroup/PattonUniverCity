@@ -8,13 +8,13 @@ const EventOverview = () => {
     
     return (
         <>
-            <section className="event-section">
+          <section className="event-section">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6 event-item">
-                            <div className="">
+                            <div>
                                 <h5>Spotlight</h5>                                   
-                                <img className="event-img" src={Spolight} alt="TentCity" width="600px" height="250px"/>
+                                <img className="event-img img-fluid img-thumbnail" src={Spolight} alt="TentCity" width="600px" height="250px"/>
                                 <br/><br/>
                                 <p>Student Name</p>
                                 <p>Student desrciption</p>
@@ -25,12 +25,12 @@ const EventOverview = () => {
                                 <div style={{display: 'flex', justifyContent: 'space-between'}}>
                                     <h5>Online Events</h5>
                                     <div>
-                                        <span>← </span>
+                                        <span> ← </span>
                                         
-                                        <span> →</span>
+                                        <span> → </span>
                                     </div>
                                 </div>
-                                <img className="event-img" src={BookClub} alt="BookClub"  width="600px" height="250px"/>
+                                <img className="event-img img-fluid img-thumbnail" src={Spolight} alt="BookClub"  width="600px" height="250px"/>
                                 <br/><br/>
                                 <p>Events desrciption</p>
                                 <p>Student desrciption</p>

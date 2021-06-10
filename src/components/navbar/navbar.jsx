@@ -28,14 +28,13 @@ const Navbar = (props) => {
     }, []);
 
     
-
     return (
         <>
         <header className={`nav-header sticky-top ${ backgroundOn ? "bg-black" : null}`}>
-            <nav className="container-fluid d-flex flex-column flex-md-row justify-content-between ">
+            <nav className="navbar navbar-default navbar-fixed-top"> 
                     <a className="py-2" href="/" >
                         <div style={{display: 'flex', alignItems: 'center'}}>
-                            <img src={Logo} alt="Patton U Logo" width="150px"/>
+                            <img src={Logo} className="img-respo" alt="Patton U Logo" width="150px"/>
                             <h2 className="logo-title"><span>PATTTON</span> <br/><span>UNIVERCITY</span> </h2>
                         </div>
                     </a>
@@ -61,8 +60,9 @@ const Navbar = (props) => {
                     </>
                 }
             </nav>
-            <div class="mobile-overlay">
-                    <div class="main-nav-mobile">
+
+            <div className="mobile-overlay">
+                    <div className="main-nav-mobile">
                         <img id="mobile-logo" src={Logo} alt="Logo" />
                         <img id="hamburger" src={Hamburger} alt="Hamurger bar" onClick={showSidebar}/>
                     </div>
@@ -72,6 +72,7 @@ const Navbar = (props) => {
                             <Link to='#' className='menu-bars'>
                                 <AiIcons.AiOutlineClose />
                             </Link>
+                             <h2 className="logo-title mt-4 " style={{ color: "white", maxHeight: 75, maxWidth: 50 }}><span>PATTON</span> <br/><span>UNIVERCITY</span></h2>
                             </li>
                             {SidebarData.map((link, index) => {
                             return (
