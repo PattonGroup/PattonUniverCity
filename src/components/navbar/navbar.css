@@ -43,9 +43,18 @@ nav a:first-child {
   width: 20px;
 }
 
+.logo-wrap {
+  display: flex;
+  align-items: center;
+}
+
 .logo-title {
   font-family: "University";
   text-align: center;
+  color: white;
+  max-height: 75;
+  max-width: 50;
+  padding-right: 4%;
 }
 
 .logo-title span:first-child {
@@ -61,7 +70,7 @@ nav a:first-child {
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
   font-size: 1.5rem;
-  padding-right: 4%;
+  
 }
 
 .content-header {
@@ -189,10 +198,12 @@ nav a:first-child {
 
   .nav-menu-items {
     width: 100%;
+    background-color: black;
   }
 
   .navbar-toggle {
-    background-color: #ccc;
+    /* background-color: #ccc; */
+    
     width: 100%;
     height: 80px;
     display: flex;

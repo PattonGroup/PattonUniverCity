@@ -34,7 +34,7 @@ const Navbar = (props) => {
         <header className={`nav-header sticky-top ${ backgroundOn ? "bg-black" : null}`}>
             <nav className="container-fluid d-flex flex-column flex-md-row justify-content-between">
                     <a className="py-2" href="/">
-                        <div style={{display: 'flex', alignItems: 'center'}}>
+                        <div className="logo-wrap">
                             <img src={Logo} alt="Patton U Logo" width="150px"/>
                             <h2 className="logo-title"><span>PATTON</span> <br/><span>UNIVERCITY</span> </h2>
                         </div>
@@ -52,11 +52,11 @@ const Navbar = (props) => {
                         <a href="/innovation">Innovation</a>
                         <a href="/news">News</a>
                         <a href="/Alumni">Alumni</a>
-                        <Link style={{ color: "white"}} onClick={props.logout}>Logout</Link>
+                        <Link onClick={props.logout}>Logout</Link>
                     </>
                     :
                     <>
-                        <a href="/login" style={{ color: "white" }}>Login</a>
+                        <a href="/login" >Login</a>
                         <a href="/signup">Signup</a>
                     </>
                 }
@@ -67,12 +67,12 @@ const Navbar = (props) => {
                         <img id="hamburger" src={Hamburger} alt="Hamburger bar" onClick={showSidebar}/>
                     </div>
                     <div className={sidebar ? 'nav-menu active' : 'nav-menu'}  >
-                        <ul className='nav-menu-items' onClick={showSidebar} style={{ backgroundColor: 'black'}}>
-                            <li className='navbar-toggle' style={{ backgroundColor: 'black' }}>
+                        <ul className='nav-menu-items' onClick={showSidebar} >
+                            <li className='navbar-toggle'>
                             <Link to='#' className='menu-bars' >
                                 <AiIcons.AiOutlineClose />
                             </Link>
-                            <h2 className="logo-title mt-4 " style={{ color: "white", maxHeight: 75, maxWidth: 50 }}><span>PATTON</span> <br/><span>UNIVERCITY</span></h2>
+                            <h2 className="logo-title mt-4"><span>PATTON</span> <br/><span>UNIVERCITY</span></h2>
                             </li>
                             {SidebarData.map((link, index) => {
                             return (
