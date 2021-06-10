@@ -51,6 +51,7 @@ const EventOverview = () => {
                                            <div className = {i === currentEvent ? "event-carousel active":"event-carousel"} key = {i}>
                                                 {i === currentEvent && (
                                                     <>
+                                                    <img className="event-img" src={e.img_url} alt="event1" width="600px" height="250px" />   
                                                     <img className="event-img img-fluid img-thumbnail" src={e.img_url} alt="event1" width="600px" height="250px" />   
                                                     <br/><br/>
                                                     <p>{e.event_description}</p>
@@ -61,6 +62,7 @@ const EventOverview = () => {
                                         )
                                     })
                                 }
+
                             </div>
                         </div>
                     </div>
