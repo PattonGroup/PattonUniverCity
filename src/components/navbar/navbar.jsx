@@ -42,26 +42,21 @@ const Navbar = (props) => {
             </div>
           </a>
           {props.authenticated ? <a href="/dashboard">Dashboard</a> : null}
-
-          {props.authenticated ? (
+          {props.authenticated ?
             <>
-              <a href="/education">Education</a>
-              <a href="/research">Research</a>
-              <a href="/innovation">Innovation</a>
-              <a href="/news">News</a>
-              <a href="/Alumni">Alumni</a>
-              <Link to="#" style={{ color: 'white' }} onClick={props.logout}>
-                Logout
-              </Link>
+              <a className={`${ backgroundOn ? "bg-black" : null}`} href="/education">Education</a>
+              <a className={`${ backgroundOn ? "bg-black" : null}`} href="/research">Research</a>
+              <a className={`${ backgroundOn ? "bg-black" : null}`} href="/innovation">Innovation</a>
+              <a className={`${ backgroundOn ? "bg-black" : null}`} href="/news">News</a>
+              <a className={`${ backgroundOn ? "bg-black" : null}`} href="/Alumni">Alumni</a>
+              <Link className={`${ backgroundOn ? "bg-black" : null}`} onClick={props.logout}>Logout</Link>
             </>
-          ) : (
+            :
             <>
-              <a href="/login" style={{ color: 'white' }}>
-                Login
-              </a>
+              <a href="/login" style={{ color: "white" }}>Login</a>
               <a href="/signup">Signup</a>
             </>
-          )}
+          }
         </nav>
         <div className="mobile-overlay">
           <div className="main-nav-mobile">
