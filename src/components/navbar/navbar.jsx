@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Logo from '../../assets/images/logo.png';
+import Logo from '../../assets/svg/Untitled design.svg';
 import Hamburger from '../../assets/svg/bar.svg';
 import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from '../../utils/sidebarData';
@@ -31,13 +31,14 @@ const Navbar = (props) => {
       <header
         className={`nav-header sticky-top ${backgroundOn ? 'bg-black' : null}`}
       >
-        <nav className="container-fluid d-flex flex-column flex-md-row justify-content-between ">
-          <a className="py-2" href="/">
+        <nav className="navbar navbar-default navbar-fixed-top">
+          <a className="py-5" href="/">
             <div style={{ display: 'flex', alignItems: 'center' }}>
               <img src={Logo} alt="Patton U Logo" width="150px" />
               <h2 className="logo-title">
-                <span>PATTTON</span> <br />
-                <span>UNIVERCITY</span>{' '}
+                <span className={`${ backgroundOn ? "bg-black" : null}`}>PATTTON</span> 
+                <br/>
+                <span className={`${ backgroundOn ? "bg-black" : null}`}>UNIVERCITY</span>
               </h2>
             </div>
           </a>
@@ -64,7 +65,7 @@ const Navbar = (props) => {
             <img
               id="hamburger"
               src={Hamburger}
-              alt="Hamurger bar"
+              alt="Hamburger bar"
               onClick={showSidebar}
             />
           </div>
