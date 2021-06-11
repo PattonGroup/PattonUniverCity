@@ -7,11 +7,6 @@
   margin-bottom: 50px;
 }
 
-.services-img {
-  width: 100%;
-  height: 35vh;
-}
-
 .services-link {
   text-decoration: none;
   font-weight: 600;
@@ -129,4 +124,8 @@
 
 .enrollment-img {
   width: 100%;
+}
+
+.services-img {
+  max-height: 17.5rem;
 }
