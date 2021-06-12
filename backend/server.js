@@ -8,10 +8,10 @@ const start = async () => {
   if (!process.env.REFRESH_TOKEN_SECRET) {
     throw new Error('REFRESH TOKEN must be defined');
   }
-  if (!process.env.MONGO_URI) {
+  if (!process.env.MONGODB_URL) {
     throw new Error('MONGO_URI must be defined');
   }
-  const PORT = process.env.PORT || 5000;
+  const PORT = process.env.PORT || 3001;
 
   app.listen(
     PORT,
