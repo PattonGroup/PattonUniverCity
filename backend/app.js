@@ -9,7 +9,9 @@ import { notFound, errorHandler } from './middlewares/errorMiddleware.js';
 import connectDB from './config/database.js';
 
 dotenv.config();
+
 connectDB();
+
 const app = express();
 
 if (process.env.NODE_ENV === 'development') {
@@ -29,10 +31,10 @@ app.use(
     maxAge: 3600000,
     httpOnly: true,
   })
-);
-
-//------------------------ Routes------------------------------------
-
+  );
+  
+  //------------------------ Routes------------------------------------
+  
 app.use('/api/users', userRoutes);
 
 const __dirname = path.resolve();
