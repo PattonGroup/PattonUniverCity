@@ -5,8 +5,11 @@
       format('truetype'),
     url('../../assets/fonts/University/UniversityRegular.eot')
       format('embedded-opentype'),
-    url('../../assets/fonts/University/Monday_Routines.woff2') format('woff2'),
     url('../../assets/fonts/University/UniversityRegular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Monday';
+  src: url('../../assets/fonts/University/Monday_Routines.woff2') format('woff2'),
 }
 
 header {
@@ -58,7 +61,7 @@ nav a:first-child {
 }
 
 .logo-title {
-  font-family: 'University';
+  font-family: 'Monday';
   text-align: center;
   color: white;
   max-height: 75;
