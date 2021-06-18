@@ -8,7 +8,7 @@ import Plugin from "./assets/plugin.svg";
 import Repo from "./assets/repo.svg";
 import StackAlt from "./assets/stackalt.svg";
 
-<Meta title="In Progress/Welcome/Tooling" />
+<Meta title="Welcome/Guides/Tooling" />
 
 <style>{`
   .subheading {
@@ -118,52 +118,105 @@ import StackAlt from "./assets/stackalt.svg";
 
 <p>&nbsp;</p>
 
-## Firebase
+## Table of Contents
 
-What is Firebase?
+1. [Axios](#axios)
+1. [Bootstrap](#bootstrap)
+1. [Changelog](#changelog)
+1. [ESLint](#eslint)
+1. [ESLint Config Airbnb](eslint-config-airbnb)
 
-Tools from Google for building app infrastructure, improving app quality, and growing your business
 
-[Firebase](https://console.firebase.google.com/u/0/)
+## Axios
+
+Promise based HTTP client for the browser and node.js
+Features:
+- Intercept request and response
+- Automatic transforms for JSON data
+- Make http requests from node.js
+- Transform request and response data
+- Client side support for protecting against XSRF
 
 ## Bootstrap
 
-What is Bootstrap?
+Front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
+The most popular CSS Framework for developing responsive and mobile-first websites. 
 
-The most popular CSS Framework for developing responsive and mobile-first websites. An open source toolkit, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
 
-[Bootstrap](https://getbootstrap.com/)
+## Changelog
+
+A changelog is a log or record of all notable changes made to a project. Allows developers to stay in the loop about what's new. It helps to announce new features, 
+latest releases, and relevant news directly in-app.
+
+[View Here](https://www.npmjs.com/package/generate-changelog)
+
+## ES Lint
+
+ESLint statically analyzes your code to quickly find problems. ESLint is built into most text editors and you can run ESLint as part of your continuous integration pipeline.
+
+Everything is pluggable:
+- Rule API is used both by bundled and custom rules
+- Formatter API is used both by bundled and custom formatters
+- Additional rules and formatters can be specified at runtime
+- Rules and formatters don't have to be bundled to be used
+
+Every rule:
+- Is standalone
+- Can be turned off or on (nothing can be deemed "too important to turn off")
+- Can be set to a warning or error individually
+
+[Read More](https://eslint.org/)
+
+[Eslint Rules](https://eslint.org/docs/rules/)
+
+## ESLint Config Airbnb
+
+The Airbnb style guide is identified as eslint-config-airbnb in the NPM repository. This style guide has some peer dependencies that must be installed along with it.
+[](https://www.npmjs.com/package/eslint-config-airbnb)
+
+## Firebase
+
+Firebase provides tools for tracking analytics, reporting and fixing app crashes, creating marketing and product experiment. Tools from Google for building app infrastructure, 
+improving app quality, and growing your business
+
+[Firebase](https://console.firebase.google.com/u/0/)
 
 ## Prettier
-
-What is prettier?
 
 Prettier enforces a consistent code style (i.e. code formatting that won’t affect
 the AST) across your entire codebase because it disregards the original styling\*
 by parsing it away and re-printing the parsed AST with its own rules that take the
 maximum line length into account, wrapping code when necessary.
 
-Why are we using it?
-
-Prettier enforces standards from the development team of React, [Facebook](https://facebook.github.io/jsx/).
+Prettier also enforces standards from the development team of React, [Facebook](https://facebook.github.io/jsx/).
 This allows for the codebase to be more uniformity and legible under one set standard. The beauty of having an unopinionated
 language is the ability to decide how you want your code. However, when you start to work with large teams you need a set standard.
 
-<p>&nbsp;</p>
+[Read more here](https://prettier.io/)
 
-Read more here: [Prettier](https://prettier.io/)
+[View preitter options](https://prettier.io/docs/en/options.html)
 
-## ES Lint
+## React icons
 
-[ES Lint](https://eslint.org/)
+React Icons is a small library that helps you to simplify using icons in your React applications. React Icons is a library that provides popular icons for your React applications.
 
-## ES Lint Config Airbnb
+## React Redux Thunk
 
-[eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
+Redux Thunk middleware allows you to write action creators that return a function instead of an action. The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met.
+
+## React Redux
+
+Redux is a predictable state container designed to help you write JavaScript apps that behave consistently across client, server, and native environments and are easy to test.
+
+## React Router Dom
+
+A tool that allows you to handle routes in a web app, using dynamic routing. Dynamic routing takes place as the app is rendering on your machine, unlike the old routing architecture where the routing is handled in a configuration outside of a running app.
 
 ## Storybook
 
-[Storybook](https://storybook.js.org/tutorials/intro-to-storybook/react/en/get-started/)
+Storybook is an open source tool for building UI components and pages in isolation. It streamlines UI development, testing, and documentation.
+
+[Learn how to use it here](https://storybook.js.org/tutorials/intro-to-storybook/react/en/get-started/)
 
 ## Setup for our styleguide
 
@@ -199,14 +252,18 @@ npx install-peerdeps --dev eslint-config-airbnb
 }
 ```
 
-## Changelog
-
-[Changelog](https://www.npmjs.com/package/generate-changelog)
-
 ### Reference
 
-- ESLint Rules - https://eslint.org/docs/rules/
-- Prettier Options - https://prettier.io/docs/en/options.html
-- Airbnb Style Guide - https://github.com/airbnb/javascript
-- Setup Guide - https://gist.github.com/bradtraversy/aab26d1e8983d9f8d79be1a9ca894ab4
+- Axios - https://www.npmjs.com/package/axios
+- Bootstrap - https://getbootstrap.com/
 - Changelog - https://keepachangelog.com/en/0.3.0/
+- Changelog Guides - https://www.freecodecamp.org/news/a-beginners-guide-to-git-what-is-a-changelog-and-how-to-generate-it/
+- React Bootstrap - https://www.npmjs.com/package/react-bootstrap
+- Airbnb Style Guide - https://github.com/airbnb/javascript
+- ESLint - https://www.npmjs.com/package/eslint
+- ESLint Rules - https://eslint.org/docs/rules/
+- ESLint Config Airbnb - https://www.npmjs.com/package/eslint-config-airbnb
+- Generate Changelog - https://www.npmjs.com/package/generate-changelog
+- Prettier Options - https://prettier.io/docs/en/options.html
+- Setup Guide - https://gist.github.com/bradtraversy/aab26d1e8983d9f8d79be1a9ca894ab4
+- Setup Linter Video - https://www.youtube.com/watch?v=SydnKbGc7W8
