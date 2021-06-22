@@ -1,5 +1,5 @@
 import React from 'react';
-import Contentbar from '../../components/navbar/content';
+import Contentbar from '../../components/navbar/navbarElements';
 import Navbar from '../../components/navbar/navbar';
 import QuoteHomeFeat from '../../components/quotes/quoteHomeFeat';
 import TechSuite from '../../components/services/techSuite';
