@@ -1,5 +1,6 @@
-import React from 'react';
-import Contentbar from '../../components/navbar/navbarElements';
+import React, { useState } from 'react';
+import Contentbar from '../../components/navbar/content';
+import Sidebar from '../../components/sidebar/sidebar';
 import Navbar from '../../components/navbar/navbar';
 import QuoteHomeFeat from '../../components/quotes/quoteHomeFeat';
 import TechSuite from '../../components/services/techSuite';
@@ -11,11 +12,20 @@ import AdmissionApply from '../../components/form/admissionApply';
 import Footer from '../../components/footer/footer';
 import './home.css';
 
+import { BrowserRouter as Router } from 'react-router-dom'
+
 const PattonUniverCity = ({ authenticated, logout }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
-    <>
+    <Router>
       <Contentbar />
-      <Navbar authenticated={authenticated} logout={logout} />
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <Navbar authenticated={authenticated} logout={logout} toggle={toggle} />
       <div id="home" className="hero-area">
         <div className="bg-image bg-parallax overlay hero-img"></div>
         <div className="home-wrapper">
@@ -36,7 +46,7 @@ const PattonUniverCity = ({ authenticated, logout }) => {
       <EventOverview />
       <AdmissionApply />
       <Footer />
-    </>
+    </Router>
   );
 };
 
