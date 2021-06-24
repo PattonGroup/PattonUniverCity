@@ -1,32 +1,23 @@
 import React from 'react';
-//import './navbar.css';
+import { ContentHeader, ContentMenu, ContentLinks, ContentItem } from './contentElements';
 
 const Contentbar = () => {
   return (
-    <div className="content-header py-1">
-      <div className="container-fluid d-flex flex-row flex-md-row justify-content-between">
-        <div className="ml-auto content-links">
-          <a className="py-2 d-none d-md-inline-block" href="/apply">
-            Apply
-          </a>
-          <a className="py-2 d-none d-md-inline-block" href="/visit">
-            Visit
-          </a>
-          <a className="py-2 d-none d-md-inline-block" href="/give">
-            Give
-          </a>
-          <a className="py-2 d-none d-md-inline-block" href="/students">
-            Students
-          </a>
-          <a className="py-2 d-none d-md-inline-block" href="/parents">
-            Parents
-          </a>
-          <a className="py-2 d-none d-md-inline-block" href="/faculityandstaff">
-            Faculity &#38; Staff
-          </a>
-        </div>
-      </div>
-    </div>
+    <>
+      <ContentHeader>
+      
+        <ContentMenu>
+          <ContentItem><ContentLinks to="/apply">Apply</ContentLinks></ContentItem>
+          <ContentItem><ContentLinks to="/visit">Visit</ContentLinks></ContentItem>
+          <ContentItem><ContentLinks to="/give">Give</ContentLinks></ContentItem>
+          <ContentItem><ContentLinks to="/students">Students</ContentLinks></ContentItem>
+          <ContentItem><ContentLinks to="/parents">Parents</ContentLinks></ContentItem>
+          <ContentItem><ContentLinks to="/facultyandstaff">Faculty & Staff</ContentLinks></ContentItem>
+        </ContentMenu>
+      
+      </ContentHeader>    
+    
+    </>
   );
 };
 

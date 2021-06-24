@@ -5,6 +5,13 @@
   
 }
 
+.nav-header {
+  background-color: transparent;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  font-size: 1.5rem;
+}
+
 .hero-area {
   position: relative;
 }

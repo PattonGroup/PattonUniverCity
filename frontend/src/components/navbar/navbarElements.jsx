@@ -1,17 +1,11 @@
-import React from 'react';
 import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 
-// @font-face {
-//   font-family: 'Monday';
-//   src: url('../../assets/fonts/University/Monday_Routines.woff2') format('woff2'),
-// }
-
 export const Nav = styled.nav`
   background: black;
   height: 80px;
-   /* margin-top: -80px; */
+  margin-top: -2%
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,6 +13,7 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
+  
   
   @media screen and (max-width: 1100px) {
     transition: 0.8s all ease;
@@ -33,9 +28,8 @@ export const Nav = styled.nav`
     width: 100%;
     padding: 0 24px;
     padding-top: 1%;
-    ${'' /* max-width: 1100px; */}
-    
-    background-color: #191919;;
+    background-color: #283e4a;
+    box-shadow: 0px 4px 13px 1px rgb(167 167 167 / 80%);
   `;
 
   export const NavLogo = styled(LinkR)`
@@ -50,15 +44,8 @@ export const Nav = styled.nav`
     font-weight: bold;
     text-decoration: none;
     text-align: center;
-    ${'' /* width: 150px; */}
-
-    &::span:first-child {
-      font-size: 2rem:
-    }
-
-    &::span:last-child {
-      font-size: 1rem;
-    }
+    max-height: 75;
+    max-width: 50;
   `;
 
   export const MobileIcon = styled.div`

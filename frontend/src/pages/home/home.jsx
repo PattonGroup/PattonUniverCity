@@ -23,9 +23,11 @@ const PattonUniverCity = ({ authenticated, logout }) => {
 
   return (
     <Router>
-      <Contentbar />
-      <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Navbar authenticated={authenticated} logout={logout} toggle={toggle} />
+      <header className={`nav-header sticky-top`}>  
+        <Sidebar isOpen={isOpen} toggle={toggle} />
+          <Contentbar />
+          <Navbar authenticated={authenticated} logout={logout} toggle={toggle} />
+      </header>  
       <div id="home" className="hero-area">
         <div className="bg-image bg-parallax overlay hero-img"></div>
         <div className="home-wrapper">

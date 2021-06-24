@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'University';
   src: url('../../assets/fonts/University/UniversityRegular.ttf');
   src: url('../../assets/fonts/University/UniversityRegular.ttf')
@@ -10,15 +10,15 @@
 @font-face {
   font-family: 'Monday';
   src: url('../../assets/fonts/University/Monday_Routines.woff2') format('woff2'),
-}
+} */
 
-header {
+/* header {
   background: #283e4a;
   position: relative;
   height: 0;
   width: 100%;
   box-shadow: 0px 4px 13px 1px rgb(167 167 167 / 80%);
-}
+} */
 
 /* .bg-black nav {
   background-color: #191919;
@@ -29,7 +29,7 @@ header {
   color: #fff !important;
 } */
 
-nav {
+/* nav {
   align-items: center;
   margin-top: -2%;
 }
@@ -40,12 +40,12 @@ nav a {
 
 nav a:first-child {
   margin-top: -2%;
-}
+} */
 
-.navbar {
+/* .navbar {
   width: 100vw;
   padding-right: 4%;
-}
+} */
 
 .main-nav-mobile {
   display: none;
@@ -60,22 +60,22 @@ nav a:first-child {
   align-items: center;
 }
 
-.logo-title {
+/* .logo-title {
   font-family: 'Monday';
   text-align: center;
   color: white;
   max-height: 75;
   max-width: 50;
   padding-right: 4%;
-}
+} */
 
-.logo-title span:first-child {
+/* .logo-title span:first-child {
   font-size: 2rem;
 }
 
 .logo-title span:last-child {
   font-size: 1rem;
-}
+} */
 
 .nav-header {
   background-color: transparent;
@@ -84,7 +84,7 @@ nav a:first-child {
   font-size: 1.5rem;
 }
 
-.content-header {
+/* .content-header {
   background-color: rgba(0, 0, 0);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
@@ -97,9 +97,9 @@ nav a:first-child {
   display: flex;
   justify-content: space-evenly;
   margin-left: auto !important;
-}
+} */
 
-.content-links a {
+/* .content-links a {
   text-decoration: none;
   font-size: 1.2rem;
 }
@@ -108,12 +108,12 @@ nav a:first-child {
 .content-header a {
   color: #fff;
   transition: color 0.15s ease-in-out;
-}
-.nav-header a:hover,
+} */
+/* .nav-header a:hover,
 .content-header a:hover {
   color: #8e8e8e;
   text-decoration: none;
-}
+} */
 
 .flex-equal > * {
   flex: 1;
@@ -122,9 +122,9 @@ nav a:first-child {
 .nav-menu {
   display: none;
 }
-.logo-header {
+/* .logo-header {
   margin-top: 8%;
-}
+} */
 
 .img-respo {
   height: 4.6rem;
@@ -186,7 +186,7 @@ nav a:first-child {
   }
 
   .nav-menu.active {
-    left: 78%; /* makes all of the logo text fit on sidebar */
+    left: 78%; 
     transition: 350ms;
   }
 
@@ -194,7 +194,7 @@ nav a:first-child {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 58px 0px 8px 16px; /* puts space between logo text and Home */
+    padding: 58px 0px 8px 16px;
     list-style: none;
     height: 4rem;
   }
