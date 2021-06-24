@@ -9,7 +9,7 @@ const TechSuite = () => {
     return (
         <>
              <section className="services-section spad" style={{background: 'whitesmoke'}}>
-                <div className="container-fluid">
+                <div className="container">
                     <div className="row">
                         <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center'}}>
                             <h3 className="service-title">Technology Department</h3>

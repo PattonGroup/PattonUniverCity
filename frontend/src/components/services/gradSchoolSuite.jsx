@@ -1,13 +1,12 @@
 import React from 'react';
 import Spolight from '../../assets/images/spotlight.jpeg';
-import BookClub from '../../assets/images/bookClub.jpg';
 import './services.css';
 
 const GradSchoolSuite = () => {
     return (
         <>
             <section className="services-section spad" style={{background: 'whitesmoke'}}>
-                <div className="container-fluid">
+                <div className="container">
                     <div className="row">
                         <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center'}}>
                             <h3 className="service-title">Education Department</h3>

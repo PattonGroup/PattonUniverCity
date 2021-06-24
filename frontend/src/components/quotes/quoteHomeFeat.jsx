@@ -6,7 +6,7 @@ const QuoteHomeFeat = () => {
   return (
     <>
       <div className="quote-section pt-5 p-b5">
-        <div className="container-fluid">
+        <div className="container">
           <div className="feature-one row">
             <div className="col-md-6">
               <img src={Elvonte} alt="President Elvonte" />
