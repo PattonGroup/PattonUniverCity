@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {FaBars} from 'react-icons/fa';
-//import Logo from '../../assets/svg/Untitled design.svg';
+import Logo from '../../assets/svg/Untitled design.svg';
 //import Hamburger from '../../assets/svg/bar.svg';
 //import * as AiIcons from 'react-icons/ai';
 //import { SidebarData } from '../../utils/sidebarData';
@@ -32,12 +32,14 @@ import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks} f
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to="/">Patton U Logo</NavLogo>
-          {/* <h2>
-            <span>PATTON</span> 
-            <br/>
-            <span>UNIVERCITY</span>
-          </h2> */}
+          <NavLogo  to="/">
+            <img src={Logo} alt="Patton U Logo" width="150px" />
+              <h2 className="logo-title">
+                <span>PATTON</span> 
+                <br/>
+                <span>UNIVERCITY</span>
+              </h2>
+          </NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
