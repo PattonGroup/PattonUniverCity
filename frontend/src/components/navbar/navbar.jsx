@@ -7,7 +7,7 @@ import Logo from '../../assets/svg/Untitled design.svg';
 //import { Link } from 'react-router-dom';
 import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks} from './navbarElements';
 
-//import './navbar.css';
+import './navbar.css';
 
  const Navbar = ({ toggle }) => {
 //   const [backgroundOn, setBackgroundOn] = useState(false);
@@ -33,11 +33,11 @@ import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks} f
       <Nav>
         <NavbarContainer>
           <NavLogo  to="/">
-            <img src={Logo} alt="Patton U Logo" width="150px" />
-              <h2 className="logo-title">
-                <span>PATTON</span> 
+            <img className="logo" src={Logo} alt="Patton U Logo" width="150px"/>
+              <h2>
+                <span className="logo-line-one">PATTON</span> 
                 <br/>
-                <span>UNIVERCITY</span>
+                <span className="logo-line-two">UNIVERCITY</span>
               </h2>
           </NavLogo>
           <MobileIcon onClick={toggle}>

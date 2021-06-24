@@ -3,6 +3,11 @@ import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 
+// @font-face {
+//   font-family: 'Monday';
+//   src: url('../../assets/fonts/University/Monday_Routines.woff2') format('woff2'),
+// }
+
 export const Nav = styled.nav`
   background: black;
   height: 80px;
@@ -41,9 +46,19 @@ export const Nav = styled.nav`
     display: flex;
     align-items: center;
     margin-left: 24px;
+    font-family: 'Monday';
     font-weight: bold;
     text-decoration: none;
+    text-align: center;
     ${'' /* width: 150px; */}
+
+    &::span:first-child {
+      font-size: 2rem:
+    }
+
+    &::span:last-child {
+      font-size: 1rem;
+    }
   `;
 
   export const MobileIcon = styled.div`

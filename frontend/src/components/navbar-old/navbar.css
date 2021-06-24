@@ -20,14 +20,14 @@ header {
   box-shadow: 0px 4px 13px 1px rgb(167 167 167 / 80%);
 }
 
-.bg-black nav {
+/* .bg-black nav {
   background-color: #191919;
   padding-top: 1%;
 }
 
 .bg-black {
   color: #fff !important;
-}
+} */
 
 nav {
   align-items: center;
