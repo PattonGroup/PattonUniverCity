@@ -1,16 +1,33 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {FaBars} from 'react-icons/fa';
 import Logo from '../../assets/svg/Untitled design.svg';
 import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks} from './navbarElements';
 import './navbar.css';
 
  const Navbar = ({ toggle }) => {
+  const [scrollNav, setScrollNav] = useState(false);
+
+  const changeNav = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNav);
+  }, []);
+
+  const toggleHome =() => {
+    scroll.scrollToTop();
+  };
 
   return (
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo  to="/">
+          <NavLogo  to="/" onClick={toggleHome}>
             <img className="logo" src={Logo} alt="Patton U Logo" width={150}/>
               <h2>
                 <span className="logo-line-one">PATTON</span> 

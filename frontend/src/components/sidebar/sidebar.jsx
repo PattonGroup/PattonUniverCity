@@ -1,10 +1,20 @@
 import React from 'react';
 //import { Link } from 'react-router-dom';
 import { SidebarContainer, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SidebarLink } from './sidebarElements';
+import Logo from '../../assets/svg/Untitled design.svg';
+import { NavLogo } from './../navbar/navbarElements';
 
 const Sidebar = ({isOpen, toggle}) => {
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
+      <NavLogo  to="/">
+        <img className="logo" src={Logo} alt="Patton U Logo" width={50}/>
+          <h2>
+            <span className="logo-line-one">PATTON</span> 
+            <br/>
+            <span className="logo-line-two">UNIVERCITY</span>
+          </h2>
+      </NavLogo>
       <Icon onClick={toggle}>
         <CloseIcon />
       </Icon>
