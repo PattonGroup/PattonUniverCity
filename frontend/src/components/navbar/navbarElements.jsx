@@ -3,7 +3,7 @@ import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 
 export const Nav = styled.nav`
-  ${'' /* background: transparent; */}
+  background-color: transparent;
   height: 160px;
   ${'' /* margin-top: -2% */}
   display: flex;
@@ -26,7 +26,7 @@ export const Nav = styled.nav`
     width: 100%;
     padding: 0 24px;
     padding-top: 1%;
-    background: gray;
+    background: #485063;
     position: relative;
     backdrop-filter: saturate(180%) blur(20px);
     ${'' /* background-color: transparent; */}
