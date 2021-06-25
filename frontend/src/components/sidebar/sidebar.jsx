@@ -1,6 +1,7 @@
 import React from 'react';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { SidebarContainer, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SidebarLink } from './sidebarElements';
+import { SidebarData } from '../../utils/sidebarData';
 import Logo from '../../assets/svg/Untitled design.svg';
 import { NavLogo } from './../navbar/navbarElements';
 
@@ -28,7 +29,18 @@ const Sidebar = ({isOpen, toggle}) => {
           <SidebarLink to="alumni" onClick={toggle}>Alumni</SidebarLink>
           <SidebarLink to="signup" onClick={toggle}>Signup</SidebarLink>
           <SidebarLink to="/login" onClick={toggle}>Login</SidebarLink>
+          {SidebarData.map((link, index) => {
+                return (
+                  <li key={index} className={link.cName}>
+                    <Link to={link.path}>
+                      {link.icon}
+                      <span>{link.title}</span>
+                    </Link>
+                  </li>
+                );
+              })}
         </SidebarMenu>
+        
       </SidebarWrapper>
     </SidebarContainer>
   )

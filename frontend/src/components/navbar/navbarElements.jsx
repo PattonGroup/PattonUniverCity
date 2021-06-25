@@ -3,18 +3,17 @@ import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
 
 export const Nav = styled.nav`
-  background: black;
-  height: 80px;
-  margin-top: -2%
+  ${'' /* background: transparent; */}
+  height: 160px;
+  ${'' /* margin-top: -2% */}
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.5rem;
   position: sticky;
   top: 0;
   z-index: 10;
-  
-  
+    
   @media screen and (max-width: 1100px) {
     transition: 0.8s all ease;
   }
@@ -23,13 +22,18 @@ export const Nav = styled.nav`
   export const NavbarContainer = styled.div`
     display: flex;
     justify-content: space-between;
-    height: 200px;
     z-index: 1;
     width: 100%;
     padding: 0 24px;
     padding-top: 1%;
-    background-color: #283e4a;
-    box-shadow: 0px 4px 13px 1px rgb(167 167 167 / 80%);
+    background: gray;
+    position: relative;
+    backdrop-filter: saturate(180%) blur(20px);
+    ${'' /* background-color: transparent; */}
+ 
+    ${'' /* box-shadow: 0px 4px 13px 1px rgb(167 167 167 / 80%); */}
+    ${'' /* opacity: ${({ isOpen}) => (isOpen ? '100%' : '0')}; */}
+    
   `;
 
   export const NavLogo = styled(LinkR)`
@@ -68,7 +72,8 @@ export const Nav = styled.nav`
     align-items: center;
     list-style: none;
     text-align: center;
-    margin-right: -22px;
+    height: 40%;
+    ${'' /* margin-right: -22px; */}
 
     @media screen and (max-width: 1100px) {
       display: none;
@@ -81,45 +86,16 @@ export const Nav = styled.nav`
 
   export const NavLinks = styled(LinkS)`
     color: #fff;
+    background-color: transparent;
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 0 1rem;
+    padding: 5rem 3rem;
     height: 100%;
     cursor: pointer;
-    
+    font-size: 1.2rem;
+          
     &.active {
      border-bottom: 3px solid #01bf71; 
     }
   `;
-
-// const Contentbar = () => {
-//   return (
-//     <div className="content-header py-1">
-//       <div className="container-fluid d-flex flex-row flex-md-row justify-content-between">
-//         <div className="ml-auto content-links">
-//           <a className="py-2 d-none d-md-inline-block" href="/apply">
-//             Apply
-//           </a>
-//           <a className="py-2 d-none d-md-inline-block" href="/visit">
-//             Visit
-//           </a>
-//           <a className="py-2 d-none d-md-inline-block" href="/give">
-//             Give
-//           </a>
-//           <a className="py-2 d-none d-md-inline-block" href="/students">
-//             Students
-//           </a>
-//           <a className="py-2 d-none d-md-inline-block" href="/parents">
-//             Parents
-//           </a>
-//           <a className="py-2 d-none d-md-inline-block" href="/faculityandstaff">
-//             Faculity &#38; Staff
-//           </a>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-//export default Contentbar;

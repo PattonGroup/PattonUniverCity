@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {FaBars} from 'react-icons/fa';
 import Logo from '../../assets/svg/Untitled design.svg';
 import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks} from './navbarElements';
+import {animateScroll as scroll} from 'react-scroll';
 import './navbar.css';
 
  const Navbar = ({ toggle }) => {
@@ -25,9 +26,9 @@ import './navbar.css';
 
   return (
     <>
-      <Nav>
+      <Nav scrollNav={scrollNav}>
         <NavbarContainer>
-          <NavLogo  to="/" onClick={toggleHome}>
+          <NavLogo to="/" onClick={toggleHome}>
             <img className="logo" src={Logo} alt="Patton U Logo" width={150}/>
               <h2>
                 <span className="logo-line-one">PATTON</span> 
@@ -39,14 +40,30 @@ import './navbar.css';
             <FaBars />
           </MobileIcon>
           <NavMenu>
-            <NavItem><NavLinks to="/dashboard">Dashboard</NavLinks></NavItem>
-            <NavItem><NavLinks to="education">Education</NavLinks></NavItem>
-            <NavItem><NavLinks to="research">Research</NavLinks></NavItem>
-            <NavItem><NavLinks to="innovation">Innovation</NavLinks></NavItem>
-            <NavItem><NavLinks to="news">News</NavLinks></NavItem>
-            <NavItem><NavLinks to="alumni">Alumni</NavLinks></NavItem>
-            <NavItem><NavLinks to="signup">Signup</NavLinks></NavItem>
-            <NavItem><NavLinks to="/login">Login</NavLinks></NavItem>
+            <NavItem><NavLinks 
+              to="/dashboard" smooth={true} duration={500} spy={true} exact="true">Dashboard
+            </NavLinks></NavItem>
+            <NavItem><NavLinks 
+             to="education" smooth={true} duration={500} spy={true} exact="true">Education
+              </NavLinks></NavItem>
+            <NavItem><NavLinks 
+              to="research" smooth={true} duration={500} spy={true} exact="true">Research
+              </NavLinks></NavItem>
+            <NavItem><NavLinks 
+              to="innovation" smooth={true} duration={500} spy={true} exact="true">Innovation
+              </NavLinks></NavItem>
+            <NavItem><NavLinks 
+              to="news" smooth={true} duration={500} spy={true} exact="true">News
+              </NavLinks></NavItem>
+            <NavItem><NavLinks 
+              to="alumni" smooth={true} duration={500} spy={true} exact="true">Alumni
+              </NavLinks></NavItem>
+            <NavItem><NavLinks 
+              to="signup" smooth={true} duration={500} spy={true} exact="true">Signup
+              </NavLinks></NavItem>
+            <NavItem><NavLinks 
+              to="/login" smooth={true} duration={500} spy={true} exact="true">Login
+            </NavLinks></NavItem>
           </NavMenu>
         </NavbarContainer>
       </Nav>
