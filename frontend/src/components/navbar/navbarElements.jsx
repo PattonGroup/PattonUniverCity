@@ -13,7 +13,7 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
-    
+      
   @media screen and (max-width: 1100px) {
     transition: 0.8s all ease;
   }
@@ -29,6 +29,7 @@ export const Nav = styled.nav`
     background: #485063;
     position: relative;
     backdrop-filter: saturate(180%) blur(20px);
+    
     ${'' /* background-color: transparent; */}
  
     ${'' /* box-shadow: 0px 4px 13px 1px rgb(167 167 167 / 80%); */}
@@ -94,7 +95,7 @@ export const Nav = styled.nav`
     height: 100%;
     cursor: pointer;
     font-size: 1.2rem;
-          
+              
     &.active {
      border-bottom: 3px solid #01bf71; 
     }

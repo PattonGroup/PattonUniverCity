@@ -29,7 +29,8 @@ import './navbar.css';
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
           <NavLogo to="/" onClick={toggleHome}>
-            <img className="logo" src={Logo} alt="Patton U Logo" width={150}/>
+          {/* if logo width gets too small, white borders emerge around the navbar */}
+            <img className="logo" src={Logo} alt="Patton U Logo" width={155}/>
               <h2>
                 <span className="logo-line-one">PATTON</span> 
                 <br/>
@@ -41,7 +42,7 @@ import './navbar.css';
           </MobileIcon>
           <NavMenu>
             <NavItem><NavLinks 
-              to="/dashboard" smooth={true} duration={500} spy={true} exact="true">Dashboard
+              to="/home" smooth={true} duration={500} spy={true} exact="true">Home
             </NavLinks></NavItem>
             <NavItem><NavLinks 
              to="education" smooth={true} duration={500} spy={true} exact="true">Education
