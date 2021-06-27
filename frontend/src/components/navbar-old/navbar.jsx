@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Logo from '../../assets/svg/Untitled design.svg';
 import Hamburger from '../../assets/svg/bar.svg';
 import * as AiIcons from 'react-icons/ai';
-import { SidebarData } from '../../utils/sidebarData';
+import { SidebarData } from '../../utils/sidebarDataOld';
 import { Link } from 'react-router-dom';
 
 import './navbar.css';

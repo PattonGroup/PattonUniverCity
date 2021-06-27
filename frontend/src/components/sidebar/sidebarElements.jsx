@@ -3,7 +3,6 @@ import { Link as LinkS} from 'react-scroll';
 import { Link as LinkR} from 'react-router-dom';
 import {FaTimes} from 'react-icons/fa';
 
-
 export const SidebarContainer = styled.aside`
   position: fixed;
   z-index: 999;
@@ -17,6 +16,10 @@ export const SidebarContainer = styled.aside`
   transition: 0.3s ease-in-out;
   opacity: ${({ isOpen}) => (isOpen ? '100%' : '0')};
   top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
+`;
+
+export const SidebarHeader = styled.div`
+  padding-top: 20px;
 `;
 
 export const CloseIcon = styled(FaTimes)`
@@ -33,8 +36,13 @@ export const Icon = styled.div`
   outline: none;
 `;
 
+export const SidebarSpan = styled.div`
+  margin-left: 14px; /* put space between menu icons and titles */
+`;
+
 export const SidebarWrapper = styled.div`
   color: #fff;
+  margin-top: -140px; /* move links up */
 `;
 
 export const SidebarMenu = styled.ul`
@@ -60,27 +68,31 @@ export const SidebarLink = styled(LinkS)`
   cursor: pointer;
   
   &:hover {
-    color: #01bf71;
+    color: #8e8e8e;
     transition: 0.2s ease-in-out;
   }
 `;
 
-export const SidebarRoute = styled(LinkR)`
-  border-radius: 50px;
-  background: #01bf71;
-  white-space: nowrap;
-  padding: 16px 64px;
-  color: #010606;
-  font-size: 16px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
-  }
+export const MobileOverlay = styled.div`
+  width: 100vw;
+  margin-left: auto;
 `;
+
+export const SidebarRoute = styled(LinkR)`
+  display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 58px 0px 8px 16px;
+    list-style: none;
+    height: 4rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    color: #fff;
+    
+    &:hover {
+      transition: all 0.2s ease-in-out;
+      color: #8e8e8e;
+    }
+`;
+
