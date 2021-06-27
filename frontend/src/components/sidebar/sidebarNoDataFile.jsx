@@ -1,7 +1,6 @@
 import React from 'react';
 //import { Link } from 'react-router-dom';
 import { SidebarContainer, SidebarHeader, Icon, CloseIcon, SidebarSpan, SidebarWrapper, SidebarMenu, SidebarLink } from './sidebarElements';
-//import { SidebarData } from '../../utils/sidebarData';
 import Logo from '../../assets/svg/Untitled design.svg';
 import { NavLogo } from '../navbar/navbarElements';
 import * as FaIcons from 'react-icons/fa';
