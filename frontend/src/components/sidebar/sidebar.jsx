@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import {animateScroll as scroll} from 'react-scroll';
 import { SidebarData } from '../../utils/sidebarData';
 import Logo from '../../assets/svg/Untitled design.svg';
 import { NavLogo } from '../navbar/navbarElements';
@@ -16,11 +17,29 @@ import {
 } from './sidebarElements';
 
 const Sidebar = ({isOpen, toggle}) => {
+  const [scrollNav, setScrollNav] = useState(false);
+
+  const changeNav = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNav);
+  }, []);
+  
+  const toggleHome =() => {
+    scroll.scrollToTop();
+  };
+
   return (
-    <SidebarContainer isOpen={isOpen} onClick={toggle}>
+    <SidebarContainer scrollNav={scrollNav} isOpen={isOpen} onClick={toggle}>
       <SidebarHeader>
-        <NavLogo  to="/">
-          <img className="logo" src={Logo} alt="Patton U Logo" width={80}/>
+        <NavLogo  to="/" onClick={toggleHome}>
+          <img src={Logo} alt="Patton U Logo" width={80}/>
             <span>
               <h3>PATTON</h3>
               <h5>UNIVERCITY</h5>

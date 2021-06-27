@@ -30,12 +30,11 @@ import './navbar.css';
         <NavbarContainer>
           <NavLogo to="/" onClick={toggleHome}>
           {/* if logo width gets too small, white borders emerge around the navbar */}
-            <img className="logo" src={Logo} alt="Patton U Logo" width={155}/>
-              <h2>
-                <span className="logo-line-one">PATTON</span> 
-                <br/>
-                <span className="logo-line-two">UNIVERCITY</span>
-              </h2>
+            <img src={Logo} alt="Patton U Logo" width={155}/>
+              <span>
+                <h1>PATTON</h1> 
+                <h4>UNIVERCITY</h4>
+              </span>
           </NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />
