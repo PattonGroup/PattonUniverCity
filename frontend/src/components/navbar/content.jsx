@@ -1,5 +1,10 @@
 import React from 'react';
-import { ContentHeader, ContentContainer, ContentMenu, ContentLinks } from './contentElements';
+import { 
+  ContentHeader, 
+  ContentContainer, 
+  ContentMenu, 
+  ContentLinks 
+} from './contentElements';
 
 const Contentbar = () => {
   return (
