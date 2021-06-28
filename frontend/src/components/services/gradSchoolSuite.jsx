@@ -1,13 +1,12 @@
 import React from 'react';
 import Spolight from '../../assets/images/spotlight.jpeg';
-import BookClub from '../../assets/images/bookClub.jpg';
 import './services.css';
 
 const GradSchoolSuite = () => {
     return (
         <>
             <section className="services-section spad" style={{background: 'whitesmoke'}}>
-                <div className="container-fluid">
+                <div className="container">
                     <div className="row">
                         <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center'}}>
                             <h3 className="service-title">Education Department</h3>
@@ -20,7 +19,7 @@ const GradSchoolSuite = () => {
                             <div className="">
                                 <img className="services-img img-fluid img-thumbnail" src={Spolight} alt="TentCity" width="600px" height="250px"/>
                                 <br/><br/>
-                                <h5 className="services-subtitle">Tutoring</h5>                                   
+                                <h5 className="services-subtitle">Writing and Composition</h5>                                   
                                 <p>Student desrciption</p>
                                 <a className="services-link" href="/">Tutoring {'>'}</a>
 
@@ -39,8 +38,9 @@ const GradSchoolSuite = () => {
                             <div className="">
                                 <img className="services-img img-fluid img-thumbnail" src={Spolight} alt="BookClub"  width="600px" height="250px"/>
                                 <br/><br/>
-                                <p>Events desrciption</p>
-                                <h5 className="services-subtitle">Mentoring</h5>
+                                <h5 className="services-subtitle">Academic Coaching</h5>
+                                <p>Academic Coach to provide weekly assistance for students having trouble maintaining responsibilities during virtual learning 
+                                    and beyond. Each student will work closely with their coach daily to create a schedule of assignments, quizzes/tests, and class times. Coaches also maintain communication with classroom teachers and act as a liaison between the school and the parent. $100/week</p>
                                 <a className="services-link" href="/">Mentoring {'>'}</a>
                             </div>
                         </div>

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Login from './pages/auth/login';
 import Signup from './pages/auth/signup';
 import PattonUniverCity from './pages/home/home';
+import Developers from './pages/developers/main';
 import Axios from 'axios';
 
 export default function App() {
@@ -111,6 +112,7 @@ export default function App() {
           />
         )}
       />
+
       <Route
         exact
         path="/login"
@@ -125,11 +127,19 @@ export default function App() {
           />
         )}
       />
+
       <Route
         exact
         path="/signup"
         render={(props) => <Signup {...props} authenticated={authenticated} />}
       />
+
+      <Route 
+      exact 
+      path={`/developers`} 
+      render={() => <Developers />} 
+      />
+
     </Router>
   );
 }
