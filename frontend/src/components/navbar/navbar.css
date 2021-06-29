@@ -90,6 +90,7 @@ nav a:first-child {
   backdrop-filter: saturate(180%) blur(20px);
   font-size: 1.5rem;
   height: 6rem;
+  z-index: 1;
 }
 
 .content-links {
@@ -119,10 +120,6 @@ nav a:first-child {
   flex: 1;
 }
 
-.nav-menu { /*prevents additional sidebar on left side of home */
-   display: none;
-}
-
 .logo-header {
   margin-top: 8%;
 }
@@ -132,18 +129,27 @@ nav a:first-child {
   width: 7.5rem;
 }
 
+.nav-menu { 
+    display: none;
+  }
+
 @media (max-width: 1200px) {
   .content-header {
     display: none;
   }
 
+  .nav-header nav {
+    display: none !important;
+  }
+
   .mobile-overlay {
-    width: 100vw;
+    width: 100%;
     margin-left: auto;
     background: white;
   }
 
   .main-nav-mobile {
+    margin-top: 2%;
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -155,31 +161,13 @@ nav a:first-child {
     margin: 0%;
   }
 
-  .main-nav-mobile img { /* margins for sidebar logo and hamburger */
-    margin: 4%;
+  .main-nav-mobile img { 
+    margin: 20px;
+    display: flex;
     opacity: 0.8;
   }
 
-  .nav-header nav {
-    display: none !important;
-  }
-
-  .nav-menu {
-    background-color: #ccc;
-    width: 250px;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 100%;
-    transition: 850ms;
-  } 
-
-  .nav-menu.active { /* THIS MAKES THE SIDEBAR TAKE 100% WIDTH */
-    /* left: 78%; /* makes all of the logo text fit on sidebar */
-    /* transition: 350ms; */
-
+  .nav-menu.active { 
     position: fixed;
     z-index: 999;
     width: 100%;
@@ -189,40 +177,12 @@ nav a:first-child {
     align-items: center;
     top: 0;
     left: 0;
-    justify-content: center;
     transition: 0.3s ease-in-out;
-  }
-
-  .nav-text {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 58px 0px 8px 16px; /* puts space between logo text and Home */
-    list-style: none;
-    height: 4rem;
-  }
-
-  .nav-text a {
-    text-decoration: none;
-    color: #f5f5f5;
-    /* font-size: 1.2rem; */
-    font-size: 1.2rem;
-    width: 95%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    /* padding: 0 16px;
-    border-radius: 4px; */
-  }
-
-  .nav-text a:hover {
-    background-color: #1a83ff;
   }
 
   .nav-menu-items {
     width: 100%;
-    background-color: black;
+    background-color: #0d0d0d;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(10, 60px);
@@ -230,28 +190,41 @@ nav a:first-child {
   }
 
   .navbar-toggle {
-    /* background-color: #ccc; */
-
-    width: 100%;
     height: 80px;
     display: flex;
-    /* justify-content: flex-start; */
-    justify-content: space-around;
-    padding: 10%;
+    justify-content: space-evenly;
     align-items: center;
+    margin: 30px 80px 0 10px;
+   }
+
+  .nav-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 4rem;
+    margin-top: 70px;
   }
 
-  .mobile-links {
+  .nav-text a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 2rem;
+    width: 35;
+    height: 100%;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    color: red;
+  }
+
+  .nav-text a:hover {
+    color: #1a83ff;
   }
 
   span {
-     margin: 14px; /*put space between menu icons and titles*/
     width: 100%;
     justify-content: center;
-
-
     white-space: nowrap;
     padding: 32px 32px;
     font-size: 20px;
@@ -263,9 +236,9 @@ nav a:first-child {
   }
 
   #mobile-logo {
-    margin: 2rem;
     height: 3.6rem;
     width: 5.5rem;
+    left: 0;
   }
 }
 
@@ -290,14 +263,12 @@ nav a:first-child {
 }
 @media (max-width: 800px) {
   .nav-menu.active {
-    /* left: 75%; */
     height: 100%;
     transition: 350ms;
   }
 }
 @media (max-width: 690px) {
   .nav-menu.active {
-    /* left: 65%;  */
     height: 100%;
     transition: 350ms;
   }

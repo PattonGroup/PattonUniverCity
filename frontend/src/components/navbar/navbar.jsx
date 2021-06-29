@@ -76,12 +76,11 @@ const Navbar = (props) => {
                 <Link to="#" className="menu-bars">
                   <AiIcons.AiOutlineClose />
                 </Link>
-                
               </li>
               {SidebarData.map((link, index) => {
                 return (
                   <li key={index} className={link.cName}>
-                    <Link to={link.path} className="mobile-links">
+                    <Link to={link.path}>
                       {link.icon}
                       <span>{link.title}</span>
                     </Link>

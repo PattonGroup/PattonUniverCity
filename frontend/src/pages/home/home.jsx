@@ -24,9 +24,7 @@ const toggle = () => {
 
   return (
     <>
-    {/* <Router> */}
       <Contentbar toggle={toggle}/>
-      {/* <Sidebar isOpen={isOpen} toggle={toggle} /> */}
       <Navbar authenticated={authenticated} logout={logout} toggle={toggle} />        
       <div id="home" className="hero-area">
         <div className="bg-image bg-parallax overlay hero-img"></div>
