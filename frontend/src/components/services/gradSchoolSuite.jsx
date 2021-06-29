@@ -23,7 +23,7 @@ const GradSchoolSuite = () => {
                                 <img className="services-img img-fluid img-thumbnail" src={Composition} alt="TentCity" width="600px" height="250px"/>
                                 <br/><br/>
                                 <h5 className="services-subtitle">Writing and Composition</h5>                                   
-                                <p>Student desrciption</p>
+                                <p>In this course students learn the foundations of writing simple sentences to complex compositions that will stretch their abilities and challenge them academically. Students learn about writing for various subjects and purposes. This course is approximately 45mins to 1hour. This course is virtual.</p>
                                 <a className="services-link" href="/">Tutoring {'>'}</a>
 
                             </div>
