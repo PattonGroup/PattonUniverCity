@@ -69,26 +69,28 @@ const Navbar = (props) => {
               onClick={showSidebar}
             />
           </div>
-          <div className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-            <ul className="nav-menu-items" onClick={showSidebar}>
-              <li className="navbar-toggle">
-                <Link to="#" className="menu-bars">
-                  <AiIcons.AiOutlineClose />
-                </Link>
-              </li>
-              {SidebarData.map((link, index) => {
-                return (
-                  <li key={index} className={link.cName}>
-                    <Link to={link.path}>
-                      {link.icon}
-                      <span>{link.title}</span>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
+          <div>
+            <div className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+              <ul className="nav-menu-items" onClick={showSidebar}>
+                <li className="navbar-toggle">
+                  <Link to="#" className="menu-bars">
+                    <AiIcons.AiOutlineClose />
+                  </Link>
+                </li>
+                {SidebarData.map((link, index) => {
+                  return (
+                    <li key={index} className={link.cName}>
+                      <Link to={link.path}>
+                        {link.icon}
+                        <span>{link.title}</span>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
-        </div>
+        </div>  
       </header>
     </>
   );

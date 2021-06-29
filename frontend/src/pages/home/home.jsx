@@ -12,19 +12,21 @@ import AdmissionApply from '../../components/form/admissionApply';
 import Footer from '../../components/footer/footer';
 import './home.css';
 
-import { BrowserRouter as Router } from 'react-router-dom'
+
+//import { BrowserRouter as Router } from 'react-router-dom'
 
 const PattonUniverCity = ({ authenticated, logout }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => {
+const toggle = () => {
     setIsOpen(!isOpen)
-  }
+}
 
   return (
-    <Router>
-      <Sidebar isOpen={isOpen} toggle={toggle} />
+    <>
+    {/* <Router> */}
       <Contentbar toggle={toggle}/>
+      {/* <Sidebar isOpen={isOpen} toggle={toggle} /> */}
       <Navbar authenticated={authenticated} logout={logout} toggle={toggle} />        
       <div id="home" className="hero-area">
         <div className="bg-image bg-parallax overlay hero-img"></div>
@@ -46,7 +48,8 @@ const PattonUniverCity = ({ authenticated, logout }) => {
       <EventOverview />
       <AdmissionApply />
       <Footer />
-    </Router>
+    {/* </Router> */}
+  </>
   );
 };
 

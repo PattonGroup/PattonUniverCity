@@ -1,38 +1,16 @@
-import React, {useState, useEffect} from 'react';
-import {animateScroll as scroll} from 'react-scroll';
-import {FaBars} from 'react-icons/fa';
+import React, { useState, useEffect } from 'react';
 import Logo from '../../assets/svg/Untitled design.svg';
+import Hamburger from '../../assets/svg/bar.svg';
+import * as AiIcons from 'react-icons/ai';
+import { SidebarData } from '../../utils/sidebarData';
 import { Link } from 'react-router-dom';
-import {
-  Nav, 
-  NavbarContainer, 
-  NavLogo, 
-  MobileIcon, 
-  NavMenu, 
-  NavItem, 
-  NavLinks
-} from './navbarElements';
+import './navbar.css';
 
-  const Navbar = ({ toggle }, props) => { 
-  // const Navbar = (props) => {   
-    const [backgroundOn, setBackgroundOn] = useState(false);
+const Navbar = (props) => {
+  const [backgroundOn, setBackgroundOn] = useState(false);
+  const [sidebar, setSidebar] = useState(false);
 
-  // const changeNav = () => {
-  //   if (window.scrollY >= 80) {
-  //     setScrollNav(true);
-  //   } else {
-  //     setScrollNav(false);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", changeNav);
-  // }, []);
-
-  const toggleHome =() => {
-    scroll.scrollToTop();
-  };
-
+  const showSidebar = () => setSidebar(!sidebar);
 
   const handleScroll = () => {
     const position = window.pageYOffset;
@@ -49,67 +27,72 @@ import {
 
   return (
     <>
-      <Nav className={`${backgroundOn ? 'bg-black' : null}`}>
-        <NavbarContainer>
-          <NavLogo to="/" onClick={toggleHome}>
-          {/* if logo width gets too small, white borders emerge around the navbar */}
-            <img src={Logo} alt="Patton U Logo" width={155}/>
-              <span>
-                <h1 className={`${ backgroundOn ? "bg-black" : null}`}>PATTON</h1> 
-                <h4 className={`${ backgroundOn ? "bg-black" : null}`}>UNIVERCITY</h4>
-              </span>
-          </NavLogo>
-          <MobileIcon onClick={toggle}>
-            <FaBars />
-          </MobileIcon>
-
-          <NavMenu>
-          {props.authenticated ? <NavLinks to="/home">Home</NavLinks> : null}
+      <header
+        className={`nav-header sticky-top ${backgroundOn ? 'bg-black' : null}`}
+      >
+        <nav className="navbar navbar-default navbar-fixed-top">
+          <a className="py-5" href="/">
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <img src={Logo} alt="Patton U Logo" width="150px" />
+              <h2 className="logo-title">
+                <span className={`${ backgroundOn ? "bg-black" : null}`}>PATTTON</span> 
+                <br/>
+                <span className={`${ backgroundOn ? "bg-black" : null}`}>UNIVERCITY</span>
+              </h2>
+            </div>
+          </a>
+          {props.authenticated ? <a href="/dashboard">Dashboard</a> : null}
           {props.authenticated ?
             <>
-              <NavItem><NavLinks className={`${ backgroundOn ? "bg-black" : null}`} to="/education">Education</NavLinks></NavItem>
-              <NavItem><NavLinks className={`${ backgroundOn ? "bg-black" : null}`} to="/research">Research</NavLinks></NavItem>
-              <NavItem><NavLinks className={`${ backgroundOn ? "bg-black" : null}`} to="/innovation">Innovation</NavLinks></NavItem>
-              <NavItem><NavLinks className={`${ backgroundOn ? "bg-black" : null}`} to="/news">News</NavLinks></NavItem>
-              <NavItem><NavLinks className={`${ backgroundOn ? "bg-black" : null}`} to="/alumni">Alumni</NavLinks></NavItem>
+              <a className={`${ backgroundOn ? "bg-black" : null}`} href="/education">Education</a>
+              <a className={`${ backgroundOn ? "bg-black" : null}`} href="/research">Research</a>
+              <a className={`${ backgroundOn ? "bg-black" : null}`} href="/innovation">Innovation</a>
+              <a className={`${ backgroundOn ? "bg-black" : null}`} href="/news">News</a>
+              <a className={`${ backgroundOn ? "bg-black" : null}`} href="/Alumni">Alumni</a>
               <Link className={`${ backgroundOn ? "bg-black" : null}`} onClick={props.logout}>Logout</Link>
             </>
             :
             <>
-              <NavItem><NavLinks to="/login">Login</NavLinks></NavItem>
-              <NavItem><NavLinks to="/signup">Signup</NavLinks></NavItem>
+              <a href="/login" style={{ color: "white" }}>Login</a>
+              <a href="/signup">Signup</a>
             </>
           }
-          </NavMenu>
-           {/* <NavMenu>
-            
-            <NavItem><NavLinks 
-             to="/education" smooth={true} duration={500} spy={true} exact="true">Education
-              </NavLinks></NavItem>
-            <NavItem><NavLinks 
-              to="/research" smooth={true} duration={500} spy={true} exact="true">Research
-              </NavLinks></NavItem>
-            <NavItem><NavLinks 
-              to="/innovation" smooth={true} duration={500} spy={true} exact="true">Innovation
-              </NavLinks></NavItem>
-            <NavItem><NavLinks 
-              to="/news" smooth={true} duration={500} spy={true} exact="true">News
-              </NavLinks></NavItem>
-            <NavItem><NavLinks 
-              to="/alumni" smooth={true} duration={500} spy={true} exact="true">Alumni
-              </NavLinks></NavItem>
-            <NavItem><NavLinks 
-              to="/logout" smooth={true} duration={500} spy={true} exact="true">Logout 
-              </NavLinks></NavItem>
-            <NavItem><NavLinks 
-              to="/signup" smooth={true} duration={500} spy={true} exact="true">Signup
-            </NavLinks></NavItem>  
-            <NavItem><NavLinks 
-              to="/login" smooth={true} duration={500} spy={true} exact="true">Login
-            </NavLinks></NavItem>
-          </NavMenu>  */}
-        </NavbarContainer>
-      </Nav>
+        </nav>
+        {/* sidebar */}
+        <div className="mobile-overlay">
+          <div className="main-nav-mobile">
+            <img id="mobile-logo" src={Logo} alt="Logo" />
+            <img
+              id="hamburger"
+              src={Hamburger}
+              alt="Hamburger bar"
+              onClick={showSidebar}
+            />
+          </div> 
+          <div className={sidebar ? 'nav-menu active' : 'nav-menu'}>
+            <ul className="nav-menu-items" onClick={showSidebar}>
+              <li className="navbar-toggle">
+                <img id="mobile-logo" src={Logo} alt="Logo" />
+                <Link to="#" className="menu-bars">
+                  <AiIcons.AiOutlineClose />
+                </Link>
+                
+              </li>
+              {SidebarData.map((link, index) => {
+                return (
+                  <li key={index} className={link.cName}>
+                    <Link to={link.path} className="mobile-links">
+                      {link.icon}
+                      <span>{link.title}</span>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+      </header>
+      
     </>
   );
 };
