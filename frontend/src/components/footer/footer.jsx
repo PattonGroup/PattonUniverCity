@@ -20,6 +20,11 @@ const Footer = () => {
                 </a>
               </li>
               <li>
+                <a className="link-secondary" href="/blockchain">
+                  Blockchain
+                </a>
+              </li>
+              <li>
                 <a className="link-secondary" href="/">
                   Leadership
                 </a>
