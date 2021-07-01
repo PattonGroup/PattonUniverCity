@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Patton university app",
   "private": true,
+  "homepage": "https://pattonu.herokuapp.com/",
   "main": "server.js",
   "type": "module",
   "dependencies": {
