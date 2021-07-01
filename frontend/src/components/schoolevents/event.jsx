@@ -72,27 +72,27 @@ const EventOverview = () => {
                         <hr/>
                         <div className="col-sm-1">
                             <div>
-                                <h5>May</h5>
-                                <h5>20</h5>
+                                <h5>Jun. - July</h5>
+                                <h5>28</h5>
                             </div>
                         </div>
                         <div className="col-sm-1">
                            <h5 style={{fontSize: '3rem'}}>|</h5>
                         </div>
                         <div className="col-sm-4">
-                            <h5><a href="/" className="event-links">Some Event</a></h5>
+                            <h5><a href="/" className="event-links">Summer Phonics Class for Kids</a></h5>
                         </div>
                         <div className="col-sm-1">
                             <div>
-                                <h5>May</h5>
-                                <h5>20</h5>
+                                <h5>Jun. - July</h5>
+                                <h5>28</h5>
                             </div>
                         </div>
                         <div className="col-sm-1">
                            <h5 style={{fontSize: '3rem'}}>|</h5>
                         </div>
                         <div className="col-sm-4">
-                           <h5><a href="/" className="event-links">Some Event</a></h5>
+                           <h5><a href="/" className="event-links"> Yoga and Mindfulness </a></h5>
                         </div>
                     </div>
                 </div>
