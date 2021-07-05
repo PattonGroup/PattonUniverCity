@@ -17,7 +17,7 @@ const GradSchoolSuite = () => {
                                 engaged citizens and leaders in a complex world</p>
                         </div>
                     </div>
-                    <div className="row mt-5">
+                    <div className="row mt-2">
                         <div className="col-md-4 services-item">
                             <div className="">
                                 <img className="services-img img-fluid img-thumbnail" src={Composition} alt="TentCity" width="600px" height="250px"/>
