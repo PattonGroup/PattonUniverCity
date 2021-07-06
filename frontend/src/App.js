@@ -5,6 +5,7 @@ import Login from './pages/auth/login';
 import Signup from './pages/auth/signup';
 import PattonUniverCity from './pages/home/home';
 import Developers from './pages/developers/main';
+import Blockchain from './pages/blockchain/main';
 import Axios from 'axios';
 
 export default function App() {
@@ -138,6 +139,12 @@ export default function App() {
       exact 
       path={`/developers`} 
       render={() => <Developers />} 
+      />
+
+      <Route 
+      exact 
+      path={`/blockchain`} 
+      render={() => <Blockchain />} 
       />
 
     </Router>
