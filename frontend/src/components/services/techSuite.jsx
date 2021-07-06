@@ -1,5 +1,5 @@
 import React from 'react';
-import Spolight from '../../assets/images/spotlight.jpeg';
+//import Spolight from '../../assets/images/spotlight.jpeg';
 import AI from '../../assets/images/AI.jpg';
 import Blockchain from '../../assets/images/blockchain.jpg';
 import SoftwareDevelopment from '../../assets/images/softwaredevelopment.jpg';
