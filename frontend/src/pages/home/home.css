@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "University";
+  src: url("../../assets/fonts/University/UniversityRegular.ttf");
+  src: url("../../assets/fonts/University/UniversityRegular.ttf")
+      format("truetype"),
+    url("../../assets/fonts/University/UniversityRegular.eot")
+      format("embedded-opentype"),
+    url("../../assets/fonts/University/UniversityRegular.woff") format("woff");
+}
 .hero-area {
   position: relative;
 }
@@ -31,7 +40,7 @@
 }
 
 .bg-image.overlay:after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   right: 0;
@@ -50,7 +59,7 @@
 
 .hero-area-tree li {
   display: inline-block;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.8);
@@ -61,14 +70,14 @@
 }
 
 .hero-area-tree li + li:before {
-  content: '/';
+  content: "/";
   display: inline-block;
   margin: 0px 5px;
   color: rgba(235, 235, 235, 0.25);
 }
 
 .hero-img {
-  background-image: url('../../assets/images/login.jpeg');
+  background-image: url("../../assets/images/login.jpeg");
   background-size: auto;
 }
 
@@ -80,4 +89,5 @@
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
+  font-family: "University";
 }

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Patton university app",
   "private": true,
+  "homepage": "https://pattonu.herokuapp.com/",
   "main": "server.js",
   "type": "module",
   "dependencies": {
@@ -23,7 +24,8 @@
   "scripts": {
     "server": "nodemon backend/server",
     "client": "npm start --prefix ../frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "node server.js"
   },
   "devDependencies": {
     "concurrently": "^6.0.0",

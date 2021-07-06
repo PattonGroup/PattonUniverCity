@@ -1,15 +1,16 @@
 @font-face {
-  font-family: 'University';
-  src: url('../../assets/fonts/University/UniversityRegular.ttf');
-  src: url('../../assets/fonts/University/UniversityRegular.ttf')
-      format('truetype'),
-    url('../../assets/fonts/University/UniversityRegular.eot')
-      format('embedded-opentype'),
-    url('../../assets/fonts/University/UniversityRegular.woff') format('woff');
+  font-family: "University";
+  src: url("../../assets/fonts/University/UniversityRegular.ttf");
+  src: url("../../assets/fonts/University/UniversityRegular.ttf")
+      format("truetype"),
+    url("../../assets/fonts/University/UniversityRegular.eot")
+      format("embedded-opentype"),
+    url("../../assets/fonts/University/UniversityRegular.woff") format("woff");
 }
 @font-face {
-  font-family: 'Monday';
-  src: url('../../assets/fonts/University/Monday_Routines.woff2') format('woff2'),
+  font-family: "Monday";
+  src: url("../../assets/fonts/University/Monday_Routines.woff2")
+    format("woff2");
 }
 
 header {
@@ -22,7 +23,6 @@ header {
 
 .bg-black nav {
   background-color: #191919;
-  padding-top: 1%;
 }
 
 .bg-black {
@@ -32,6 +32,7 @@ header {
 nav {
   align-items: center;
   margin-top: -2%;
+  height: 225px;
 }
 
 nav a {
@@ -61,20 +62,26 @@ nav a:first-child {
 }
 
 .logo-title {
-  font-family: 'Monday';
+  font-family: "University";
   text-align: center;
   color: white;
   max-height: 75;
   max-width: 50;
   padding-right: 4%;
+  margin-top: -15%;
 }
 
 .logo-title span:first-child {
-  font-size: 2rem;
+  font-size: 1rem;
+  white-space: nowrap;
+  padding-left: 16px;
 }
 
 .logo-title span:last-child {
-  font-size: 1rem;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  padding-left: 16px;
+  margin-top: -10%;
 }
 
 .nav-header {

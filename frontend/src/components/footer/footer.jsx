@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="row">
-          <div className="col-6 col-md">
+          <div className="col-4 col-md">
             <h5>Helpful Links</h5>
             <ul className="list-unstyled">
               <li>
@@ -17,6 +17,11 @@ const Footer = () => {
               <li>
                 <a className="link-secondary" href="/developers">
                   Developers
+                </a>
+              </li>
+              <li>
+                <a className="link-secondary" href="/blockchain">
+                  Blockchain
                 </a>
               </li>
               <li>
@@ -41,7 +46,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-6 col-md">
+          <div className="col-4 col-md">
             <h5>Vist Patton U</h5>
             <ul className="list-unstyled">
               <li>
@@ -76,7 +81,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-6 col-md">
+          <div className="col-4 col-md">
             <h5>Departments</h5>
             <ul className="list-unstyled">
               <li>

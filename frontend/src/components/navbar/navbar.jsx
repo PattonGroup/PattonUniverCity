@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Logo from '../../assets/svg/Untitled design.svg';
 import Hamburger from '../../assets/svg/bar.svg';
 import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from '../../utils/sidebarData';
@@ -32,12 +31,12 @@ const Navbar = (props) => {
       >
         <nav className="navbar navbar-default navbar-fixed-top">
           <a className="py-5" href="/">
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-              <img src={Logo} alt="Patton U Logo" width="150px" />
+            <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
+              <img src={'https://i.imgur.com/RF2Zlgb.png'} alt="Patton U Logo" width="150px" />
               <h2 className="logo-title">
-                <span className={`${ backgroundOn ? "bg-black" : null}`}>PATTTON</span> 
+                <span className={`${ backgroundOn ? "bg-black" : null}`}>PATTON UNIVERCITY</span> 
                 <br/>
-                <span className={`${ backgroundOn ? "bg-black" : null}`}>UNIVERCITY</span>
+                <span className={`${ backgroundOn ? "bg-black" : null}`}>Est. 2015</span>
               </h2>
             </div>
           </a>
@@ -61,7 +60,7 @@ const Navbar = (props) => {
         {/* sidebar */}
         <div className="mobile-overlay">
           <div className="main-nav-mobile">
-            <img id="mobile-logo" src={Logo} alt="Logo" />
+            <img id="mobile-logo" src={'https://i.imgur.com/RF2Zlgb.png'} alt="Logo" />
             <img
               id="hamburger"
               src={Hamburger}

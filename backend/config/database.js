@@ -2,11 +2,13 @@ import mongoose from 'mongoose';
 
 const connectDB = async () => {
   try {
-    const URI = process.env.MONGODB_URL;
-    mongoose.connect(URI, {
-        useNewUrlParser: true,
-        useCreateIndex: true,
-        useUnifiedTopology: true
+    const URI_PRODUCTION = process.env.MONGODB_URI_PRODUCTION;
+    const URI_DEV = process.env.MONGODB_URI_DEVELOPMENT;
+    
+    mongoose.connect(URI_PRODUCTION, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true
     });
 
     const db = mongoose.connection;
