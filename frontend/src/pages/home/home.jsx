@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Contentbar from '../../components/navbar/content';
-import Sidebar from '../../components/sidebar/sidebar';
+//import Sidebar from '../../components/sidebar/sidebar';
 import Navbar from '../../components/navbar/navbar';
 import QuoteHomeFeat from '../../components/quotes/quoteHomeFeat';
 import TechSuite from '../../components/services/techSuite';
