@@ -1,8 +1,4 @@
 import React from 'react';
-import Spolight from '../../assets/images/spotlight.jpeg';
-import AI from '../../assets/images/AI.jpg';
-import Blockchain from '../../assets/images/blockchain.jpg';
-import SoftwareDevelopment from '../../assets/images/softwaredevelopment.jpg';
 import './services.css';
 
 const TechSuite = () => {
@@ -12,7 +8,7 @@ const TechSuite = () => {
                 <div className="container">
                     <div className="row">
                         <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center'}}>
-                            <h3 className="service-title">Technology Department</h3>
+                            <h3 className="service-title">The Future of Tech</h3>
                             <p className="service-subtitle" >Preparing students to make meaningful contributions to society as 
                                 engaged citizens and leaders in a complex world</p>
                         </div>
@@ -20,7 +16,7 @@ const TechSuite = () => {
                     <div className="row mt-2">
                         <div className="col-md-4 services-item">
                             <div className="">
-                                <img className="services-img img-fluid img-thumbnail" src={SoftwareDevelopment} alt="Software Development" />
+                                <img className="services-img img-fluid img-thumbnail" src={'https://i.imgur.com/WNW7C0r.jpg'} alt="Software Development" />
                                 <br/><br/>
                                 <h5 className="services-subtitle">Software Development</h5>                                   
                                 <p> We develop software developers fostering a learning environment to identify user needs, build programs, test out new software, 
@@ -31,7 +27,7 @@ const TechSuite = () => {
                         </div>
                         <div className="col-md-4 services-item">
                             <div className="">
-                                <img className="services-img img-fluid img-thumbnail" src={Blockchain} alt="Blockchain"  />
+                                <img className="services-img img-fluid img-thumbnail" src={'https://i.imgur.com/rJG9EA9.jpg'} alt="Blockchain"  />
                                 <br/><br/>
                                 <h5 className="services-subtitle">Blockchain</h5>
                                 <p>Blockchain has recently become synonymous with cryptocurrency, but its applications go far beyond financial transactions. The 
@@ -42,7 +38,7 @@ const TechSuite = () => {
                         </div>
                         <div className="col-md-4 services-item">
                             <div className="">
-                                <img className="services-img img-fluid img-thumbnail" src={AI} alt="Artifical Intelligence"  />
+                                <img className="services-img img-fluid img-thumbnail" src={'https://i.imgur.com/3wpYwa6.jpg'} alt="Artifical Intelligence"  />
                                 <br/><br/>
                                 <h5 className="services-subtitle">Artifical Intelligence</h5>
                                 <p>The AI Intelligence program provides a introduction to machine learning, as well as opportunities to explore theoretical and 
