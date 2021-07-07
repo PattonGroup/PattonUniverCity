@@ -6,10 +6,32 @@
   background-color: gray;
 }
 
-button {
-  padding: 5px 12px;
+.cta-button {
+  padding: 5px 22px;
   background: red;
   color: #fff;
   border-radius: 15px;
-  margin: 20px;
+  margin: 35px;
+  text-decoration: none;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+}
+
+@media (max-width: 1120px) {
+  .cta-button {
+    font-size: 27px;
+  }
+}  
+
+@media (max-width: 900px) {
+  .cta-button {
+    font-size: 25px;
+  }  
+}
+
+@media (max-width: 500px) {
+  .cta-button {
+    font-size: 22px;
+  }  
 }

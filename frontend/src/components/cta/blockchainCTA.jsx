@@ -5,7 +5,7 @@ const blockchainCTA = () => {
   return (
     <>
       <section className="background">
-        <button>Join the Network</button>
+        <div className="cta-button">Join the Network</div>
       </section>
     </>
   );
