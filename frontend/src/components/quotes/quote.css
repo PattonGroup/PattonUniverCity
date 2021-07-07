@@ -11,6 +11,18 @@
   width: 100%;
 }
 
+.feature-one > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-one-caption {
+  width: 80%;
+  font-size: 13px;
+  font-style: italic;
+  padding-top: 2%;
+}
+
 .feature-one div p {
   position: relative;
   width: 100%;
@@ -44,7 +56,7 @@
 }
 
 .feature-one div:last-child {
-  align-self: flex-end;
+  align-self: auto;
 }
 
 .feature-one div:last-child div a {
