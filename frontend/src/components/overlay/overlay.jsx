@@ -14,7 +14,7 @@ const Overlay = () => {
                     </div>
                 </div>
             </div>
-        </section >
+        </section>
     )
 }
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import TeamCard from '../../components/teamcard/teamCard';
 import Navbar from '../../components/navbar/content';
+import BlockchainOverlay from '../../components/overlay/blockchainOverlay';
 import BlockchainCTA from '../../components/cta/blockchainCTA';
 import Footer from '../../components/footer/footer';
 import './main.css';
@@ -10,6 +11,7 @@ const Blockchain = () => {
     return(
         <div>
             <Navbar />
+            <BlockchainOverlay />
             <BlockchainCTA />
                 <h5 className="blockchain-title">A NEW ERA IN EDUCATION</h5>
                 <p className="blockchain-description">
