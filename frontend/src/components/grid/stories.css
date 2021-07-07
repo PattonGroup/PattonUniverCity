@@ -51,7 +51,7 @@
 
 .story-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   grid-gap: 20px;
 }
 .story-grid > article {
@@ -64,8 +64,20 @@
 .story-text {
   padding: 0 20px 20px;
 }
+.story-text p {
+  overflow: hidden;
+  line-height: 2rem;
+  max-height: 8rem;
+  -webkit-box-orient: vertical;
+  display: block;
+  display: -webkit-box;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+}
 .story-text h3 {
   padding-bottom: 4%;
+  padding-top: 4%;
 }
 .story-text > button {
   background: gray;
@@ -84,4 +96,8 @@
 .article-one {
   border: none !important;
   box-shadow: none !important;
+}
+.secondary {
+  max-height: 270px;
+  width: fit-content;
 }

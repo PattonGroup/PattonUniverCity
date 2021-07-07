@@ -24,7 +24,7 @@ const Login = (props) => {
       localStorage.setItem('firstLogin', true);
       console.log(res);
       dbLogin(props);
-      history.push('/dashboard');
+      history.push('/home');
     } catch {
       setError('Incorrect Username/Password');
     }

@@ -1,4 +1,3 @@
-import React from 'react';
 import Phonogram from '../../assets/images/phonogram.jpg';
 import MathClub from '../../assets/images/mathClub.png';
 

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Patton university app",
   "private": true,
+  "homepage": "https://pattonu.herokuapp.com/",
   "main": "server.js",
   "type": "module",
   "dependencies": {
@@ -12,7 +13,7 @@
     "colors": "^1.4.0",
     "cookie-session": "^1.4.0",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
+    "dotenv": "^8.6.0",
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
     "jsonwebtoken": "^8.5.1",
@@ -23,7 +24,8 @@
   "scripts": {
     "server": "nodemon backend/server",
     "client": "npm start --prefix ../frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "node server.js"
   },
   "devDependencies": {
     "concurrently": "^6.0.0",
