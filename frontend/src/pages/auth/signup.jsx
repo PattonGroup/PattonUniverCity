@@ -42,7 +42,7 @@ export default function Signup(props) {
           });
         }
       );
-      history.push('/dashboard');
+      history.push('/home');
     } catch (err) {
       console.log(err);
       setError('Failed to create an account');
