@@ -7,7 +7,6 @@ import FinalCTA from '../../components/cta/finalCTA';
 import Process from '../../components/process/process';
 import LogoSlider from '../../components/slider/logoSlider';
 import JoinCTA from '../../components/cta/joinCTA';
-import Job from '../../assets/images/job.jpg';
 import Navbar from '../../components/navbar/content';
 import Footer from '../../components/footer/footer';
 
@@ -31,7 +30,7 @@ const Developers = () => {
                             <p className="lead">We’ll walk you through everything you need to know about software engineering—we’ll take a look on what does it takes to find a job as a software engineer, what make this profession very demanding nowadays, is it really necessary to take up a four year degree course or software bootcamp will do? </p>
                         </div>
                         <div className="col-md-5">
-                            <img src={Job} alt="job" className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500px" height="500px" />
+                            <img src={'https://i.imgur.com/CAv8HUB.jpg'} alt="job" className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500px" height="500px" />
 
                         </div>
                     </div>

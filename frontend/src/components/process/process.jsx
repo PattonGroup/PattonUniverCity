@@ -24,21 +24,17 @@ const Process = () => {
                     </div>
                     <div>
                         <ul className="nav nav-tabs">
-                            <li onClick={() => updateItemsShow('concept')}><a ><i className="fa fa-star-o"></i>
+                            <li onClick={() => updateItemsShow('concept')}><i className="fa fa-star-o"></i>
                                 <h5 >01. Concept</h5>
-                            </a>
                             </li>
-                            <li><a ><i className="fa fa-copy"></i>
+                            <li><i className="fa fa-copy"></i>
                                 <h5 onClick={() => updateItemsShow('prototyping')}>02. Prototyping</h5>
-                            </a>
                             </li>
-                            <li><a><i className="fa fa-laptop"></i>
+                            <li><i className="fa fa-laptop"></i>
                                 <h5 onClick={() => updateItemsShow('design')}>03. Design</h5>
-                            </a>
                             </li>
-                            <li><a ><i className="fa fa-code"></i>
+                            <li><i className="fa fa-code"></i>
                                 <h5 onClick={() => updateItemsShow('development')}>04. Development</h5>
-                            </a>
                             </li>
                         </ul>
 

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Spolight from '../../assets/images/spotlight.jpeg';
-import BookClub from '../../assets/images/bookClub.jpg';
 import eventData from './eventData';
 import './event.css';
 
