@@ -91,3 +91,9 @@
   line-height: 1.2;
   font-family: "University";
 }
+
+@media (max-width: 800px) {
+  .hero-text {
+    font-size: 3.5rem;
+  }
+}

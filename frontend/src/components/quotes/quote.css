@@ -141,4 +141,9 @@
     width: 2.5rem;
     font-size: 1.3rem;
   }
+  .feature-one-caption {
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }
