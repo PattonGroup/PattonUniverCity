@@ -39,7 +39,7 @@ const EventOverview = () => {
                             <div className="">
                                 <div style={{display: 'flex', justifyContent: 'space-between'}}>
                                     <h5>Online Events</h5>
-                                    <div>
+                                    <div className = "arrows">
                                         <span className = {isLeftArrow === true ? "carousel-left-arrow active" : "carousel-left-arrow"} onClick = {previousSlide}>&lt; </span>
                                         <span className = {isRightArrow === true ? "carousel-right-arrow active" : "carousel-right-arrow"} onClick = {nextSlide}> &gt;</span>
                                     </div>
