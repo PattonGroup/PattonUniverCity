@@ -6,11 +6,9 @@ const BlockchainOverlay = () => {
       <section id="blockchain-slider">
         <div className="container">
             <div className="row">
-                <div className="col-md-10 col-md-offset-2">
+                <div className="col-md-6.5">
                     <div className="block">
-                        <h1 className="animated fadeInUp">Introduction education</h1>
-                        <h1 className="animated fadeInUp">to the world of</h1>
-                        <h1 className="animated fadeInUp">Blockchain Technology</h1>
+                        <h1 className="animated fadeInUp">Introduction education to the world of Blockchain Technology</h1>
                     </div>
                 </div>
             </div>
