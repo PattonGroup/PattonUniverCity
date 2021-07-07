@@ -6,7 +6,16 @@ const Contentbar = () => {
     <div className="content-header py-1">
       <div className="container-fluid d-flex flex-row flex-md-row justify-content-between">
         <div className="ml-auto content-links">
-          <a className="py-2 d-none d-md-inline-block" href="/apply">
+        <a className="py-2 d-none d-md-inline-block" href="/apply">
+            About US
+          </a>
+        <a className="py-2 d-none d-md-inline-block" href="/apply">
+            Register
+          </a>
+        <a className="py-2 d-none d-md-inline-block" href="/apply">
+            Donate
+          </a>
+          {/* <a className="py-2 d-none d-md-inline-block" href="/apply">
             Apply
           </a>
           <a className="py-2 d-none d-md-inline-block" href="/visit">
@@ -23,7 +32,7 @@ const Contentbar = () => {
           </a>
           <a className="py-2 d-none d-md-inline-block" href="/faculityandstaff">
             Faculity &#38; Staff
-          </a>
+          </a> */}
         </div>
       </div>
     </div>
