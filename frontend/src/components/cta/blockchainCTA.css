@@ -1,0 +1,15 @@
+.background {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+}
+
+button {
+  padding: 5px 12px;
+  background: red;
+  color: #fff;
+  border-radius: 15px;
+  margin: 20px;
+}
