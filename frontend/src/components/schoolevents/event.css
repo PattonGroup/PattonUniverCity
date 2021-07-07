@@ -10,7 +10,7 @@
 
 .event-img {
   width: 100%;
-  height: 40vh;
+  height: 350px !important;
 }
 
 .event-links {
@@ -41,4 +41,10 @@
 .event-carousel.active{
   opacity: 1;
   transition-duration: 2s;
+}
+
+@media screen and (max-width: 990px){
+  .event-img {
+    height: 280px !important;
+  }
 }
