@@ -8,7 +8,7 @@ const start = async () => {
   if (!process.env.REFRESH_TOKEN_SECRET) {
     throw new Error('REFRESH TOKEN must be defined');
   }
-  if (!process.env.MONGODB_URL) {
+  if (!process.env.MONGODB_URI_PRODUCTION) {
     throw new Error('MONGO_URI must be defined');
   }
   const PORT = process.env.PORT || 3001;
