@@ -16,7 +16,7 @@ const TeamCard = () => {
                         return(
                             <div className = "team-card">   
                                 <div className = "logo">
-                                    <img src = {logo} alt = "logo"></img>
+                                    <img src = {logo} alt ="logo"></img>
                                 </div>
 
                                 <div className = "title">
@@ -25,7 +25,7 @@ const TeamCard = () => {
                                 </div>
 
                                 <div className = "teamcard-img">
-                                    <img src = {member.img_url} alt = "teammember-1"></img>
+                                    <img src={member.img_url} alt={member.name}></img>
                                 </div>
                                 <div className = "teammember-name">{member.name}</div>
                                 <p>{member.description}</p>
