@@ -6,7 +6,7 @@ const ProcessItem = (props) => {
         <>
             <div key={props.item.key} id={props.item.id} className="tab-pane active">
                 <div className="col-md-5 process-img">
-                    <img src={props.item.img} className="img-responsive" />
+                    <img src={props.item.img} alt={props.item.name} className="img-responsive" />
                 </div>
 
                 <div className="col-md-7 process-content">

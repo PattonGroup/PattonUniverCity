@@ -10,7 +10,7 @@ const AdmissionApply = () => {
             <div className="row justify-content-end">
               <div className="col-lg-7">
                 <div className="admission_form">
-                  <h3>Apply for Admission</h3>
+                  <h3>Stay in Touch</h3>
                   <form>
                     <div className="row">
                       <div className="col-md-6">
@@ -33,7 +33,7 @@ const AdmissionApply = () => {
                           <input type="text" placeholder="Email Address" />
                         </div>
                       </div>
-                      <div className="col-md-12">
+                      {/* <div className="col-md-12">
                         <div className="single_input">
                           <textarea
                             cols="30"
@@ -41,7 +41,7 @@ const AdmissionApply = () => {
                             rows="10"
                           ></textarea>
                         </div>
-                      </div>
+                      </div> */}
                       <div className="col-md-12">
                         <input
                           className="admission-button white"

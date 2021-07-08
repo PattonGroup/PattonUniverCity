@@ -1,5 +1,4 @@
 import React from 'react';
-import Elvonte from '../../assets/images/elvonte.png';
 import './quote.css';
 
 const QuoteHomeFeat = () => {
@@ -9,13 +8,16 @@ const QuoteHomeFeat = () => {
         <div className="container">
           <div className="feature-one row">
             <div className="col-md-6">
-              <img src={Elvonte} alt="President Elvonte" />
+              <img src={'https://i.imgur.com/u9ggAMv.jpg'} alt="President Elvonte" />
+              <span className="feature-one-caption"><strong>Photo</strong>: 4th year Patton U student, Bailey speaks at the campaign rally for 
+                Beto O’Rouke during the 2018 Presidential Primaries.</span>
             </div>
             <div className="col-md-6">
               <p className="quote-info">
-                Mindfulness is the simple process of noticing new things about
-                the familiar. When we notice actively, we become sensitive to
-                perspective and change.”
+              We cannot predict with certainty the types of jobs that will 
+              exist in the future, but we consistently provide students with 
+              exposure to 21st century skills with the most authentic, unique, 
+              and innovative learning experiences possible.”
               </p>
               <p className="quote-info-contact">
                 Elvonte Patton, Professor of Education

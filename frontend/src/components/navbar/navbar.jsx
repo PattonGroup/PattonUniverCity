@@ -33,7 +33,7 @@ const Navbar = (props) => {
         <nav className="navbar navbar-default navbar-fixed-top">
           <a className="py-5" href="/">
             <div style={{ display: 'flex', alignItems: 'center' }}>
-              <img src={Logo} alt="Patton U Logo" width="150px" />
+              <img src={'https://i.imgur.com/RF2Zlgb.png'} alt="Patton U Logo" width="150px" />
               <h2 className="logo-title">
                 <span className={`${ backgroundOn ? "bg-black" : null}`}>PATTTON</span> 
                 <br/>
@@ -41,7 +41,7 @@ const Navbar = (props) => {
               </h2>
             </div>
           </a>
-          {props.authenticated ? <a href="/dashboard">Dashboard</a> : null}
+          {/* {props.authenticated ? <a href="/dashboard">Dashboard</a> : null} */}
           {props.authenticated ?
             <>
               <a className={`${ backgroundOn ? "bg-black" : null}`} href="/education">Education</a>
@@ -49,13 +49,14 @@ const Navbar = (props) => {
               <a className={`${ backgroundOn ? "bg-black" : null}`} href="/innovation">Innovation</a>
               <a className={`${ backgroundOn ? "bg-black" : null}`} href="/news">News</a>
               <a className={`${ backgroundOn ? "bg-black" : null}`} href="/Alumni">Alumni</a>
-              <Link className={`${ backgroundOn ? "bg-black" : null}`} onClick={props.logout}>Logout</Link>
+              {/* <Link className={`${ backgroundOn ? "bg-black" : null}`} onClick={props.logout}>Logout</Link> */}
             </>
             :
-            <>
-              <a href="/login" style={{ color: "white" }}>Login</a>
-              <a href="/signup">Signup</a>
-            </>
+            null
+            // <>
+            //   <a href="/login" style={{ color: "white" }}>Login</a>
+            //   <a href="/signup">Signup</a>
+            // </>
           }
         </nav>
         {/* sidebar */}
