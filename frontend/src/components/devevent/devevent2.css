@@ -21,7 +21,7 @@
   padding: 15px;
 }
 
-.devevent-card {
+.devevent-item {
   margin-bottom: 50px;
 }
 
@@ -30,22 +30,11 @@
   height: 100%;
 }
 
-.devevent-card-overlay {
-  /* position: absolute; */
-  /* position: fixed; */
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 50%;
-  background-color: black;
-  z-index: 20000;
-}
-
 .devevent-links {
   text-decoration: none;
 }
 
-/* .carousel-left-arrow, .carousel-right-arrow{
+.carousel-left-arrow, .carousel-right-arrow{
   cursor: pointer;
   border: 1px solid #F4F4F4;
   width: 30px;
@@ -69,7 +58,7 @@
 .devevent-carousel.active{
   opacity: 1;
   transition-duration: 2s;
-} */
+}
 
 @media (max-width: 1120px) {
   .devevent-subtitle {
