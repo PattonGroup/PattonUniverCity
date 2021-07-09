@@ -8,7 +8,6 @@ import Process from '../../components/process/process';
 import LogoSlider from '../../components/slider/logoSlider';
 import JoinCTA from '../../components/cta/joinCTA';
 import DeveventOverview from '../../components/devevent/devevent';
-// import DeveventOverview from '../../components/devevent/devevent2';
 import Navbar from '../../components/navbar/content';
 import Footer from '../../components/footer/footer';
 
@@ -66,7 +65,6 @@ const Developers = () => {
                 </div>
                 <JoinCTA />
                 <DeveventOverview />
-
                 <div className="container marketing">
                     <hr className="featurette-divider" />
 

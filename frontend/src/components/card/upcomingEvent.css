@@ -18,7 +18,6 @@ body{
   
 }
 
-
 /* 
 .upcomingEvent-card-overlay {
   background-color: gray;
@@ -29,43 +28,6 @@ body{
   width: 50%;
   height: 50%;
   z-index: 2;
-} */
-
-/* 
-.devevent-section {
-  padding-top: 4%;
-  padding-bottom: 4%;
-  overflow-x: hidden;
-}
-
-.devevent-title {
-  width: 100%;
-  justify-content: center;
-  text-align: center;
-  padding: 10px;
-}
-
-.devevent-subtitle {
-  width: 80vw;
-  margin-left: 6em;
-  font-size: 30px;
-  justify-content: center;
-  text-align: center;
-  display: flex;
-  padding: 15px;
-} */
-
-
-
-/* .devevent-card-overlay { */
-  /* position: absolute; */
-  /* position: fixed; */
-  /* top: 0;
-  right: 0;
-  width: 50%;
-  height: 50%;
-  background-color: black;
-  z-index: 20000;
 } */
 
 .card-link a {
