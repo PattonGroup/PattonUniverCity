@@ -18,8 +18,8 @@
 }
 
 .arrows{
-  width: 200px;
-  height:30px;
+  width: fit-content;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +28,8 @@
 .carousel-left-arrow, .carousel-right-arrow{
   cursor: pointer;
   border: 1px solid #F4F4F4;
-  width: 50%;
+  width: 30px;
+  height:30px;
   font-size: 20px;
   text-align: center;
 } 
@@ -48,15 +49,7 @@
   transition-duration: 2s;
 }
 
-@media screen and (max-width: 1200px){
-  .arrows{
-    width: fit-content;
-    height:fit-content;
-    display: table-cell;
-    overflow: hidden;
 
-  }
-}
 
 @media screen and (max-width: 990px){
   .event-img {
