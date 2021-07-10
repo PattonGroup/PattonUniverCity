@@ -1,0 +1,91 @@
+#blockchain-slider {
+  background: url("../../assets/images/blockchain.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  padding: 100px 0 200px 0;
+  position: relative;
+  display: block; 
+}
+
+#blockchain-slider:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #8b86a3, #322e40);
+  opacity: 0.5;
+}
+
+#blockchain-slider .block {
+  color: #e3e3e4;
+}
+
+#blockchain-slider .title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 150;
+  font-size: 85px;
+  line-height: 100px;
+  letter-spacing: 5px;
+  padding-bottom: 315px;
+  justify-content: center;
+  width: 100%;
+  color: white;
+  display: flex;
+}
+
+#blockchain-slider .block h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 55px;
+  line-height: 65px;
+  letter-spacing: 5px;
+  padding-bottom: 15px;
+  width: 60%;
+  color: white;
+}
+#blockchain-slider .block p {
+  font-size: 23px;
+  line-height: 40px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+ @media (max-width: 1120px) {
+  #blockchain-slider .title {
+      font-size: 80px;
+  }
+  
+  #blockchain-slider .block h1 {
+    width: 70%;
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 900px) {
+#blockchain-slider .title {
+    font-size: 70px;
+}
+
+#blockchain-slider .block h1 {
+    width: 75%;
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 500px) {
+  #blockchain-slider .title {
+    font-size: 50px;
+}
+
+  #blockchain-slider .block h1 {
+    width: 80%;
+    font-size: 20px;
+  }
+} 
+
