@@ -109,10 +109,10 @@ const Footer = () => {
         </div>
         <hr />
         <div className="row">
-          <div className="col-3">
+          <div className="col-3 col-sm-3">
             <p>Houston, Texas</p>
           </div>
-          <div className="col-9 col-md">
+          <div className="col-9 col-md col-sm-3">
             <span>
               <a className="link-secondary" href="/">
                 {' '}
