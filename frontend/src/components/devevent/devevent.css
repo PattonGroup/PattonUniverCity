@@ -1,0 +1,96 @@
+.devevent-section {
+  padding-top: 4%;
+  padding-bottom: 4%;
+  overflow-x: hidden;
+}
+
+.devevent-title {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.devevent-subtitle {
+  width: 80vw;
+  margin-left: 6em;
+  font-size: 30px;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  padding: 15px;
+}
+
+.devevent-card {
+  margin-bottom: 50px;
+}
+
+.devevent-img {
+  width: 100%;
+  height: 100%;
+}
+
+.devevent-card-overlay {
+  /* position: absolute; */
+  /* position: fixed; */
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  background-color: black;
+  z-index: 20000;
+}
+
+.devevent-links {
+  text-decoration: none;
+}
+
+/* .carousel-left-arrow, .carousel-right-arrow{
+  cursor: pointer;
+  border: 1px solid #F4F4F4;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+} 
+
+.carousel-left-arrow.active, .carousel-right-arrow.active, .carousel-left-arrow:hover, .carousel-right-arrow:hover{
+  color:white;
+  background-color: #B32825;
+} 
+
+.devevent-carousel{
+  opacity: 0;
+  transition-duration: 2s ease;
+}
+
+.devevent-carousel.active{
+  opacity: 1;
+  transition-duration: 2s;
+} */
+
+@media (max-width: 1120px) {
+  .devevent-subtitle {
+    width: 80vw;
+    margin-left: 4em;
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 800px) {
+  .devevent-subtitle {
+    width: 75vw;
+    margin-left: 4em;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 500px) {
+  .devevent-subtitle {
+    width: 65vw;
+    margin-left: 3em;
+    font-size: 18px;
+  }
+}

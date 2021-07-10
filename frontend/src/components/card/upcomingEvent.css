@@ -1,0 +1,35 @@
+body{
+  padding: 2rem 0rem;
+}
+
+.card-img {
+  width: 500px;
+  height: 500px;
+  position: relative; 
+}
+
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 50%;
+  max-height: 50%;
+  z-index: 10;
+  
+}
+
+/* 
+.upcomingEvent-card-overlay {
+  background-color: gray;
+  color: purple;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  z-index: 2;
+} */
+
+.card-link a {
+  text-decoration: none;
+}

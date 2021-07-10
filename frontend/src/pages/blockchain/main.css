@@ -1,0 +1,46 @@
+.blockchain-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  font-size: 30px;
+}
+
+.blockchain-description {
+  display: inline-block;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 24px;
+  padding: 1.5em;
+  text-align: center;
+}
+
+@media (max-width: 1120px) {
+   .blockchain-title {
+    font-size: 32px;
+  }
+
+  .blockchain-description {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 900px) {
+   .blockchain-title {
+    font-size: 30px;
+  }
+  
+  .blockchain-description {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .blockchain-title {
+    font-size: 25px;
+  }
+
+  .blockchain-description {
+    font-size: 17px;
+  }
+}
