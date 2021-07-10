@@ -83,7 +83,7 @@ const Navbar = (props) => {
                   <li key={index} className={link.cName}>
                     <Link to={link.path}>
                       {link.icon}
-                      <span>{link.title}</span>
+                      <span className="sidebar-title">{link.title}</span>
                     </Link>
                   </li>
                 );

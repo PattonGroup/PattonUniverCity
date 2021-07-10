@@ -230,7 +230,7 @@ nav a:first-child {
     color: #8e8e8e;
   }
 
-  span {
+  .sidebar-title {
     width: 100%;
     justify-content: center;
     white-space: nowrap;
