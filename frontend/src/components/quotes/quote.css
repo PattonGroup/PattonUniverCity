@@ -80,6 +80,7 @@
   border: none;
 }
 @media (max-width: 1200px) {
+
   .feature-one div:first-child img {
     width: 90%;
   }
@@ -98,6 +99,12 @@
   .quote-btn {
     width: 3rem;
     font-size: 1.5rem;
+  }
+  .feature-one-caption {
+    width: 90%;
+    padding-top: 2%;
+    padding-left: 0px;
+    white-space: pre-line;
   }
 }
 @media (max-width: 1000px) {
