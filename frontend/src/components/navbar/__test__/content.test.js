@@ -3,10 +3,8 @@ import Contentbar from '../content';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-//globally define getByTestId
 let getByTestId;
 
-// run this before each test (otherwise, define const { getByTestId } = render(<Counter />); at beginning of each test)
 beforeEach(() => {
   const component = render(<Contentbar />);
   getByTestId = component.getByTestId;
