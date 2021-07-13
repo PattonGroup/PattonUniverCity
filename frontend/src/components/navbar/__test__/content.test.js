@@ -1,6 +1,6 @@
 import React from 'react';
 import Contentbar from '../content';
-import { render } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 let getByTestId;
@@ -9,6 +9,8 @@ beforeEach(() => {
   const component = render(<Contentbar />);
   getByTestId = component.getByTestId;
 })
+
+afterEach(cleanup);
 
 test("header renders with About link", () => {
   const headerEl = getByTestId("header-about");
