@@ -6,13 +6,13 @@ const Contentbar = () => {
     <div className="content-header py-1">
       <div className="container-fluid d-flex flex-row flex-md-row justify-content-between">
         <div className="ml-auto content-links">
-        <a className="py-2 d-none d-md-inline-block" href="/apply">
+        <a className="py-2 d-none d-md-inline-block" href="/apply" data-testid="header-about">
             About US
           </a>
-        <a className="py-2 d-none d-md-inline-block" href="/apply">
+        <a className="py-2 d-none d-md-inline-block" href="/apply" data-testid="header-register">
             Register
           </a>
-        <a className="py-2 d-none d-md-inline-block" href="/apply">
+        <a className="py-2 d-none d-md-inline-block" href="/apply"  data-testid="header-donate">
             Donate
           </a>
           {/* <a className="py-2 d-none d-md-inline-block" href="/apply">
