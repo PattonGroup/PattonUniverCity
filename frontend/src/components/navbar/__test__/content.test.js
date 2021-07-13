@@ -15,7 +15,7 @@ afterEach(cleanup);
 test("header renders with About link", () => {
   const headerEl = getByTestId("header-about");
 
-  expect(headerEl.textContent).toBe("About US");
+  expect(headerEl.textContent).toBe("About Us");
 });
 
 test("header renders with Register link", () => {
