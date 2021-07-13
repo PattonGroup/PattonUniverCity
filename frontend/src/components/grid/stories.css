@@ -60,6 +60,7 @@
 }
 .story-grid > article img {
   max-width: 100%;
+  max-height: 36rem;
 }
 .story-text {
   padding: 0 20px 20px;
@@ -98,6 +99,17 @@
   box-shadow: none !important;
 }
 .secondary {
-  max-height: 270px;
-  width: fit-content;
+  max-height: 300px !important;
+  width: 100%;
+}
+
+.amazonBook {
+  width: 100%;
+  max-height: 300px;
+}
+
+@media (max-width: 500px) {
+  .story-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
