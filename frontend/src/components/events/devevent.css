@@ -1,0 +1,24 @@
+.dev-event-section {
+  padding: 130px 0 100px;
+  background: whitesmoke;
+}
+@media (max-width: 991px) {
+  .dev-event-section {
+    padding: 70px 0;
+  }
+}
+
+.dev-event-title {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.dev-event-subtitle {
+  font-size: 30px;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  padding: 15px;
+}

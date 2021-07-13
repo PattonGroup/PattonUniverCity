@@ -20,7 +20,8 @@ const GradSchoolSuite = () => {
                                 <img className="services-img img-fluid img-thumbnail" src={'https://i.imgur.com/2GC8Qpa.jpg'} alt="TentCity" width="600px" height="250px"/>
                                 <br/><br/>
                                 <h5 className="services-subtitle">Crypto for Kids</h5>                                   
-                                <p>Need Content</p>
+                                <p>This course teaches the basics of money and currency used throughout the world and how we are evolving economically into a cryptocurrency space. 
+                                    Students of all ages are invited to enroll in this course. This course is virtual. </p>
                                 <a className="services-link" href="/">Tutoring {'>'}</a>
 
                             </div>
@@ -30,7 +31,8 @@ const GradSchoolSuite = () => {
                                 <img className="services-img img-fluid img-thumbnail" src={'https://i.imgur.com/jgJX7TV.jpg'} alt="BookClub"  width="600px" height="250px"/>
                                 <br/><br/>
                                 <h5 className="services-subtitle">Youth Entrepreneurship</h5>
-                                <p>Need Content</p>
+                                <p>This course allows students to identify their personal interests and possible career aspirations to uncover strategies to earn income through entrepreneurship. 
+                                    This course is currently virtual.</p>
                                 <a className="services-link " href="/">College Coachnig {'>'}</a>
                             </div>
                         </div>

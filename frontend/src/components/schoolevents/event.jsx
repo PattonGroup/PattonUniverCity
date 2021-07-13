@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Spolight from '../../assets/images/spotlight.jpeg';
 import eventData from './eventData';
 import './event.css';
 
@@ -29,17 +28,19 @@ const EventOverview = () => {
                         <div className="col-md-6 event-item">
                             <div>
                                 <h5>Spotlight</h5>                                   
-                                <img className="event-img img-fluid img-thumbnail" src={Spolight} alt="TentCity" width="600px" height="250px"/>
+                                <img className="event-img img-fluid img-thumbnail" src={'https://i.imgur.com/Y8GSxAg.jpg'} alt="TentCity" width="600px" height="250px" />
                                 <br/><br/>
-                                <p>Student Name</p>
-                                <p>Student desrciption</p>
+                                <p>CHRISTIAN D. - 10TH GRADER</p>
+                                <p>Christian is a rising 10th grader who loves theater. Christian is getting ahead of the school year by learning a few geometry skills that will 
+                                    be introduced in the Fall. Christian is an honor roll student and has plans to keep it that way!
+                                </p>
                             </div>
                         </div>
                         <div className="col-md-6 event-item">
                             <div className="">
                                 <div style={{display: 'flex', justifyContent: 'space-between'}}>
                                     <h5>Online Events</h5>
-                                    <div>
+                                    <div className = "arrows">
                                         <span className = {isLeftArrow === true ? "carousel-left-arrow active" : "carousel-left-arrow"} onClick = {previousSlide}>&lt; </span>
                                         <span className = {isRightArrow === true ? "carousel-right-arrow active" : "carousel-right-arrow"} onClick = {nextSlide}> &gt;</span>
                                     </div>
