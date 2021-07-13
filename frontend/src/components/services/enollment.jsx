@@ -43,7 +43,7 @@ const Enrollment = () => {
               </div>
             </div>
             <div className="col-lg-6 offset-lg-1 p-lg-0 p-4">
-              <img className="enrollment-img" src={'https://i.imgur.com/gdWuDGD.jpg'} alt="" />
+              <img className="enrollment-img" src={'https://i.imgur.com/JfS1edn.jpg'} alt="" />
             </div>
           </div>
         </div>

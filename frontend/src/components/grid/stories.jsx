@@ -15,7 +15,7 @@ const Stories = () => {
             <h3 className="story-subheading">The Latest Stories from Patton U</h3>              
             <main class="story-grid">
               <article className="article-one">
-                <img src={'https://i.imgur.com/cI4fMAt.png'} className="img-fluid img-thumbnail" alt="Sample spotlight"/>
+                <img src={'https://i.imgur.com/cI4fMAt.png'} className="img-fluid img-thumbnail amazonBook" alt="Sample spotlight"/>
                 {/* <h5 className="article-one-title"><span>UniverCity Affairs</span></h5><br/> */}
                 {/* <h6 className="article-one-subtitle"><span>Patton to continue 11 varsity sports</span></h6><br/> */}
               </article>

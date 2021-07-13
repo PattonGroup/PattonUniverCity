@@ -20,12 +20,12 @@ const QuoteHomeFeat = () => {
               and innovative learning experiences possible.”
               </p>
               <p className="quote-info-contact">
-                Elvonte Patton, Professor of Education
+              Ashley B. Patton, M.S. - Co-Founder
               </p>
               <div>
                 <button className="quote-btn">→</button>
                 <a href="/" className="quote-link">
-                  Learn more about Professor Elvonte
+                  Learn more about Ashley
                 </a>
               </div>
             </div>
