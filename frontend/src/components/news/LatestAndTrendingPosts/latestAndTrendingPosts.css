@@ -1,0 +1,53 @@
+.latest-and-trending-container{
+    width: 90%;
+    height: fit-content;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.tab {
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+  
+  .tab button.active {
+    border-bottom: 1px solid red;
+  }
+  
+  .tabcontent {
+    display: none;
+    border: none;
+    width: 100%;
+  }
+
+  .tabcontent li{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.158);
+    padding-top: 2%;
+  }
+
+  .tabcontent ul div:first-child{
+    font-size: 20px;
+  }
+
+  .list-items{
+    margin-left: 35%;
+  }
+
+  .list-items p{
+      font-size: 13px;
+  }
