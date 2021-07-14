@@ -54,6 +54,20 @@
   opacity: 1;
   transition-duration: 2s;
 }
+.event-subtile {
+  padding-bottom: 2%;
+}
+
+.event-descrp {
+  width: 95%;
+  line-height: 2;
+}
+
+.event-date {
+  display: flex;
+  justify-content: space-evenly;
+  border-right: 3.5px solid #191919;
+}
 
 @media screen and (max-width: 990px) {
   .event-img {
