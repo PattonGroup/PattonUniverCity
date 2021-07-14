@@ -20,7 +20,9 @@ const Stories = () => {
                 {/* <h6 className="article-one-subtitle"><span>Patton to continue 11 varsity sports</span></h6><br/> */}
               </article>
               <article>
-                <img src={Mascot} className="img-fluid img-thumbnail secondary" alt="Sample spotlight"/>
+                <a href="https://form.jotform.com/PattonUniverCity/coursecatalog" target="_blank" rel="noopener noreferrer">
+                  <img src={Mascot} className="img-fluid img-thumbnail secondary" alt="Sample spotlight"/>
+                </a>
                 <div className="story-text">
                   <h3>Summer 2021 Course Catalog is now available! </h3>
                   <p>Choose from a variety of courses for your student to learn this summer, especially if they are not currently 
@@ -36,7 +38,9 @@ const Stories = () => {
                 </div>
               </article>
               <article>
-                <img src={SummerGolf} className="img-fluid img-thumbnail secondary" alt="Sample spotlight"/>
+                <a href="https://form.jotform.com/PattonUniverCity/coursecatalog" target="_blank" rel="noopener noreferrer">
+                  <img src={SummerGolf} className="img-fluid img-thumbnail secondary" alt="Sample spotlight"/>
+                </a>
                 <div className="story-text">
                   <h3>Golf Lessons for Girls</h3>
                   <p>Golf Lessons for Girls ages 6-12 in Houston! Visit our Course Catalog to learn more and register!</p>

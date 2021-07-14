@@ -80,7 +80,7 @@ const EventOverview = () => {
                            <h5 style={{fontSize: '3rem'}}>|</h5>
                         </div>
                         <div className="col-sm-4">
-                            <h5><a href="/" className="event-links">Summer Phonics Class for Kids</a></h5>
+                            <h5><a href="https://form.jotform.com/PattonUniverCity/coursecatalog" className="event-links">Summer Phonics Class for Kids</a></h5>
                         </div>
                         <div className="col-sm-1">
                             <div>
@@ -92,7 +92,7 @@ const EventOverview = () => {
                            <h5 style={{fontSize: '3rem'}}>|</h5>
                         </div>
                         <div className="col-sm-4">
-                           <h5><a href="/" className="event-links"> Yoga and Mindfulness </a></h5>
+                           <h5><a href="https://form.jotform.com/PattonUniverCity/coursecatalog" className="event-links"> Yoga and Mindfulness </a></h5>
                         </div>
                     </div>
                 </div>
