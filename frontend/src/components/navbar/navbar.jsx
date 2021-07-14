@@ -35,9 +35,9 @@ const Navbar = (props) => {
             <div style={{ display: 'flex', alignItems: 'center' }}>
               <img src={'https://i.imgur.com/RF2Zlgb.png'} alt="Patton U Logo" width="150px" />
               <h2 className="logo-title">
-                <span className={`${ backgroundOn ? "bg-black" : null}`}>PATTTON</span> 
+                <span className={`${ backgroundOn ? "bg-black" : null}`} data-testid="logo-title1-navbar">PATTTON</span> 
                 <br/>
-                <span className={`${ backgroundOn ? "bg-black" : null}`}>UNIVERCITY</span>
+                <span className={`${ backgroundOn ? "bg-black" : null}`} data-testid="logo-title2-navbar">UNIVERCITY</span>
               </h2>
             </div>
           </a>
