@@ -1,40 +1,30 @@
-import React, {useEffect} from 'react';
+import React, {useState} from 'react';
 import './latestAndTrendingPosts.css';
 import PattonNewsData from '../pattonNewsData';
 
 const LatestAndTrendingPosts = () => {
+    
+    const [openTab1, setopenTab1] = useState(true);
+    const [openTab2, setopenTab2] = useState(false);
 
-    useEffect(() => {
-        document.getElementById("defaultOpen").click();
-    });
-
-    const open = (evt, type) => {
-        let i, tabcontent, tablinks;
-      
-        tabcontent = document.getElementsByClassName("tabcontent");
-        
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
+    const open = (e, type) => {
+        if(type === 'LATEST'){
+            setopenTab1(true);
+            setopenTab2(false);
+        }else{
+            setopenTab1(false);
+            setopenTab2(true);
         }
-      
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-      
-        document.getElementById(type).style.display = "block";
-        evt.currentTarget.className += " active";
       }
 
     return (
        <div className = "latest-and-trending-container">
             <div className="tab">
-            <button className="tablinks" onClick={(e) => open(e, "LATEST")} id="defaultOpen">LATEST</button>
-            <button className="tablinks" onClick={(e) => open(e, "TRENDING")}>TRENDING</button>
+            <button className = {openTab1 ? 'active' : ''} onClick={(e) => open(e, "LATEST")} id="defaultOpen">LATEST</button>
+            <button className = {openTab2 ? 'active' : ''} onClick={(e) => open(e, "TRENDING")}>TRENDING</button>
             </div>
-
             
-            <div id="LATEST" className="tabcontent">
+            <div id="LATEST" className="tabcontent" style = {{'display' : openTab1 ? 'block' : 'none'}}>
                 <ul>
                 {
                     PattonNewsData.map(data => {
@@ -54,7 +44,7 @@ const LatestAndTrendingPosts = () => {
                 </ul>
             </div>
 
-            <div id="TRENDING" className="tabcontent">
+            <div id="TRENDING" className="tabcontent" style = {{'display' : openTab2 ? 'block' : 'none'}}>
                 <ul>
                     {
                         PattonNewsData.map(data => {
