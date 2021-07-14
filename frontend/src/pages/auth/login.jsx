@@ -119,7 +119,7 @@ const Login = (props) => {
                       placeholder="Password *"
                     />
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <button type="submit" className="float-right login_btn">
                       Login
                     </button>
