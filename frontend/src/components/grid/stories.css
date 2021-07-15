@@ -66,7 +66,6 @@
   padding: 0 20px 20px;
 }
 .story-text p {
-  overflow: hidden;
   line-height: 2rem;
   max-height: 8rem;
   -webkit-box-orient: vertical;

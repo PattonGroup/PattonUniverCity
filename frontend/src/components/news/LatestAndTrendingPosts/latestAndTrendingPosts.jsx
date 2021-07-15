@@ -31,7 +31,7 @@ const LatestAndTrendingPosts = () => {
                         if(data.type === "latest"){
                             return(
                                 <li>
-                                <div>Category</div>
+                                <div className="tabcontent-category">Category</div>
                                 <div className = "list-items">
                                     <h6>{data.title}</h6>
                                     <p>{data.description}</p>
@@ -51,7 +51,7 @@ const LatestAndTrendingPosts = () => {
                             if(data.type === "trending"){
                                 return(
                                     <li>
-                                    <div>Category</div>
+                                    <div className="tabcontent-category">Category</div>
                                     <div className = "list-items">
                                         <h6>{data.title}</h6>
                                         <p>{data.description}</p>
