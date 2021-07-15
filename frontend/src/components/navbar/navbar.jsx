@@ -34,17 +34,17 @@ const Navbar = (props) => {
           <a className="py-5" href="/">
             <div style={{ display: 'flex', alignItems: 'center' }}>
               <img src={'https://i.imgur.com/RF2Zlgb.png'} alt="Patton U Logo" width="150px" />
-              <h2 className="logo-title">
-                <span className={`${ backgroundOn ? "bg-black" : null}`} data-testid="logo-title1-navbar">PATTTON</span> 
+              <h2 className="logo-title" data-testid="logo-title-navbar">
+                <span className={`${ backgroundOn ? "bg-black" : null}`}>PATTON</span> 
                 <br/>
-                <span className={`${ backgroundOn ? "bg-black" : null}`} data-testid="logo-title2-navbar">UNIVERCITY</span>
+                <span className={`${ backgroundOn ? "bg-black" : null}`}>UNIVERCITY</span>
               </h2>
             </div>
           </a>
           {/* {props.authenticated ? <a href="/dashboard">Dashboard</a> : null} */}
           {props.authenticated ?
             <>
-              <a className={`${ backgroundOn ? "bg-black" : null}`} href="/education">Education</a>
+              <a className={`${ backgroundOn ? "bg-black" : null}`} href="/education" data-testid="link-education">Education</a>
               <a className={`${ backgroundOn ? "bg-black" : null}`} href="/research">Research</a>
               <a className={`${ backgroundOn ? "bg-black" : null}`} href="/innovation">Innovation</a>
               <a className={`${ backgroundOn ? "bg-black" : null}`} href="/news">News</a>
