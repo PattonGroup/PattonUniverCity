@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col-4 col-md">
-            <h5>Helpful Links</h5>
+            <h5 data-testid="header1-footer">Helpful Links</h5>
             <ul className="list-unstyled">
               <li>
                 <a className="link-secondary" href="/">
@@ -47,11 +47,11 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-4 col-md">
-            <h5>Vist Patton U</h5>
+            <h5 data-testid="header2-footer">Visit Patton U</h5>
             <ul className="list-unstyled">
               <li>
                 <a className="link-secondary" href="/">
-                  Faculity & Staff
+                  Faculty & Staff
                 </a>
               </li>
               <li>
@@ -82,7 +82,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-4 col-md">
-            <h5>Departments</h5>
+            <h5 data-testid="header3-footer">Departments</h5>
             <ul className="list-unstyled">
               <li>
                 <a className="link-secondary" href="/">
@@ -99,18 +99,13 @@ const Footer = () => {
                   Research
                 </a>
               </li>
-              <li>
-                <a className="link-secondary" href="/">
-                  Blockchain
-                </a>
-              </li>
             </ul>
           </div>
         </div>
         <hr />
         <div className="row">
           <div className="col-3">
-            <p>Houston, Texas</p>
+            <p data-testid="paragraph-footer">Houston, Texas</p>
           </div>
           <div className="col-9 col-md">
             <span>
