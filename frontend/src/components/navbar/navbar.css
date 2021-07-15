@@ -37,6 +37,8 @@ nav {
 
 nav a {
   text-decoration: none;
+  font-family: "Carme", sans-serif;
+  font-size: 2rem;
 }
 
 nav a:first-child {
@@ -109,7 +111,7 @@ nav a:first-child {
 
 .content-links a {
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .nav-header a,

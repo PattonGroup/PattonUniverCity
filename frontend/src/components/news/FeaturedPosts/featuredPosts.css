@@ -74,6 +74,11 @@
   padding-right: 4% !important;
 }
 
+.second-section div:first-child h5,
+.second-section div:first-child p {
+  padding-right: 4% !important;
+}
+
 .second-section h5 {
   font-size: 24px;
   font-family: "Mermaid", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
