@@ -7,15 +7,15 @@ import '@testing-library/jest-dom/extend-expect';
 
 afterEach(cleanup);
 
-it("renders logo title", () => {
-  const logoTitleEl = document.createElement("logo-title-navbar");
+it("renders navbar without crashing", () => {
+  const headerEl = document.createElement("header-navbar");
 
   ReactDom.render(
     <BrowserRouter>
       <Navbar />
     </BrowserRouter>,
-    logoTitleEl
+    headerEl
   );
 
-  ReactDom.unmountComponentAtNode(logoTitleEl);
+  ReactDom.unmountComponentAtNode(headerEl);
 });

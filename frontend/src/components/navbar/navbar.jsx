@@ -29,12 +29,13 @@ const Navbar = (props) => {
     <>
       <header
         className={`nav-header sticky-top ${backgroundOn ? 'bg-black' : null}`}
+        data-testid="header-navbar"
       >
         <nav className="navbar navbar-default navbar-fixed-top">
           <a className="py-5" href="/">
             <div style={{ display: 'flex', alignItems: 'center' }}>
               <img src={'https://i.imgur.com/RF2Zlgb.png'} alt="Patton U Logo" width="150px" />
-              <h2 className="logo-title" data-testid="logo-title-navbar">
+              <h2 className="logo-title">
                 <span className={`${ backgroundOn ? "bg-black" : null}`}>PATTON</span> 
                 <br/>
                 <span className={`${ backgroundOn ? "bg-black" : null}`}>UNIVERCITY</span>
@@ -44,7 +45,7 @@ const Navbar = (props) => {
           {/* {props.authenticated ? <a href="/dashboard">Dashboard</a> : null} */}
           {props.authenticated ?
             <>
-              <a className={`${ backgroundOn ? "bg-black" : null}`} href="/education" data-testid="link-education">Education</a>
+              <a className={`${ backgroundOn ? "bg-black" : null}`} href="/education">Education</a>
               <a className={`${ backgroundOn ? "bg-black" : null}`} href="/research">Research</a>
               <a className={`${ backgroundOn ? "bg-black" : null}`} href="/innovation">Innovation</a>
               <a className={`${ backgroundOn ? "bg-black" : null}`} href="/news">News</a>
