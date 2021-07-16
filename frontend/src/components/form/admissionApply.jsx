@@ -47,7 +47,6 @@ const AdmissionApply = () => {
                           className="admission-button white"
                           value="Apply Now"
                           type="submit"
-                          data-testid="button-admission-form"
                         />
                       </div>
                     </div>
