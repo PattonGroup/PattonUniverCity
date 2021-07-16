@@ -7,7 +7,7 @@ import '@testing-library/jest-dom/extend-expect';
 
 afterEach(cleanup);
 
-it("renders navbar without crashing", () => {
+test("navbar renders without crashing", () => {
   const headerEl = document.createElement("header-navbar");
 
   ReactDom.render(

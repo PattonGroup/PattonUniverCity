@@ -10,7 +10,7 @@ const AdmissionApply = () => {
             <div className="row justify-content-end">
               <div className="col-lg-7">
                 <div className="admission_form">
-                  <h3>Stay in Touch</h3>
+                  <h3 data-testid="header-admission-form">Stay in Touch</h3>
                   <form>
                     <div className="row">
                       <div className="col-md-6">
@@ -47,6 +47,7 @@ const AdmissionApply = () => {
                           className="admission-button white"
                           value="Apply Now"
                           type="submit"
+                          data-testid="button-admission-form"
                         />
                       </div>
                     </div>
