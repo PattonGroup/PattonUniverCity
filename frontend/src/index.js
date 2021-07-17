@@ -1,16 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
 import store from './store';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Auth0Provider } from '@auth0/auth0-react';
+import { Provider } from 'react-redux';
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <Auth0Provider
+    domain="pattonunivercity.us.auth0.com"
+    clientId="Aa7C3wjXeRwoi9f3jOfFyJfN8pR0dg4c"
+    redirectUri={window.location.origin}
+  >
+    <Provider store={store}>
+      <App />
+    </Provider>
+    ,
+  </Auth0Provider>,
   document.getElementById('root')
 );
 
