@@ -28,17 +28,17 @@ const EventOverview = () => {
                     <div className="row">
                         <div className="col-md-6 event-item">
                             <div>
-                                <h5>Spotlight</h5>                                   
+                                <h5 data-testid="header-spotlight">Spotlight</h5>                                   
                                 <img className="event-img img-fluid img-thumbnail" src={Spolight} alt="TentCity" width="600px" height="250px"/>
                                 <br/><br/>
-                                <p>Student Name</p>
-                                <p>Student desrciption</p>
+                                <p data-testid="paragraph1-spotlight">Student Name</p>
+                                <p data-testid="paragraph2-spotlight">Student Description</p>
                             </div>
                         </div>
                         <div className="col-md-6 event-item">
                             <div className="">
                                 <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                                    <h5>Online Events</h5>
+                                    <h5 data-testid="header-online">Online Events</h5>
                                     <div>
                                         <span className = {isLeftArrow === true ? "carousel-left-arrow active" : "carousel-left-arrow"} onClick = {previousSlide}>&lt; </span>
                                         <span className = {isRightArrow === true ? "carousel-right-arrow active" : "carousel-right-arrow"} onClick = {nextSlide}> &gt;</span>
@@ -52,8 +52,8 @@ const EventOverview = () => {
                                                     <>
                                                     <img className="event-img img-fluid img-thumbnail" src={e.img_url} alt="event1" width="600px" height="250px" />   
                                                     <br/><br/>
-                                                    <p>{e.event_description}</p>
-                                                    <p>{e.student_desrciption}</p>    
+                                                    <p data-testid="paragraph1-online">{e.event_description}</p>
+                                                    <p>{e.student_description}</p>    
                                                     </>
                                                 )}
                                             </div>        
@@ -66,32 +66,32 @@ const EventOverview = () => {
                     </div>
                     <div className="row">
                         <div className="col-sm-6">
-                            <h5>Important Dates</h5>
+                            <h5 data-testid="header-dates">Important Dates</h5>
                         </div>
                         <hr/>
                         <div className="col-sm-1">
                             <div>
-                                <h5>Jun. - July</h5>
-                                <h5>28</h5>
+                                <h5 data-testid="header-month1">Jun. - July</h5>
+                                <h5 data-testid="header-day1">28</h5>
                             </div>
                         </div>
                         <div className="col-sm-1">
-                           <h5 style={{fontSize: '3rem'}}>|</h5>
+                           <h5 data-testid="header-bar1" style={{fontSize: '3rem'}}>|</h5>
                         </div>
                         <div className="col-sm-4">
-                            <h5><a href="/" className="event-links">Summer Phonics Class for Kids</a></h5>
+                            <h5><a href="/" className="event-links">Summer Phonics Class</a></h5>
                         </div>
                         <div className="col-sm-1">
                             <div>
-                                <h5>Jun. - July</h5>
-                                <h5>28</h5>
+                                <h5 data-testid="header-month2">Jun. - July</h5>
+                                <h5 data-testid="header-day2">28</h5>
                             </div>
                         </div>
                         <div className="col-sm-1">
-                           <h5 style={{fontSize: '3rem'}}>|</h5>
+                           <h5 data-testid="header-bar2" style={{fontSize: '3rem'}}>|</h5>
                         </div>
                         <div className="col-sm-4">
-                           <h5><a href="/" className="event-links"> Yoga and Mindfulness </a></h5>
+                           <h5><a href="/" className="event-links">Yoga and Mindfulness</a></h5>
                         </div>
                     </div>
                 </div>

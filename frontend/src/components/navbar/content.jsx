@@ -7,7 +7,7 @@ const Contentbar = () => {
       <div className="container-fluid d-flex flex-row flex-md-row justify-content-between">
         <div className="ml-auto content-links">
         <a className="py-2 d-none d-md-inline-block" href="/apply" data-testid="header-about">
-            About US
+            About Us
           </a>
         <a className="py-2 d-none d-md-inline-block" href="/apply" data-testid="header-register">
             Register
