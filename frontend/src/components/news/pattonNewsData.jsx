@@ -1,12 +1,11 @@
 import Phonogram from '../../assets/images/phonogram.jpg';
 import MathClub from '../../assets/images/mathClub.png';
-import newsImg from '../../assets/images/news.png'
 
 const pattonNewsData = [
     {
-        img_url: newsImg,
-        title: "Gift endows, names Cornell Jeb E. Brooks School of Public Policy",
-        description: "The major gift from the Brooks family, whose Cornell roots span three generations, provides the early boost to help the university's newest school achieve world-class experience.",
+        img_url: 'https://i.imgur.com/8rljZg3.jpg',
+        title: "Gift endows, names Jeb E. Brooks School of Public Policy",
+        description: "The major gift from the Brooks family, whose roots span three generations, provides the early boost to help the university's newest school achieve world-class experience.",
         type: "latest"
     },
     {

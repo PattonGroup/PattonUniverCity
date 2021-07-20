@@ -3,6 +3,11 @@
   padding-bottom: 4%;
   overflow-x: hidden;
 }
+.event-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-bottom: 2%;
+}
 
 .event-item {
   margin-bottom: 50px;
@@ -53,6 +58,27 @@
 .event-carousel.active {
   opacity: 1;
   transition-duration: 2s;
+}
+.event-subtile {
+  font-size: 1.2rem;
+  width: 75%;
+  font-weight: 500;
+  padding-bottom: 2%;
+  text-transform: capitalize;
+  font-family: "Merriweather", serif;
+  font-weight: 600;
+}
+
+.event-descrp {
+  width: 95%;
+  line-height: 2;
+  font-family: "Merriweather", serif;
+}
+
+.event-date {
+  display: flex;
+  justify-content: space-evenly;
+  border-right: 3.5px solid #191919;
 }
 
 @media screen and (max-width: 990px) {

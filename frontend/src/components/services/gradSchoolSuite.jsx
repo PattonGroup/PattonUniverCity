@@ -40,8 +40,10 @@ const GradSchoolSuite = () => {
                             <div className="">
                                 <img className="services-img img-fluid img-thumbnail" src={'https://i.imgur.com/lrRP2aA.jpg'} alt="BookClub"  width="600px" height="250px"/>
                                 <br/><br/>
-                                <h5 className="services-subtitle">Yoga and Mindfulness</h5>
-                                <p>Need Content</p>
+                                <h5 className="services-subtitle">Academic Coaching</h5>
+                                <p>This program is for students who will thrive from having personalized guidance from an educational professional during the school year. Coaches meet with students 
+                                    periodically in the week to keep them on schedule with assignments and tests in addition to teaching responsibility and independence. Tutorials are offered “as-needed”. 
+                                    The meetings are currently virtual. </p>
                                 <a className="services-link" href="/">Mentoring {'>'}</a>
                             </div>
                         </div>

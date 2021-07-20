@@ -14,6 +14,7 @@
   text-align: center;
   font-size: 2rem;
   padding-bottom: 2%;
+  font-family: "Carme", sans-serif;
 }
 
 .article-one {
@@ -66,7 +67,6 @@
   padding: 0 20px 20px;
 }
 .story-text p {
-  overflow: hidden;
   line-height: 2rem;
   max-height: 8rem;
   -webkit-box-orient: vertical;
@@ -75,10 +75,13 @@
   overflow: hidden !important;
   text-overflow: ellipsis;
   -webkit-line-clamp: 4;
+  font-family: "Merriweather", serif;
 }
 .story-text h3 {
   padding-bottom: 4%;
   padding-top: 4%;
+  font-family: "Carme", sans-serif;
+  font-weight: 600;
 }
 .story-text > button {
   background: gray;

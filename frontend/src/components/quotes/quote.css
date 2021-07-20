@@ -21,6 +21,7 @@
   font-size: 13px;
   font-style: italic;
   padding-top: 2%;
+  font-family: "Carme", sans-serif;
 }
 
 .feature-one div p {
@@ -41,6 +42,7 @@
 
 .quote-info-contact {
   font-size: 1.5rem;
+  font-family: "Carme", sans-serif;
 }
 
 .feature-one div:last-child p:first-child::before {
@@ -62,6 +64,7 @@
 
 .feature-one div:last-child div a {
   padding-left: 4%;
+  font-family: "Carme", sans-serif;
 }
 
 .quote-link {
@@ -80,7 +83,6 @@
   border: none;
 }
 @media (max-width: 1200px) {
-
   .feature-one div:first-child img {
     width: 90%;
   }

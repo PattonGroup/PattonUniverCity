@@ -16,6 +16,7 @@
   overflow: hidden !important;
   text-overflow: ellipsis;
   -webkit-line-clamp: 4;
+  font-family: "Merriweather", serif;
 }
 
 .services-link {
@@ -77,6 +78,10 @@
   position: relative;
   padding-bottom: 15px;
   margin-bottom: 10px;
+}
+
+.enroll-list-item p {
+  font-family: "Merriweather", serif;
 }
 
 .enroll-list-item span {

@@ -1,124 +1,151 @@
-.featured-posts-container{
-    width: 80%;
-    height: fit-content;
-    margin: auto;
-    margin-top: 10%;
-    display: flex;
+@font-face {
+  font-family: "Mermaid";
+  src: url("../../../assets/fonts/Mermaid/Mermaid-Bold.ttf");
+  src: url("../../../assets/fonts/Mermaid/Mermaid-Bold.ttf") format("truetype"),
+    url("../../../assets/fonts/Mermaid/Mermaid1001.eot")
+      format("embedded-opentype"),
+    url("../../../assets/fonts/Mermaid/Mermaid-Bold.woff") format("woff");
+}
+
+.featured-posts-container {
+  width: 80%;
+  height: fit-content;
+  margin: auto;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.featured-posts-container div {
+  width: 70%;
+}
+
+.first-section img {
+  width: 100%;
+}
+
+.text-on-image {
+  position: relative;
+  width: 100% !important;
+  color: white;
+  background-color: #aa0600;
+  z-index: 1;
+  margin-top: -5%;
+  padding: 1%;
+}
+
+.text-on-image p {
+  font-size: 18px;
+  font-family: "Mermaid", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.text-on-image span {
+  font-size: 12px;
+  font-family: "Mermaid", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+}
+
+.text-on-image a {
+  padding-left: 5%;
+  text-decoration: none;
+  color: white;
+}
+
+.second-section {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-section img {
+  width: 100%;
+  height: 100%;
+  padding: 4%;
+  padding-right: 0%;
+}
+
+.img-one {
+  padding-left: 0% !important;
+  padding-right: 4% !important;
+}
+
+.second-section div:first-child h5,
+.second-section div:first-child p {
+  padding-right: 4% !important;
+}
+
+.second-section h5 {
+  font-size: 24px;
+  font-family: "Mermaid", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.second-section p {
+  width: 95%;
+  font-family: "Mermaid", Gill Sans, "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+  font-size: 14px;
+}
+
+.featured-posts-subtitle {
+  text-align: left;
+  align-self: baseline;
+  color: #aa0600;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1100px) {
+  .second-section {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
+    margin-top: 10%;
+  }
 
-.featured-posts-container div{
-    width: 60%;
-}
-
-.first-section img{
+  .second-section div {
     width: 100%;
-}
+  }
 
-.text-on-image{
-    position: relative;
-    width: 100% !important;
-    color: white;
-    background-color: red;
-    z-index: 1;
-    margin-top: -10%;
-    padding: 1%;
-}
-
-.text-on-image p{
-    font-size: 18px;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.text-on-image span{
-    font-size: 12px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.text-on-image a{
-    padding-left: 5%;
-    text-decoration: none;
-    color: white;
-}
-
-.second-section{
-    margin-top: 2%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.second-section img{
+  .second-section h5 {
     padding: 2%;
+  }
+
+  .second-section p {
+    padding: 2%;
+    font-size: 15px;
+  }
+
+  .first-section img {
     width: 100%;
-    height: 100%;
+    height: 250px;
+  }
+
+  .text-on-image p {
+    font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
 }
 
-.second-section h5{
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+@media screen and (max-width: 900px) {
+  .featured-posts-container div {
+    width: 70%;
+  }
+
+  .second-section div {
+    width: 100%;
+  }
 }
 
-.second-section p{
-    width: 95%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 13px;
-}
+@media screen and (max-width: 680px) {
+  .featured-posts-container div {
+    width: 100%;
+  }
 
-@media  screen and (max-width: 1100px) {
-    .second-section{
-        flex-direction: column;
-        margin-top: 10%;
-    }
-
-    .second-section div{
-        width: 100%;
-    }
-
-    .second-section h5{
-        padding: 2%;
-    }
-
-    .second-section p{
-        padding: 2%;
-        font-size: 15px;
-
-    }
-
-    .first-section img{
-        width: 100%;
-        height: 250px;
-    }
-
-    .text-on-image p{
-        font-size: 15px;
-        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-
-
-
-}
-
-
-@media  screen and (max-width: 900px) {
-    
-    .featured-posts-container div{
-        width: 70%;
-    }
-
-    .second-section div{
-        width: 100%;
-    }
-}
-
-@media  screen and (max-width: 680px) {
-    .featured-posts-container div{
-        width: 100%;
-    }
-
-    .second-section div{
-        width: 100%;
-    }
+  .second-section div {
+    width: 100%;
+  }
 }
