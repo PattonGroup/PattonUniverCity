@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Spolight from '../../assets/images/spotlight.jpeg';
+import Spotlight from '../../assets/images/spotlight.jpeg';
 import eventData from './eventData';
 import './event.css';
 
@@ -29,7 +29,7 @@ const EventOverview = () => {
                         <div className="col-md-6 event-item">
                             <div>
                                 <h5 data-testid="header-spotlight">Spotlight</h5>                                   
-                                <img className="event-img img-fluid img-thumbnail" src={Spolight} alt="TentCity" width="600px" height="250px"/>
+                                <img className="event-img img-fluid img-thumbnail" src={Spotlight} alt="TentCity" width="600px" height="250px"/>
                                 <br/><br/>
                                 <p data-testid="paragraph1-spotlight">Student Name</p>
                                 <p data-testid="paragraph2-spotlight">Student Description</p>
