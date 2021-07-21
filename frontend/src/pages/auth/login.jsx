@@ -76,7 +76,7 @@ const Login = (props) => {
               <div className="card px-4 ">
                 <div className="row mb-4 pb-4 px-3">
                   <div className="card-header">
-                    <div class="d-flex justify-content-end social_icon">
+                    <div className="d-flex justify-content-end social_icon">
                       <div className="social text-center mr-3">
                         <div onClick={props.googlelogin}>
                           <FcGoogle />
@@ -119,7 +119,7 @@ const Login = (props) => {
                       placeholder="Password *"
                     />
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <button type="submit" className="float-right login_btn">
                       Login
                     </button>

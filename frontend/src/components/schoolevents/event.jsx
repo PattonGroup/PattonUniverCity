@@ -29,7 +29,7 @@ const EventOverview = () => {
                         <div className="col-md-6 event-item">
                             <div>
                                 <h5 data-testid="header-spotlight">Spotlight</h5>                                   
-                                <img className="event-img img-fluid img-thumbnail" src={Spotlight} alt="TentCity" width="600px" height="250px"/>
+                                <img data-testid="image-spotlight" className="event-img img-fluid img-thumbnail" src={Spotlight} alt="TentCity" width="600px" height="250px"/>
                                 <br/><br/>
                                 <p data-testid="paragraph1-spotlight">Student Name</p>
                                 <p data-testid="paragraph2-spotlight">Student Description</p>
@@ -50,10 +50,10 @@ const EventOverview = () => {
                                            <div className = {i === currentEvent ? "event-carousel active":"event-carousel"} key = {i}>
                                                 {i === currentEvent && (
                                                     <>
-                                                    <img className="event-img img-fluid img-thumbnail" src={e.img_url} alt="event1" width="600px" height="250px" />   
+                                                    <img data-testid="image-online" className="event-img img-fluid img-thumbnail" src={e.img_url} alt="event1" width="600px" height="250px" />   
                                                     <br/><br/>
                                                     <p data-testid="paragraph1-online">{e.event_description}</p>
-                                                    <p>{e.student_description}</p>    
+                                                    <p data-testid="paragraph2-online">{e.student_description}</p>    
                                                     </>
                                                 )}
                                             </div>        

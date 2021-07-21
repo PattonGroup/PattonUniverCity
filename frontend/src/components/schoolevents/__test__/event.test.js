@@ -19,8 +19,12 @@ test("Spotlight header renders with the correct text", () => {
   expect(headerEl.textContent).toBe("Spotlight");
 });
 
-// test img
+test("Image must have src={Spotlight} and alt = 'TentCity'", () => {
+  const imageEl = screen.getByTestId("image-spotlight");
 
+  expect(imageEl).toHaveAttribute("src", "spotlight.jpeg");
+  expect(imageEl).toHaveAttribute("alt", "TentCity");
+});
 
 test("paragraph1 renders with the correct text", () => {
   const paragraph1El = getByTestId("paragraph1-spotlight");
@@ -41,13 +45,20 @@ test("Online Events renders with the correct text", () => {
   expect(headerEl.textContent).toBe("Online Events");
 });
 
-// test img
-
 // test right arrow button carousel
 
 // test left arrow button carousel
 
-// Online Events tests
+// test("Online Events image must have src={e.img_url} and alt = 'event1'", () => {
+//   const imageEl = screen.getByTestId("image-online");
+
+//   expect(imageEl).toHaveAttribute("src", {e.img_url});
+//   expect(imageEl).toHaveAttribute("alt", "event1");
+// });
+
+// test online event paragraph1-online
+
+// test online event paragraph2-online
 
 
 

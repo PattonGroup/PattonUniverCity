@@ -1,10 +1,5 @@
 import React from 'react';
 import Stories from '../stories';
-import Cryptobook from '../../../assets/images/cryptobook.jpg';
-import Mascot from '../../../assets/images/mascot.png';
-import PattonReportCover2 from '../../../assets/images/cover2.jpeg';
-import SummerGolf from '../../../assets/images/summerGolf.jpeg';
-import Vision from '../../../assets/images/vision.jpeg';
 
 import { screen, render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
