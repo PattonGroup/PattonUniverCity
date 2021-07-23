@@ -6,9 +6,9 @@
 
 .admission_area::before {
   position: absolute;
-  background-image: url('../../assets/images/grad.jpg');
+  background-image: url("../../assets/images/grad.jpg");
   right: 0;
-  content: '';
+  content: "";
   width: 60%;
   top: 0;
   bottom: 0;
@@ -32,7 +32,7 @@
 .admission_area::after {
   position: absolute;
   right: 0;
-  content: '';
+  content: "";
   width: 60%;
   top: 0;
   bottom: 0;
@@ -61,10 +61,10 @@
   width: 40%;
   top: 0;
   bottom: 0;
-  content: '';
+  content: "";
   background-size: cover;
   background-position: center center;
-  background-image: url('../../assets/images/instructor.jpeg');
+  background-image: url("https://i.imgur.com/Jamvs9k.jpg");
 }
 
 @media (max-width: 767px) {

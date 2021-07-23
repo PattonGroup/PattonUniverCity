@@ -33,12 +33,12 @@ const Navbar = (props) => {
       >
         <nav className="navbar navbar-default navbar-fixed-top">
           <a className="py-5" href="/">
-            <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
               <img src={'https://i.imgur.com/RF2Zlgb.png'} alt="Patton U Logo" width="150px" />
               <h2 className="logo-title">
-                <span className={`${ backgroundOn ? "bg-black" : null}`}>PATTON</span> 
+                <span className={`${ backgroundOn ? "bg-black" : null}`}>PATTON UNIVERCITY</span> 
                 <br/>
-                <span className={`${ backgroundOn ? "bg-black" : null}`}>UNIVERCITY</span>
+                <span className={`${ backgroundOn ? "bg-black" : null}`}>Est. 2015</span>
               </h2>
             </div>
           </a>
@@ -84,7 +84,7 @@ const Navbar = (props) => {
                   <li key={index} className={link.cName}>
                     <Link to={link.path}>
                       {link.icon}
-                      <span>{link.title}</span>
+                      <span className="sidebar-title">{link.title}</span>
                     </Link>
                   </li>
                 );

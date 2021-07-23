@@ -1,7 +1,13 @@
 import React from 'react';
+
 import './admissionApply.css';
 
-const AdmissionApply = () => {
+const AdmissionApply = () => { 
+
+  const handleApply = () => {
+    window.open("https://form.jotform.com/PattonUniverCity/coursecatalog") 
+  }
+
   return (
     <>
       <div className="admission_area">

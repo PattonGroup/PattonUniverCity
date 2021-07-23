@@ -25,7 +25,7 @@ const QuoteHomeFeat = () => {
               <div>
                 <button data-testid="button" className="quote-btn">→</button>
                 <a href="/" className="quote-link">
-                  Learn more about Professor Elvonte
+                  Learn more about Ashley
                 </a>
               </div>
             </div>

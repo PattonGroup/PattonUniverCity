@@ -21,6 +21,7 @@
   font-size: 13px;
   font-style: italic;
   padding-top: 2%;
+  font-family: "Carme", sans-serif;
 }
 
 .feature-one div p {
@@ -31,6 +32,7 @@
 .feature-one div:first-child img {
   height: 32rem;
   width: 85%;
+  object-fit: cover;
 }
 
 .quote-info {
@@ -40,6 +42,7 @@
 
 .quote-info-contact {
   font-size: 1.5rem;
+  font-family: "Carme", sans-serif;
 }
 
 .feature-one div:last-child p:first-child::before {
@@ -61,6 +64,7 @@
 
 .feature-one div:last-child div a {
   padding-left: 4%;
+  font-family: "Carme", sans-serif;
 }
 
 .quote-link {
@@ -97,6 +101,12 @@
   .quote-btn {
     width: 3rem;
     font-size: 1.5rem;
+  }
+  .feature-one-caption {
+    width: 90%;
+    padding-top: 2%;
+    padding-left: 0px;
+    white-space: pre-line;
   }
 }
 @media (max-width: 1000px) {

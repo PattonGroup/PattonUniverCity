@@ -3,6 +3,11 @@
   padding-bottom: 4%;
   overflow-x: hidden;
 }
+.event-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-bottom: 2%;
+}
 
 .event-item {
   margin-bottom: 50px;
@@ -10,35 +15,74 @@
 
 .event-img {
   width: 100%;
-  height: 40vh;
+  height: 350px !important;
+  object-fit: cover;
+  object-position: 0% 20%;
 }
 
 .event-links {
   text-decoration: none;
 }
 
-.carousel-left-arrow, .carousel-right-arrow{
+.arrows {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-left-arrow,
+.carousel-right-arrow {
   cursor: pointer;
-  border: 1px solid #F4F4F4;
+  border: 1px solid #f4f4f4;
   width: 30px;
   height: 30px;
   font-size: 20px;
   text-align: center;
-  display: table-cell;
-  vertical-align: middle;
-} 
+}
 
-.carousel-left-arrow.active, .carousel-right-arrow.active, .carousel-left-arrow:hover, .carousel-right-arrow:hover{
-  color:white;
-  background-color: #B32825;
-} 
+.carousel-left-arrow.active,
+.carousel-right-arrow.active,
+.carousel-left-arrow:hover,
+.carousel-right-arrow:hover {
+  color: white;
+  background-color: #b32825;
+}
 
-.event-carousel{
+.event-carousel {
   opacity: 0;
   transition-duration: 2s ease;
 }
 
-.event-carousel.active{
+.event-carousel.active {
   opacity: 1;
   transition-duration: 2s;
+}
+.event-subtile {
+  font-size: 1.2rem;
+  width: 75%;
+  font-weight: 500;
+  padding-bottom: 2%;
+  text-transform: capitalize;
+  font-family: "Merriweather", serif;
+  font-weight: 600;
+}
+
+.event-descrp {
+  width: 95%;
+  line-height: 2;
+  font-family: "Merriweather", serif;
+}
+
+.event-date {
+  display: flex;
+  justify-content: space-evenly;
+  border-right: 3.5px solid #191919;
+}
+
+@media screen and (max-width: 990px) {
+  .event-img {
+    height: 280px !important;
+  }
 }
