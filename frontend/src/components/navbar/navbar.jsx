@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Mascot from '../../assets/images/mascot2021.png';
 import Logo from '../../assets/svg/untitled-design.svg';
 import Hamburger from '../../assets/svg/bar.svg';
 import * as AiIcons from 'react-icons/ai';
@@ -35,8 +34,7 @@ const Navbar = (props) => {
         <nav className="navbar navbar-default navbar-fixed-top">
           <a className="py-5" href="/">
             <div style={{ display: 'flex', alignItems: 'center' }}>
-              {/* <img src={'https://i.imgur.com/RF2Zlgb.png'} alt="Patton U Logo" width="150px" /> */}
-              <img src={Mascot} alt="Patton U Logo" width="150px" />
+              <img src={'https://i.imgur.com/RF2Zlgb.png'} alt="Patton U Logo" width="150px" />
               <h2 className="logo-title">
                 <span className={`${ backgroundOn ? "bg-black" : null}`}>PATTON</span> 
                 <br/>
