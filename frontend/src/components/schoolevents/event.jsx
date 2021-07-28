@@ -75,9 +75,6 @@ const EventOverview = () => {
                                 <h5 data-testid="header-day1">28</h5>
                             </div>
                         </div>
-                        <div className="col-sm-1">
-                           <h5 data-testid="header-bar1" style={{fontSize: '3rem'}}>|</h5>
-                        </div>
                         <div className="col-sm-4">
                             <h5><a href="/" className="event-links">Summer Phonics Class</a></h5>
                         </div>
@@ -87,9 +84,7 @@ const EventOverview = () => {
                                 <h5 data-testid="header-day2">28</h5>
                             </div>
                         </div>
-                        <div className="col-sm-1">
-                           <h5 data-testid="header-bar2" style={{fontSize: '3rem'}}>|</h5>
-                        </div>
+                     
                         <div className="col-sm-4">
                            <h5><a href="/" className="event-links">Yoga and Mindfulness</a></h5>
                         </div>
