@@ -15,12 +15,14 @@ const Stories = () => {
             <h3 data-testid="subheader-main" className="story-subheading">The Latest Stories from Patton U</h3>              
             <main className="story-grid">
               <article className="article-one">
-                <img data-testid="image1" src={'https://i.imgur.com/cI4fMAt.png'} className="img-fluid img-thumbnail" alt="Sample spotlight"/>
+                <img data-testid="image1" src={'https://i.imgur.com/cI4fMAt.png'} className="img-fluid img-thumbnail amazonBook" alt="Sample spotlight"/>
                 {/* <h5 className="article-one-title"><span>UniverCity Affairs</span></h5><br/> */}
                 {/* <h6 className="article-one-subtitle"><span>Patton to continue 11 varsity sports</span></h6><br/> */}
               </article>
               <article>
-                <img data-testid="image2" src={Mascot} className="img-fluid img-thumbnail secondary" alt="Sample spotlight"/>
+                <a href="https://form.jotform.com/PattonUniverCity/coursecatalog" target="_blank" rel="noopener noreferrer">
+                  <img data-testid="image2" src={Mascot} className="img-fluid img-thumbnail secondary" alt="Sample spotlight"/>
+                </a>
                 <div className="story-text">
                   <h3 data-testid="header-article2">Summer 2021 Course Catalog is now available!</h3>
                   <p data-testid="paragraph-article2">Choose from a variety of courses for your student to learn this summer, especially if they are not currently 
@@ -36,7 +38,9 @@ const Stories = () => {
                 </div>
               </article>
               <article>
-                <img data-testid="image4" src={SummerGolf} className="img-fluid img-thumbnail secondary" alt="Sample spotlight"/>
+                <a href="https://form.jotform.com/PattonUniverCity/coursecatalog" target="_blank" rel="noopener noreferrer">
+                  <img data-testid="image4" src={SummerGolf} className="img-fluid img-thumbnail secondary" alt="Sample spotlight"/>
+                </a>
                 <div className="story-text">
                   <h3 data-testid="header-article4">Golf Lessons for Girls</h3>
                   <p data-testid="paragraph-article4">Golf Lessons for Girls ages 6-12 in Houston! Visit our Course Catalog to learn more and register!</p>

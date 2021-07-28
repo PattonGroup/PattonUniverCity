@@ -7,13 +7,8 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="row">
-<<<<<<< HEAD
-          <div className="col-4 col-md">
-            <h5 data-testid="header1-footer">Helpful Links</h5>
-=======
           <div className="col-3 col-md">
             <h5>Helpful Links</h5>
->>>>>>> 34f1931fd0c0700472ea357562d4ec3a8a026fd7
             <ul className="list-unstyled">
               <li>
                 <a className="link-secondary" href="/">
@@ -52,13 +47,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-<<<<<<< HEAD
-          <div className="col-4 col-md">
-            <h5 data-testid="header2-footer">Visit Patton U</h5>
-=======
           <div className="col-3 col-md">
             <h5>Vist Patton U</h5>
->>>>>>> 34f1931fd0c0700472ea357562d4ec3a8a026fd7
             <ul className="list-unstyled">
               <li>
                 <a className="link-secondary" href="/">
@@ -92,13 +82,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-<<<<<<< HEAD
           <div className="col-4 col-md">
             <h5 data-testid="header3-footer">Departments</h5>
-=======
-          <div className="col-3 col-md">
-            <h5>Departments</h5>
->>>>>>> 34f1931fd0c0700472ea357562d4ec3a8a026fd7
             <ul className="list-unstyled">
               <li>
                 <a className="link-secondary" href="/">
@@ -128,13 +113,8 @@ const Footer = () => {
         </div>
         <hr />
         <div className="row">
-<<<<<<< HEAD
           <div className="col-3">
             <p data-testid="paragraph-footer">Houston, Texas</p>
-=======
-          <div className="col-sm-2">
-            <p>Houston, Texas</p>
->>>>>>> 34f1931fd0c0700472ea357562d4ec3a8a026fd7
           </div>
           <div className="col-sm-10">
             <span>

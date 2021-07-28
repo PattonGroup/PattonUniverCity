@@ -13,9 +13,9 @@ const eventData = [
         student_description: "This course is intended for rising 6, 7, 8, and 9th graders. The class is specifically written for students who struggle in mathematics courses during the school year. We will build a stronger foundation for middle school and 9th grade algebra. All fees are due upon required upon registration. If a payment plan is needed, please email pattonunivercity@gmail.com. Sessions last approximately 45-60 mins per day, twice a week. This class is virtual.",
     },
     {
-        img_url:"https://image.freepik.com/free-vector/music-event-poster-template-with-abstract-shapes_1361-1316.jpg",
-        event_description: "Event 3",
-        student_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a dui vulputate, fringilla felis nec, consequat ante. Curabitur egestas tristique eros id faucibus.",
+        img_url:"https://i.imgur.com/AlDmi3x.png",
+        event_description: "Golf for Girls",
+        student_description: "Golf for Girls provides customized golf lessons to girls ages 6-12. An experienced golf enthusiast will instruct the young ladies on golf vocabulary, proper form, efficient swing, and overall golf etiquette. Meetings are in-person at MacGregor Park in Houston, TX.",
     }
 ];
 

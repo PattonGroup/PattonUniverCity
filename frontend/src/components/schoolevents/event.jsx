@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Spotlight from '../../assets/images/spotlight.jpeg';
 import eventData from './eventData';
 import './event.css';
 
@@ -29,17 +28,18 @@ const EventOverview = () => {
                         <div className="col-md-6 event-item">
                             <div>
                                 <h5 data-testid="header-spotlight">Spotlight</h5>                                   
-                                <img data-testid="image-spotlight" className="event-img img-fluid img-thumbnail" src={Spotlight} alt="TentCity" width="600px" height="250px"/>
+                                <img data-testid="image-spotlight" className="event-img img-fluid img-thumbnail" src="https://i.imgur.com/Y8GSxAg.jpg" alt="TentCity" width="600px" height="250px"/>
                                 <br/><br/>
-                                <p data-testid="paragraph1-spotlight">Student Name</p>
-                                <p data-testid="paragraph2-spotlight">Student Description</p>
+                                <p data-testid="paragraph1-spotlight">Christian D. - 10th Grader</p>
+                                <p data-testid="paragraph2-spotlight">Christian is a rising 10th grader who loves theater. Christian is getting ahead of the school year by learning a few geometry skills that will 
+                                    be introduced in the Fall. Christian is an honor roll student and has plans to keep it that way! </p>
                             </div>
                         </div>
                         <div className="col-md-6 event-item">
                             <div className="">
                                 <div style={{display: 'flex', justifyContent: 'space-between'}}>
                                     <h5 data-testid="header-online">Online Events</h5>
-                                    <div>
+                                    <div className = "arrows">
                                         <span className = {isLeftArrow === true ? "carousel-left-arrow active" : "carousel-left-arrow"} onClick = {previousSlide}>&lt; </span>
                                         <span className = {isRightArrow === true ? "carousel-right-arrow active" : "carousel-right-arrow"} onClick = {nextSlide}> &gt;</span>
                                     </div>
@@ -66,12 +66,12 @@ const EventOverview = () => {
                     </div>
                     <div className="row">
                         <div className="col-sm-6">
-                            <h5 data-testid="header-dates">Important Dates</h5>
+                            <h5 data-testid="header-dates" className="event-title">Important Dates</h5>
                         </div>
                         <hr/>
                         <div className="col-sm-1">
                             <div>
-                                <h5 data-testid="header-month1">Jun. - July</h5>
+                                <h5 className="event-date" data-testid="header-month1">Jun. - July</h5>
                                 <h5 data-testid="header-day1">28</h5>
                             </div>
                         </div>
@@ -83,7 +83,7 @@ const EventOverview = () => {
                         </div>
                         <div className="col-sm-1">
                             <div>
-                                <h5 data-testid="header-month2">Jun. - July</h5>
+                                <h5 className="event-date" data-testid="header-month2">Jun. - July</h5>
                                 <h5 data-testid="header-day2">28</h5>
                             </div>
                         </div>
