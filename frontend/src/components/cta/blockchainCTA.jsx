@@ -1,14 +1,14 @@
 import React from 'react';
 import './blockchainCTA.css';
 
-const blockchainCTA = () => {
+const BlockchainCTA = () => {
   return (
     <>
       <section className="background">
-        <div className="cta-button">Join the Network</div>
+        <div data-testid="button" className="cta-button">Join the Network</div>
       </section>
     </>
   );
 };
 
-export default blockchainCTA;
+export default BlockchainCTA;

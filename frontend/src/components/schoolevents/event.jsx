@@ -27,19 +27,18 @@ const EventOverview = () => {
                     <div className="row">
                         <div className="col-md-6 event-item">
                             <div>
-                                <h5 className="event-title">Spotlight</h5>                                   
-                                <img className="event-img img-fluid img-thumbnail" src={'https://i.imgur.com/Y8GSxAg.jpg'} alt="TentCity" width="600px" height="250px" />
+                                <h5 data-testid="header-spotlight">Spotlight</h5>                                   
+                                <img data-testid="image-spotlight" className="event-img img-fluid img-thumbnail" src="https://i.imgur.com/Y8GSxAg.jpg" alt="TentCity" width="600px" height="250px"/>
                                 <br/><br/>
-                                <h6 className="event-subtile">Christian D. - 10th Grader</h6>
-                                <p className="event-descrp">Christian is a rising 10th grader who loves theater. Christian is getting ahead of the school year by learning a few geometry skills that will 
-                                    be introduced in the Fall. Christian is an honor roll student and has plans to keep it that way!
-                                </p>
+                                <p data-testid="paragraph1-spotlight">Christian D. - 10th Grader</p>
+                                <p data-testid="paragraph2-spotlight">Christian is a rising 10th grader who loves theater. Christian is getting ahead of the school year by learning a few geometry skills that will 
+                                    be introduced in the Fall. Christian is an honor roll student and has plans to keep it that way! </p>
                             </div>
                         </div>
                         <div className="col-md-6 event-item">
                             <div className="">
                                 <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                                    <h5 className="event-title">Online Events</h5>
+                                    <h5 data-testid="header-online">Online Events</h5>
                                     <div className = "arrows">
                                         <span className = {isLeftArrow === true ? "carousel-left-arrow active" : "carousel-left-arrow"} onClick = {previousSlide}>&lt; </span>
                                         <span className = {isRightArrow === true ? "carousel-right-arrow active" : "carousel-right-arrow"} onClick = {nextSlide}> &gt;</span>
@@ -51,10 +50,10 @@ const EventOverview = () => {
                                            <div className = {i === currentEvent ? "event-carousel active":"event-carousel"} key = {i}>
                                                 {i === currentEvent && (
                                                     <>
-                                                    <img className="event-img img-fluid img-thumbnail" src={e.img_url} alt="event1" width="600px" height="250px" />   
+                                                    <img data-testid="image-online" className="event-img img-fluid img-thumbnail" src={e.img_url} alt="event1" width="600px" height="250px" />   
                                                     <br/><br/>
-                                                    <h6 className="event-subtile">{e.event_description}</h6>
-                                                    <p className="event-descrp">{e.student_desrciption}</p>    
+                                                    <p data-testid="paragraph1-online">{e.event_description}</p>
+                                                    <p data-testid="paragraph2-online">{e.student_description}</p>    
                                                     </>
                                                 )}
                                             </div>        
@@ -67,34 +66,32 @@ const EventOverview = () => {
                     </div>
                     <div className="row">
                         <div className="col-sm-6">
-                            <h5 className="event-title">Important Dates</h5>
+                            <h5 data-testid="header-dates" className="event-title">Important Dates</h5>
                         </div>
                         <hr/>
-                        <div className="col-sm-2">
-                            <div className="event-date">
-                                <h5>Jun. - July</h5>
-                                <h5>28</h5>
+                        <div className="col-sm-1">
+                            <div>
+                                <h5 className="event-date" data-testid="header-month1">Jun. - July</h5>
+                                <h5 data-testid="header-day1">28</h5>
                             </div>
                         </div>
-                        <div className="col-sm-3">
-                            <h5>
-                                <a href="https://form.jotform.com/PattonUniverCity/coursecatalog" 
-                                target="_blank" rel="noopener noreferrer"
-                                className="event-links">Summer Phonics Class for Kids</a>
-                                </h5>
+                        <div className="col-sm-1">
+                           <h5 data-testid="header-bar1" style={{fontSize: '3rem'}}>|</h5>
                         </div>
-                        <div className="col-sm-2">
-                            <div className="event-date">
-                                <h5>Jun. - July</h5>
-                                <h5>28</h5>
+                        <div className="col-sm-4">
+                            <h5><a href="/" className="event-links">Summer Phonics Class</a></h5>
+                        </div>
+                        <div className="col-sm-1">
+                            <div>
+                                <h5 className="event-date" data-testid="header-month2">Jun. - July</h5>
+                                <h5 data-testid="header-day2">28</h5>
                             </div>
                         </div>
-                        <div className="col-sm-3">
-                           <h5>
-                               <a href="https://form.jotform.com/PattonUniverCity/coursecatalog" 
-                               target="_blank" rel="noopener noreferrer"
-                               className="event-links"> Yoga and Mindfulness </a>
-                               </h5>
+                        <div className="col-sm-1">
+                           <h5 data-testid="header-bar2" style={{fontSize: '3rem'}}>|</h5>
+                        </div>
+                        <div className="col-sm-4">
+                           <h5><a href="/" className="event-links">Yoga and Mindfulness</a></h5>
                         </div>
                     </div>
                 </div>

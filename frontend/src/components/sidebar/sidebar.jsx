@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {animateScroll as scroll} from 'react-scroll';
 import { SidebarData } from '../../utils/sidebarData';
-import Logo from '../../assets/svg/Untitled design.svg';
+import Logo from '../../assets/svg/UntitledDesign.svg';
 import { 
   SidebarContainer, 
   SidebarHeader, 

@@ -16,8 +16,8 @@ const AdmissionApply = () => {
             <div className="row justify-content-end">
               <div className="col-lg-7">
                 <div className="admission_form">
-                  <h3>Stay in Touch</h3>
-                  <form onSubmit={() => handleApply()}>
+                  <h3 data-testid="header-admission-form">Stay in Touch</h3>
+                  <form>
                     <div className="row">
                       <div className="col-md-6">
                         <div className="single_input">

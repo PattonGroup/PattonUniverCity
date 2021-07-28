@@ -6,8 +6,8 @@ const FinalCTA = () => {
         <section id="free-trial-block">
             <div className="container">
                 <div className="row wow fadeInUp">
-                    <p>Want to be apart of the team? We are always looking for new talent.</p>
-                    <a href="contact.html">Submit Resume</a> </div>
+                    <p data-testid="paragraph">Want to be a part of the team? We are always looking for new talent.</p>
+                    <a data-testid="button" href="contact.html">Submit Resume</a> </div>
             </div>
         </section>
     )

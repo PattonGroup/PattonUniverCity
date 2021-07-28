@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Logo from '../../assets/svg/Untitled design.svg';
+import Logo from '../../assets/svg/untitled-design.svg';
 import Hamburger from '../../assets/svg/bar.svg';
 import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from '../../utils/sidebarData';
@@ -29,6 +29,7 @@ const Navbar = (props) => {
     <>
       <header
         className={`nav-header sticky-top ${backgroundOn ? 'bg-black' : null}`}
+        data-testid="header-navbar"
       >
         <nav className="navbar navbar-default navbar-fixed-top">
           <a className="py-5" href="/">

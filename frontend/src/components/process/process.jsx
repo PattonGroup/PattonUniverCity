@@ -20,31 +20,31 @@ const Process = () => {
             <div className="container">
                 <div className="row">
                     <div className="section-title text-center wow fadeInUp">
-                        <h2>The process</h2>
+                        <h2 data-testid="header-main">The Process</h2>
                     </div>
                     <div>
                         <ul className="nav nav-tabs">
                             <li onClick={() => updateItemsShow('concept')}><i className="fa fa-star-o"></i>
-                                <h5 >01. Concept</h5>
+                                <h5 data-testid="header-concept">01. Concept</h5>
                             </li>
                             <li><i className="fa fa-copy"></i>
-                                <h5 onClick={() => updateItemsShow('prototyping')}>02. Prototyping</h5>
+                                <h5 data-testid="header-prototyping" onClick={() => updateItemsShow('prototyping')}>02. Prototyping</h5>
                             </li>
                             <li><i className="fa fa-laptop"></i>
-                                <h5 onClick={() => updateItemsShow('design')}>03. Design</h5>
+                                <h5 data-testid="header-design" onClick={() => updateItemsShow('design')}>03. Design</h5>
                             </li>
                             <li><i className="fa fa-code"></i>
-                                <h5 onClick={() => updateItemsShow('development')}>04. Development</h5>
+                                <h5 data-testid="header-development" onClick={() => updateItemsShow('development')}>04. Development</h5>
                             </li>
                         </ul>
 
-                        <div className="tab-content">
+                        {/* <div className="tab-content">
 
                             {
                                 list.map((item) => <ProcessItem item={item} />)
                             }
                             
-                        </div>
+                        </div> */}
 
                     </div>
 

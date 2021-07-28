@@ -4,27 +4,24 @@ import PattonNewsData from '../pattonNewsData';
 
 const LatestAndTrendingPosts = () => {
     
-    const [openTab1, setopenTab1] = useState(true);
-    const [openTab2, setopenTab2] = useState(false);
+    const [toggleTab, setToggleTab] = useState(true);
 
     const open = (e, type) => {
         if(type === 'LATEST'){
-            setopenTab1(true);
-            setopenTab2(false);
+            setToggleTab(true);
         }else{
-            setopenTab1(false);
-            setopenTab2(true);
+            setToggleTab(false);
         }
       }
 
     return (
        <div className = "latest-and-trending-container">
             <div className="tab">
-            <button className = {openTab1 ? 'active' : ''} onClick={(e) => open(e, "LATEST")} id="defaultOpen">LATEST</button>
-            <button className = {openTab2 ? 'active' : ''} onClick={(e) => open(e, "TRENDING")}>TRENDING</button>
+            <button className = {toggleTab ? 'active' : ''} onClick={(e) => open(e, "LATEST")} id="defaultOpen">LATEST</button>
+            <button className = {!toggleTab ? 'active' : ''} onClick={(e) => open(e, "TRENDING")}>TRENDING</button>
             </div>
             
-            <div id="LATEST" className="tabcontent" style = {{'display' : openTab1 ? 'block' : 'none'}}>
+            <div id="LATEST" className="tabcontent" style = {{'display' : toggleTab ? 'block' : 'none'}}>
                 <ul>
                 {
                     PattonNewsData.map(data => {
@@ -44,7 +41,7 @@ const LatestAndTrendingPosts = () => {
                 </ul>
             </div>
 
-            <div id="TRENDING" className="tabcontent" style = {{'display' : openTab2 ? 'block' : 'none'}}>
+            <div id="TRENDING" className="tabcontent" style = {{'display' : !toggleTab ? 'block' : 'none'}}>
                 <ul>
                     {
                         PattonNewsData.map(data => {

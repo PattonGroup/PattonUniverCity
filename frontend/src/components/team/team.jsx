@@ -7,28 +7,28 @@ const Team = () => {
     return (
         <div className="row">
             <div className="col-lg-4">
-                <img className="bd-placeholder-img rounded-circle" width="140" height="140" src={Person2} alt="" />
+                <img className="bd-placeholder-img rounded-circle" width="140" height="140" src={Person1} alt="" data-testid="image1" />
 
-                <h2>Ian</h2>
-                <h3>IOS Lead</h3>
-                <p>Over 9 years of IOS development in the industry.</p>
-                <p><a href="/" className="btn btn-secondary">View details &raquo;</a></p>
+                <h2 data-testid="header1-person1">Ian</h2>
+                <h3 data-testid="header2-person1">IOS Lead</h3>
+                <p data-testid="paragraph1-person1">Over 9 years of IOS development in the industry.</p>
+                <p><a data-testid="button-person1" href="/" className="btn btn-secondary">View details &raquo;</a></p>
             </div>
             <div className="col-lg-4">
-                <img className="bd-placeholder-img rounded-circle" width="140" height="140" src={Person1} alt="" />
+                <img className="bd-placeholder-img rounded-circle" width="140" height="140" src={Person2} alt="" data-testid="image2" />
 
-                <h2>Dominique</h2>
-                <h3>Project Manager</h3>
-                <p> <strong>Degree:</strong> Masters in Management Information Systems <br /> <strong>Experience:</strong> G.A. Alumni Software Engineering Program</p>
-                <p><a href="/"  className="btn btn-secondary">View details &raquo;</a></p>
+                <h2 data-testid="header1-person2">Dominique</h2>
+                <h3 data-testid="header2-person2">Project Manager</h3>
+                <p data-testid="paragraph1-person2"><strong>Degree:</strong> Masters in Management Information Systems <br /> <strong>Experience:</strong> G.A. Alumni Software Engineering Program</p>
+                <p><a data-testid="button-person2" href="/"  className="btn btn-secondary">View details &raquo;</a></p>
             </div>
             <div className="col-lg-4">
-                <img className="bd-placeholder-img rounded-circle" width="140" height="140" src={Person3} alt="" />
+                <img className="bd-placeholder-img rounded-circle" width="140" height="140" src={Person3} alt="" data-testid="image3" />
 
-                <h2>Elvonte</h2>
-                <h3>UX/UI Lead</h3>
-                <p> Developed designs for top #10 ranking apps in the IOS app store.</p>
-                <p><a href="/"  className="btn btn-secondary">View details &raquo;</a></p>
+                <h2 data-testid="header1-person3">Elvonte</h2>
+                <h3 data-testid="header2-person3">UX/UI Lead</h3>
+                <p data-testid="paragraph1-person3">Developed designs for top #10 ranking apps in the IOS app store.</p>
+                <p><a data-testid="button-person3" href="/"  className="btn btn-secondary">View details &raquo;</a></p>
             </div>
 
 

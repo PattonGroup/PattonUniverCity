@@ -52,7 +52,7 @@ const Footer = () => {
             <ul className="list-unstyled">
               <li>
                 <a className="link-secondary" href="/">
-                  Faculity & Staff
+                  Faculty & Staff
                 </a>
               </li>
               <li>
@@ -82,8 +82,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-3 col-md">
-            <h5>Departments</h5>
+          <div className="col-4 col-md">
+            <h5 data-testid="header3-footer">Departments</h5>
             <ul className="list-unstyled">
               <li>
                 <a className="link-secondary" href="/">
@@ -100,11 +100,6 @@ const Footer = () => {
                   Research
                 </a>
               </li>
-              <li>
-                <a className="link-secondary" href="/">
-                  Blockchain
-                </a>
-              </li>
             </ul>
           </div>
           <div className="col-3 col-md">
@@ -118,8 +113,8 @@ const Footer = () => {
         </div>
         <hr />
         <div className="row">
-          <div className="col-sm-2">
-            <p>Houston, Texas</p>
+          <div className="col-3">
+            <p data-testid="paragraph-footer">Houston, Texas</p>
           </div>
           <div className="col-sm-10">
             <span>

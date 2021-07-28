@@ -27,6 +27,7 @@
 	background: whitesmoke;
 	padding: 2% 4%;
 	letter-spacing: 0.8px;
+	text-decoration: none;
 }
 #free-trial-block a:hover {
 	border: 1px #fff solid;
