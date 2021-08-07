@@ -73,7 +73,6 @@ const register = asyncHandler(async (req, res) => {
 });
 
 const checkUser = asyncHandler(async (req, res) => {
-  console.log(req.session.jwt);
   res.send({ currentUser: req.session.jwt || null });
 });
 
