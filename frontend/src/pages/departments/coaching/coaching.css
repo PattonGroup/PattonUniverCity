@@ -1,0 +1,28 @@
+.quote{
+	margin-top: 30px;
+}
+.tags{
+	background-color: white;
+}
+
+.heading {
+	margin-right: 450px;
+	color: #c65120;
+}
+
+.media{
+	margin-top: 50px;
+}
+
+hr{
+	border: 1px solid black;
+}
+
+.author{
+	width: 10%;
+	border: 1px solid #c65120;
+}
+
+.name {
+	margin-top: 10px;
+}
