@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import morgan from 'morgan';
 import cors from 'cors';
 import cookieSession from 'cookie-session';
-import compression from 'compression';
+// import compression from 'compression';
 import userRoutes from './routes/userRoutes.js';
 import { notFound, errorHandler } from './middlewares/errorMiddleware.js';
 import connectDB from './config/database.js';
@@ -25,7 +25,7 @@ app.use(cors({ exposedHeaders: '*' }));
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
-app.use(compression())
+// app.use(compression())
 
 app.use(
   cookieSession({
