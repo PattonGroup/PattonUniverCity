@@ -32,7 +32,7 @@ const EventOverview = () => {
 					<div className="row">
 						<div className="col-md-6 event-item">
 							<div>
-								<h5 data-testid="header-spotlight">Spotlight</h5>
+								<h5 className="header-spotlight" data-testid="header-spotlight">Spotlight</h5>
 								<img
 									data-testid="image-spotlight"
 									className="event-img img-fluid img-thumbnail"
@@ -59,7 +59,7 @@ const EventOverview = () => {
 								<div
 									style={{ display: "flex", justifyContent: "space-between" }}
 								>
-									<h5 data-testid="header-online">Online Events</h5>
+									<h5 className="header-online" data-testid="header-online">Online Events</h5>
 									<div className="arrows">
 										<span
 											className={
