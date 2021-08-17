@@ -11,37 +11,37 @@ const Footer = () => {
             <h5>Helpful Links</h5>
             <ul className="list-unstyled">
               <li>
-                <a className="link-secondary" href="/">
+                <a className="link-secondary" href="/comingsoon">
                   Academic Calendar
                 </a>
               </li>
               <li>
-                <a className="link-secondary" href="/developers">
+                <a className="link-secondary" href="/comingsoon">
                   Developers
                 </a>
               </li>
               <li>
-                <a className="link-secondary" href="/blockchain">
+                <a className="link-secondary" href="/comingsoon">
                   Blockchain
                 </a>
               </li>
               <li>
-                <a className="link-secondary" href="/">
+                <a className="link-secondary" href="/comingsoon">
                   Leadership
                 </a>
               </li>
               <li>
-                <a className="link-secondary" href="/">
+                <a className="link-secondary" href="/comingsoon">
                   Careers
                 </a>
               </li>
               <li>
-                <a className="link-secondary" href="/">
+                <a className="link-secondary" href="/comingsoon">
                   Events
                 </a>
               </li>
               <li>
-                <a className="link-secondary" href="/">
+                <a className="link-secondary" href="/comingsoon">
                   News
                 </a>
               </li>
@@ -51,32 +51,32 @@ const Footer = () => {
             <h5>Vist Patton U</h5>
             <ul className="list-unstyled">
               <li>
-                <a className="link-secondary" href="/">
+                <a className="link-secondary" href="/comingsoon">
                   Faculty & Staff
                 </a>
               </li>
               <li>
-                <a className="link-secondary" href="/support">
+                <a className="link-secondary" href="/comingsoon">
                   Support Center
                 </a>
               </li>
               <li>
-                <a className="link-secondary" href="/faq">
+                <a className="link-secondary" href="/comingsoon">
                   FAQ
                 </a>
               </li>
               <li>
-                <a className="link-secondary" href="/">
+                <a className="link-secondary" href="/comingsoon">
                   Alumni
                 </a>
               </li>
               <li>
-                <a className="link-secondary" href="/">
+                <a className="link-secondary" href="/comingsoon">
                   Privacy
                 </a>
               </li>
               <li>
-                <a className="link-secondary" href="/">
+                <a className="link-secondary" href="/comingsoon">
                   Terms
                 </a>
               </li>
@@ -86,17 +86,17 @@ const Footer = () => {
             <h5 data-testid="header3-footer">Departments</h5>
             <ul className="list-unstyled">
               <li>
-                <a className="link-secondary" href="/">
+                <a className="link-secondary" href="/comingsoon">
                   Business
                 </a>
               </li>
               <li>
-                <a className="link-secondary" href="/">
+                <a className="link-secondary" href="/comingsoon">
                   Education
                 </a>
               </li>
               <li>
-                <a className="link-secondary" href="/">
+                <a className="link-secondary" href="/comingsoon">
                   Research
                 </a>
               </li>
@@ -118,31 +118,31 @@ const Footer = () => {
           </div>
           <div className="col-sm-10">
             <span>
-              <a className="link-secondary" href="/">
+              <a className="link-secondary" href="/comingsoon">
                 {' '}
                 Univercity Privacy |{' '}
               </a>
             </span>
             <span>
-              <a className="link-secondary" href="/">
+              <a className="link-secondary" href="/comingsoon">
                 {' '}
                 Terms |{' '}
               </a>
             </span>
             <span>
-              <a className="link-secondary" href="/">
+              <a className="link-secondary" href="/comingsoon">
                 {' '}
                 Copyright |{' '}
               </a>
             </span>
             <span>
-              <a className="link-secondary" href="/">
+              <a className="link-secondary" href="/comingsoon">
                 {' '}
                 Site Information |{' '}
               </a>
             </span>
             <span>
-              <a className="link-secondary" href="/">
+              <a className="link-secondary" href="/comingsoon">
                 {' '}
                 Contact{' '}
               </a>

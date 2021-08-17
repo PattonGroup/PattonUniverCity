@@ -62,31 +62,31 @@ const Navbar = (props) => {
 							<>
 								<a
 									className={`${backgroundOn ? "bg-black" : null}`}
-									href="/education"
+									href="/comingsoon"
 								>
 									Education
 								</a>
 								<a
 									className={`${backgroundOn ? "bg-black" : null}`}
-									href="/research"
+									href="/comingsoon"
 								>
 									Research
 								</a>
 								<a
 									className={`${backgroundOn ? "bg-black" : null}`}
-									href="/innovation"
+									href="/comingsoon"
 								>
 									Innovation
 								</a>
 								<a
 									className={`${backgroundOn ? "bg-black" : null}`}
-									href="/news"
+									href="/comingsoon"
 								>
 									News
 								</a>
 								<a
 									className={`${backgroundOn ? "bg-black" : null}`}
-									href="/Alumni"
+									href="/comingsoon"
 								>
 									Alumni
 								</a>

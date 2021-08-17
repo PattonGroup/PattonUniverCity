@@ -11,6 +11,7 @@ import Axios from "axios";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ComingSoon from "./pages/comingsoon/comingsoon";
 AOS.init();
 
 export default function App() {
@@ -145,6 +146,8 @@ export default function App() {
 			<Route exact path={`/blockchain`} render={() => <Blockchain />} />
 
 			<Route exact path={`/news`} render={() => <News />} />
+			
+			<Route exact path={`/comingsoon`} render={() => <ComingSoon />} />
 		</Router>
 	);
 }
