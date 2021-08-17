@@ -6,6 +6,7 @@
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/user-event": "^12.1.10",
+    "aos": "^3.0.0-beta.6",
     "axios": "^0.21.1",
     "bootstrap": "^5.0.1",
     "firebase": "^8.6.5",
@@ -14,6 +15,7 @@
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
     "react-redux": "^7.2.4",
+    "react-responsive-carousel": "^3.2.20",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
     "react-scroll": "^1.8.2",
