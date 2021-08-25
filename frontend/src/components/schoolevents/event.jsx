@@ -137,7 +137,7 @@ const EventOverview = () => {
 						</div>
 						<div className="col-sm-4">
 							<h5>
-								<a href="/" className="event-links">
+								<a href="/comingsoon" className="event-links">
 									Summer Phonics Class
 								</a>
 							</h5>
@@ -153,7 +153,7 @@ const EventOverview = () => {
 
 						<div className="col-sm-4">
 							<h5>
-								<a href="/" className="event-links">
+								<a href="/comingsoon" className="event-links">
 									Yoga and Mindfulness
 								</a>
 							</h5>

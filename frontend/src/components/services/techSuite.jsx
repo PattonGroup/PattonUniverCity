@@ -82,7 +82,7 @@ const TechSuite = () => {
 									creating documentation client software to create maintainable
 									stand alone services.
 								</p>
-								<a className="services-link" href="/">
+								<a className="services-link" href="/comingsoon">
 									Software Development {">"}
 								</a>
 							</div>
@@ -114,7 +114,7 @@ const TechSuite = () => {
 									development focused on the creation of new applications for
 									education and women in the ecosystem.
 								</p>
-								<a className="services-link" href="/">
+								<a className="services-link" href="/comingsoon">
 									Blockchain {">"}
 								</a>
 							</div>
@@ -146,7 +146,7 @@ const TechSuite = () => {
 									in the principles that underlie AI including logic, knowledge
 									representation, and probabilistic models.
 								</p>
-								<a className="services-link" href="/">
+								<a className="services-link" href="/comingsoon">
 									Artificial Intelligence {">"}
 								</a>
 							</div>

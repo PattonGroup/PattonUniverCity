@@ -81,7 +81,7 @@ const GradSchoolSuite = () => {
 									a cryptocurrency space. Students of all ages are invited to
 									enroll in this course. This course is virtual.
 								</p>
-								<a className="services-link" href="/">
+								<a className="services-link" href="/comingsoon">
 									Tutoring {">"}
 								</a>
 							</div>
@@ -113,7 +113,7 @@ const GradSchoolSuite = () => {
 									strategies to earn income through entrepreneurship. This
 									course is currently virtual.
 								</p>
-								<a className="services-link " href="/">
+								<a className="services-link " href="/comingsoon">
 									College Coaching {">"}
 								</a>
 							</div>
@@ -142,7 +142,7 @@ const GradSchoolSuite = () => {
 									Tutorials are offered “as-needed”. The meetings are currently
 									virtual.
 								</p>
-								<a className="services-link" href="/">
+								<a className="services-link" href="/comingsoon">
 									Mentoring {">"}
 								</a>
 							</div>
