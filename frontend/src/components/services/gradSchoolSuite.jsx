@@ -1,18 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./services.css";
 
 const GradSchoolSuite = () => {
-	const [currentSlide, setCurrentSlide] = useState(0);
-
-	const prev = () => {
-		setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : currentSlide);
-	};
-
-	const next = () => {
-		setCurrentSlide(currentSlide < 2 ? currentSlide + 1 : currentSlide);
-	};
 	return (
 		<>
 			<section
@@ -50,8 +41,7 @@ const GradSchoolSuite = () => {
 						emulateTouch={true}
 						centerMode={true}
 						centerSlidePercentage={90}
-						selectedItem={currentSlide}
-						showArrows={false}
+						showArrows={true}
 						autoPlay={false}
 					>
 						<div
@@ -61,7 +51,7 @@ const GradSchoolSuite = () => {
 							data-aos-duration="1500"
 							data-aos-once="true"
 						>
-							<div onClick={prev}>
+							<div>
 								<img
 									data-testid="image1"
 									className="services-img img-fluid img-thumbnail"
@@ -71,7 +61,7 @@ const GradSchoolSuite = () => {
 									height="250px"
 								/>
 							</div>
-							<div className="services-info" onClick={next}>
+							<div className="services-info">
 								<h5 data-testid="header1" className="services-subtitle">
 									Crypto for Kids
 								</h5>
@@ -93,7 +83,7 @@ const GradSchoolSuite = () => {
 							data-aos-duration="1500"
 							data-aos-once="true"
 						>
-							<div onClick={prev}>
+							<div>
 								<img
 									data-testid="image2"
 									className="services-img img-fluid img-thumbnail"
@@ -103,7 +93,7 @@ const GradSchoolSuite = () => {
 									height="250px"
 								/>
 							</div>
-							<div className="services-info" onClick={next}>
+							<div className="services-info">
 								<h5 data-testid="header2" className="services-subtitle">
 									Youth Entrepreneurship
 								</h5>
@@ -119,7 +109,7 @@ const GradSchoolSuite = () => {
 							</div>
 						</div>
 						<div className="services-item">
-							<div onClick={prev}>
+							<div>
 								<img
 									data-testid="image3"
 									className="services-img img-fluid img-thumbnail"
@@ -129,7 +119,7 @@ const GradSchoolSuite = () => {
 									height="250px"
 								/>
 							</div>
-							<div className="services-info" onClick={next}>
+							<div className="services-info">
 								<h5 data-testid="header3" className="services-subtitle">
 									Academic Coaching
 								</h5>

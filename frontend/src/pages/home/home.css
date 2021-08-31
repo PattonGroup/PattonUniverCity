@@ -141,8 +141,18 @@
 	font-family: "University";
 }
 
+@media (max-width: 1200px) {
+	.hero-text {
+		font-size: 3.5rem;
+		/* text-align: center; */
+		margin: auto;
+		/* padding: 0 10%; */
+		width: 70%;
+	}
+}
 @media (max-width: 800px) {
 	.hero-text {
 		font-size: 3.5rem;
+		width: 100%;
 	}
 }

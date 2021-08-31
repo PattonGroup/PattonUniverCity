@@ -4,15 +4,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./services.css";
 
 const TechSuite = () => {
-	const [currentSlide, setCurrentSlide] = useState(0);
-
-	const prev = () => {
-		setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : currentSlide);
-	};
-
-	const next = () => {
-		setCurrentSlide(currentSlide < 2 ? currentSlide + 1 : currentSlide);
-	};
 	return (
 		<>
 			<section
@@ -50,8 +41,7 @@ const TechSuite = () => {
 						emulateTouch={true}
 						centerMode={true}
 						centerSlidePercentage={90}
-						showArrows={false}
-						selectedItem={currentSlide}
+						showArrows={true}
 						autoPlay={false}
 					>
 						<div
@@ -61,7 +51,7 @@ const TechSuite = () => {
 							data-aos-duration="1500"
 							data-aos-once="true"
 						>
-							<div onClick={prev}>
+							<div>
 								<img
 									data-testid="image1"
 									className="services-img img-fluid img-thumbnail"
@@ -69,7 +59,7 @@ const TechSuite = () => {
 									alt="Software Development"
 								/>
 							</div>
-							<div className="services-info" onClick={next}>
+							<div className="services-info">
 								<h5 data-testid="header1" className="services-subtitle">
 									Software Development
 								</h5>
@@ -94,7 +84,7 @@ const TechSuite = () => {
 							data-aos-duration="1500"
 							data-aos-once="true"
 						>
-							<div onClick={prev}>
+							<div>
 								<img
 									data-testid="image2"
 									className="services-img img-fluid img-thumbnail"
@@ -102,7 +92,7 @@ const TechSuite = () => {
 									alt="Blockchain"
 								/>
 							</div>
-							<div className="services-info" onClick={next}>
+							<div className="services-info">
 								<h5 data-testid="header2" className="services-subtitle">
 									Blockchain
 								</h5>
@@ -126,7 +116,7 @@ const TechSuite = () => {
 							data-aos-duration="1500"
 							data-aos-once="true"
 						>
-							<div onClick={prev}>
+							<div>
 								<img
 									data-testid="image3"
 									className="services-img img-fluid img-thumbnail"
@@ -134,7 +124,7 @@ const TechSuite = () => {
 									alt="Artificial Intelligence"
 								/>
 							</div>
-							<div className="services-info" onClick={next}>
+							<div className="services-info">
 								<h5 data-testid="header3" className="services-subtitle">
 									Artificial Intelligence
 								</h5>
