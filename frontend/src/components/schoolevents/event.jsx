@@ -19,31 +19,73 @@ const EventOverview = () => {
 		setCurrentEvent(currentEvent === 0 ? length - 1 : currentEvent - 1);
 	};
 
+	const hoverAnimation = (event) => {
+		const parent = event.currentTarget.firstChild;
+		const image = parent.childNodes[1].firstChild;
+		const header = parent.childNodes[3];
+		image.classList.add("hovered-event-img");
+		header.classList.add("hovered-event-header");
+	};
+
+	const unHover = (event) => {
+		const parent = event.currentTarget.firstChild;
+		const image = parent.childNodes[1].firstChild;
+		const header = parent.childNodes[3];
+		image.classList.remove("hovered-event-img");
+		header.classList.remove("hovered-event-header");
+	};
+
+	const hoverCarouselAnimation = (event) => {
+		const parent = event.currentTarget.firstChild;
+		const image = parent.childNodes[0].firstChild;
+		const header = parent.childNodes[2];
+		image.classList.add("hovered-event-img");
+		header.classList.add("hovered-event-header");
+	};
+
+	const unHoverCarousel = (event) => {
+		const parent = event.currentTarget.firstChild;
+		const image = parent.childNodes[0].firstChild;
+		const header = parent.childNodes[2];
+		image.classList.remove("hovered-event-img");
+		header.classList.remove("hovered-event-header");
+	};
+
 	return (
 		<>
 			<section className="event-section">
-				<div
-					className="container"
-					data-aos="fade"
-					data-aos-offset="200"
-					data-aos-duration="1500"
-					data-aos-once="true"
-				>
-					<div className="row">
-						<div className="col-md-6 event-item">
+				<div className="container">
+					<div
+						className="row"
+						data-aos="fade"
+						data-aos-offset="200"
+						data-aos-duration="1500"
+						data-aos-once="true"
+					>
+						<div
+							className="col-md-6 event-item"
+							onMouseOver={hoverAnimation}
+							onMouseOut={unHover}
+						>
 							<div>
-								<h5 className="header-spotlight" data-testid="header-spotlight">Spotlight</h5>
-								<img
-									data-testid="image-spotlight"
-									className="event-img img-fluid img-thumbnail"
-									src="https://i.imgur.com/Y8GSxAg.jpg"
-									alt="TentCity"
-									width="600px"
-									height="250px"
-								/>
+								<h5 className="header-spotlight" data-testid="header-spotlight">
+									Spotlight
+								</h5>
+								<div className="event-image-container">
+									<img
+										data-testid="image-spotlight"
+										className="event-img img-fluid img-thumbnail"
+										src="https://i.imgur.com/Y8GSxAg.jpg"
+										alt="TentCity"
+										width="600px"
+										height="250px"
+									/>
+								</div>
 								<br />
-								<br />
-								<p data-testid="paragraph1-spotlight">
+								<p
+									data-testid="paragraph1-spotlight"
+									className="event-subheader"
+								>
 									Christian D. - 10th Grader
 								</p>
 								<p data-testid="paragraph2-spotlight">
@@ -59,7 +101,9 @@ const EventOverview = () => {
 								<div
 									style={{ display: "flex", justifyContent: "space-between" }}
 								>
-									<h5 className="header-online" data-testid="header-online">Online Events</h5>
+									<h5 className="header-online" data-testid="header-online">
+										Online Events
+									</h5>
 									<div className="arrows">
 										<span
 											className={
@@ -93,26 +137,32 @@ const EventOverview = () => {
 													: "event-carousel"
 											}
 											key={i}
+											onMouseOver={hoverCarouselAnimation}
+											onMouseOut={unHoverCarousel}
 										>
 											{i === currentEvent && (
-												<>
-													<img
-														data-testid="image-online"
-														className="event-img img-fluid img-thumbnail"
-														src={e.img_url}
-														alt="event1"
-														width="600px"
-														height="250px"
-													/>
+												<div>
+													<div className="event-image-container">
+														<img
+															data-testid="image-online"
+															className="event-img img-fluid img-thumbnail"
+															src={e.img_url}
+															alt="event1"
+															width="600px"
+															height="250px"
+														/>
+													</div>
 													<br />
-													<br />
-													<p data-testid="paragraph1-online">
+													<p
+														className="event-subheader"
+														data-testid="paragraph1-online"
+													>
 														{e.event_description}
 													</p>
 													<p data-testid="paragraph2-online">
 														{e.student_description}
 													</p>
-												</>
+												</div>
 											)}
 										</div>
 									);
@@ -121,42 +171,50 @@ const EventOverview = () => {
 						</div>
 					</div>
 					<div className="row">
-						<div className="col-sm-6">
-							<h5 data-testid="header-dates" className="event-title">
-								Important Dates
-							</h5>
-						</div>
-						<hr />
-						<div className="col-sm-1">
-							<div>
-								<h5 className="event-date" data-testid="header-month1">
-									Jun. - July
+						<div
+							className="dates-container row"
+							data-aos="fade"
+							data-aos-offset="200"
+							data-aos-duration="1500"
+							data-aos-once="true"
+						>
+							<div className="col-sm-6">
+								<h5 data-testid="header-dates" className="event-title">
+									Important Dates
 								</h5>
-								<h5 data-testid="header-day1">28</h5>
 							</div>
-						</div>
-						<div className="col-sm-4">
-							<h5>
-								<a href="/comingsoon" className="event-links">
-									Summer Phonics Class
-								</a>
-							</h5>
-						</div>
-						<div className="col-sm-1">
-							<div>
-								<h5 className="event-date" data-testid="header-month2">
-									Jun. - July
+							<hr />
+							<div className="col-sm-1">
+								<div>
+									<h5 className="event-date" data-testid="header-month1">
+										Jun. - July
+									</h5>
+									<h5 data-testid="header-day1">28</h5>
+								</div>
+							</div>
+							<div className="col-sm-4">
+								<h5>
+									<a href="/" className="event-links">
+										Summer Phonics Class
+									</a>
 								</h5>
-								<h5 data-testid="header-day2">28</h5>
 							</div>
-						</div>
+							<div className="col-sm-1">
+								<div>
+									<h5 className="event-date" data-testid="header-month2">
+										Jun. - July
+									</h5>
+									<h5 data-testid="header-day2">28</h5>
+								</div>
+							</div>
 
-						<div className="col-sm-4">
-							<h5>
-								<a href="/comingsoon" className="event-links">
-									Yoga and Mindfulness
-								</a>
-							</h5>
+							<div className="col-sm-4">
+								<h5>
+									<a href="/" className="event-links">
+										Yoga and Mindfulness
+									</a>
+								</h5>
+							</div>
 						</div>
 					</div>
 				</div>

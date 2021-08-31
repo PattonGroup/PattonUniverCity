@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
 import "./straightLine.css";
 
-const StraightLine = ({}) => {
+const StraightLine = () => {
 	const [totalHeight, setTotalHeight] = useState(0);
 	const [scrollPosition, setScrollPosition] = useState(window.pageYOffset);
 	const [lineHeight, setLineHeight] = useState("0");
@@ -54,8 +54,10 @@ const StraightLine = ({}) => {
 	//
 
 	useEffect(() => {
-		const heightDecimal = (scrollPosition / totalHeight) * 98;
-		if (lineHeight >= heightDecimal) return;
+		let heightDecimal = (scrollPosition / totalHeight) * 95;
+		if (heightDecimal < 40) {
+			heightDecimal = 40;
+		}
 
 		setLineHeight(heightDecimal);
 	}, [scrollPosition, totalHeight, lineHeight, setLineHeight]);

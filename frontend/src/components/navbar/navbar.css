@@ -1,299 +1,298 @@
 @font-face {
-  font-family: "University";
-  src: url("../../assets/fonts/University/UniversityRegular.ttf");
-  src: url("../../assets/fonts/University/UniversityRegular.ttf")
-      format("truetype"),
-    url("../../assets/fonts/University/UniversityRegular.eot")
-      format("embedded-opentype"),
-    url("../../assets/fonts/University/UniversityRegular.woff") format("woff");
+	font-family: "University";
+	src: url("../../assets/fonts/University/UniversityRegular.ttf");
+	src: url("../../assets/fonts/University/UniversityRegular.ttf")
+			format("truetype"),
+		url("../../assets/fonts/University/UniversityRegular.eot")
+			format("embedded-opentype"),
+		url("../../assets/fonts/University/UniversityRegular.woff") format("woff");
 }
 @font-face {
-  font-family: "Monday";
-  src: url("../../assets/fonts/University/Monday_Routines.woff2")
-    format("woff2");
+	font-family: "Monday";
+	src: url("../../assets/fonts/University/Monday_Routines.woff2")
+		format("woff2");
 }
 
 header {
-  background: #283e4a;
-  position: relative;
-  height: 0;
-  width: 100%;
-  box-shadow: 0px 4px 13px 1px rgb(167 167 167 / 80%);
+	background: #283e4a;
+	position: relative;
+	height: 0;
+	width: 100%;
+	box-shadow: 0px 4px 13px 1px rgb(167 167 167 / 80%);
 }
 
 .bg-black nav {
-  background-color: #191919;
+	background-color: #191919;
 }
 
 .bg-black {
-  color: #fff !important;
+	color: #fff !important;
 }
 
 nav {
-  align-items: center;
-  margin-top: -2%;
-  height: 225px;
-  position: absolute;
-  z-index: 0;
+	align-items: center;
+	margin-top: -2%;
+	height: 225px;
+	position: absolute;
+	z-index: 3;
 }
 
 nav a {
-  text-decoration: none;
-  font-family: "Libre Baskerville", serif;
-  font-size: 2rem;
-  position: relative;
+	text-decoration: none;
+	font-family: "Libre Baskerville", serif;
+	font-size: 2rem;
 }
 
 nav a:first-child {
-  margin-top: -2%;
-  padding: 0 !important;
+	margin-top: -2%;
+	padding: 0 !important;
 }
 
 .navbar {
-  width: 100vw;
-  padding: 0 8% 0 2%;
+	width: 100vw;
+	padding: 0 8% 0 2%;
 }
 
 .main-nav-mobile {
-  display: none;
+	display: none;
 }
 
 .main-nav-mobile img {
-  width: 20px;
+	width: 20px;
 }
 
 .logo-wrap {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .logo-title {
-  font-family: "University";
-  text-align: center;
-  color: white;
-  max-height: 75;
-  max-width: 50;
-  padding-right: 4%;
-  margin-top: -15%;
+	font-family: "University";
+	text-align: center;
+	color: white;
+	max-height: 75;
+	max-width: 50;
+	padding-right: 4%;
+	margin-top: -15%;
 }
 
 .logo-title span:first-child {
-  font-size: 1rem;
-  white-space: nowrap;
-  padding-left: 16px;
+	font-size: 1rem;
+	white-space: nowrap;
+	padding-left: 16px;
 }
 
 .logo-title span:last-child {
-  font-size: 0.7rem;
-  white-space: nowrap;
-  padding-left: 16px;
-  margin-top: -10%;
+	font-size: 0.7rem;
+	white-space: nowrap;
+	padding-left: 16px;
+	margin-top: -10%;
 }
 
 .nav-header {
-  background-color: transparent;
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
-  font-size: 1.5rem;
+	background-color: transparent;
+	-webkit-backdrop-filter: saturate(180%) blur(20px);
+	backdrop-filter: saturate(180%) blur(20px);
+	font-size: 1.5rem;
 }
 
 .content-header {
-  background-color: rgba(0, 0, 0);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
-  font-size: 1.5rem;
-  height: 6rem;
-  z-index: 1;
+	background-color: rgba(0, 0, 0);
+	-webkit-backdrop-filter: saturate(180%) blur(20px);
+	backdrop-filter: saturate(180%) blur(20px);
+	font-size: 1.5rem;
+	height: 6rem;
+	z-index: 1;
 }
 
 .content-links {
-  width: 60%;
-  display: flex;
-  justify-content: space-evenly;
-  margin-left: auto !important;
+	width: 60%;
+	display: flex;
+	justify-content: space-evenly;
+	margin-left: auto !important;
 }
 
 .content-links a {
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-family: "Libre Baskerville", serif;
+	text-decoration: none;
+	font-size: 1.5rem;
+	font-family: "Libre Baskerville", serif;
 }
 
 .nav-header a,
 .content-header a {
-  color: #fff;
-  transition: color 0.15s ease-in-out;
+	color: #fff;
+	transition: color 0.15s ease-in-out;
 }
 .nav-header a:hover,
 .content-header a:hover {
-  color: #8e8e8e;
-  text-decoration: none;
+	color: #8e8e8e;
+	text-decoration: none;
 }
 
 .flex-equal > * {
-  flex: 1;
+	flex: 1;
 }
 
 .logo-header {
-  margin-top: 8%;
+	margin-top: 8%;
 }
 
 .img-respo {
-  height: 4.6rem;
-  width: 7.5rem;
+	height: 4.6rem;
+	width: 7.5rem;
 }
 
 .nav-menu {
-  display: none;
+	display: none;
 }
 
 @media (max-width: 1200px) {
-  .content-header {
-    display: none;
-  }
+	.content-header {
+		display: none;
+	}
 
-  .nav-header nav {
-    display: none !important;
-  }
+	.nav-header nav {
+		display: none !important;
+	}
 
-  .mobile-overlay {
-    width: 100%;
-    margin-left: auto;
-    background: white;
-  }
+	.mobile-overlay {
+		width: 100%;
+		margin-left: auto;
+		background: white;
+	}
 
-  .main-nav-mobile {
-    margin-top: 2%;
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 100px;
-  }
+	.main-nav-mobile {
+		/* margin-top: 2%; */
+		display: flex;
+		width: 100%;
+		flex-direction: row;
+		justify-content: space-between;
+		height: 100px;
+	}
 
-  #mobile-logo {
-    width: 10%;
-    margin: 0%;
-  }
+	#mobile-logo {
+		width: 10%;
+		margin: 0%;
+	}
 
-  .main-nav-mobile img {
-    margin: 20px;
-    display: flex;
-    opacity: 0.8;
-  }
+	.main-nav-mobile img {
+		margin: 20px;
+		display: flex;
+		opacity: 0.8;
+	}
 
-  .nav-menu.active {
-    position: fixed;
-    z-index: 999;
-    width: 100%;
-    height: 100vh;
-    background: #0d0d0d;
-    display: grid;
-    align-items: center;
-    top: 0;
-    left: 0;
-    transition: 0.3s ease-in-out;
-  }
+	.nav-menu.active {
+		position: fixed;
+		z-index: 999;
+		width: 100%;
+		height: 100vh;
+		background: #0d0d0d;
+		display: grid;
+		align-items: center;
+		top: 0;
+		left: 0;
+		transition: 0.3s ease-in-out;
+	}
 
-  .nav-menu-items {
-    width: 100%;
-    background-color: #0d0d0d;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(10, 60px);
-    text-align: center;
-  }
+	.nav-menu-items {
+		width: 100%;
+		background-color: #0d0d0d;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(10, 60px);
+		text-align: center;
+	}
 
-  .navbar-toggle {
-    height: 80px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 30px 80px 0 10px;
-  }
+	.navbar-toggle {
+		height: 80px;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		margin: 30px 80px 0 10px;
+	}
 
-  .nav-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 0px 8px 16px;
-    list-style: none;
-    height: 4rem;
-    margin-top: 70px;
-  }
+	.nav-text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 8px 0px 8px 16px;
+		list-style: none;
+		height: 4rem;
+		margin-top: 70px;
+	}
 
-  .nav-text a {
-    text-decoration: none;
-    color: #f5f5f5;
-    font-size: 2rem;
-    width: 35;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+	.nav-text a {
+		text-decoration: none;
+		color: #f5f5f5;
+		font-size: 2rem;
+		width: 35;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
-  .nav-text a:hover {
-    color: #8e8e8e;
-  }
+	.nav-text a:hover {
+		color: #8e8e8e;
+	}
 
-  .sidebar-title {
-    width: 100%;
-    justify-content: center;
-    white-space: nowrap;
-    padding: 32px 32px;
-    font-size: 20px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-  }
+	.sidebar-title {
+		width: 100%;
+		justify-content: center;
+		white-space: nowrap;
+		padding: 32px 32px;
+		font-size: 20px;
+		outline: none;
+		border: none;
+		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+		text-decoration: none;
+	}
 
-  #mobile-logo {
-    height: 3.6rem;
-    width: 5.5rem;
-    left: 0;
-  }
+	#mobile-logo {
+		height: 3.6rem;
+		width: 5.5rem;
+		left: 0;
+	}
 }
 
 @media (max-width: 1024px) {
-  .mobile-overlay {
-    height: 100px;
-  }
-  #hamburger {
-    top: 5% !important;
-  }
+	.mobile-overlay {
+		height: 100px;
+	}
+	#hamburger {
+		top: 5% !important;
+	}
 }
 @media (max-width: 800px) {
-  .content-header {
-    display: none;
-  }
+	.content-header {
+		display: none;
+	}
 }
 
 @media (max-width: 800px) {
-  .nav-menu.active {
-    height: 100%;
-    transition: 350ms;
-  }
+	.nav-menu.active {
+		height: 100%;
+		transition: 350ms;
+	}
 }
 
 @media (min-width: 768px) {
-  .flex-md-equal > * {
-    flex: 1;
-  }
+	.flex-md-equal > * {
+		flex: 1;
+	}
 
-  .content-links {
-    width: 70%;
-  }
+	.content-links {
+		width: 70%;
+	}
 
-  .d-md-inline-block {
-    display: inline-block !important;
-  }
+	.d-md-inline-block {
+		display: inline-block !important;
+	}
 }
 @media (max-width: 690px) {
-  .nav-menu.active {
-    height: 100%;
-    transition: 350ms;
-  }
+	.nav-menu.active {
+		height: 100%;
+		transition: 350ms;
+	}
 }

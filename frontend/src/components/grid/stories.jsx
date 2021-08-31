@@ -7,6 +7,21 @@ import SummerGolf from "../../assets/images/summerGolf.jpeg";
 import Vision from "../../assets/images/vision.jpeg";
 
 const Stories = () => {
+	const hoverAnimation = (event) => {
+		const parent = event.currentTarget;
+		const image = parent.firstChild.firstChild;
+		const header = parent.lastChild.firstChild;
+		image.classList.add("hovered-article-img");
+		header.classList.add("hovered-article-header");
+	};
+
+	const unHover = (event) => {
+		const parent = event.currentTarget;
+		const image = parent.firstChild.firstChild;
+		const header = parent.lastChild.firstChild;
+		image.classList.remove("hovered-article-img");
+		header.classList.remove("hovered-article-header");
+	};
 	return (
 		<>
 			<div className="container story-feature">
@@ -25,20 +40,18 @@ const Stories = () => {
 					</div>
 				</div>
 				<main className="story-grid">
-					<article
-						className="article-one"
-						data-aos="fade-right"
-						data-aos-offset="0"
-						data-aos-delay="250"
-						data-aos-duration="1500"
-						data-aos-once="true"
-					>
+					<article className="article-one">
 						<img
 							data-testid="image1"
 							src={"https://i.imgur.com/cI4fMAt.png"}
 							className="img-fluid img-thumbnail amazonBook"
 							alt="Sample spotlight"
 							data-testid="header-main"
+							data-aos="fade-right"
+							data-aos-offset="0"
+							data-aos-delay="250"
+							data-aos-duration="1500"
+							data-aos-once="true"
 						/>
 						{/* <h5 className="article-one-title"><span>UniverCity Affairs</span></h5><br/> */}
 						{/* <h6 className="article-one-subtitle"><span>Patton to continue 11 varsity sports</span></h6><br/> */}
@@ -49,6 +62,8 @@ const Stories = () => {
 						data-aos-delay="500"
 						data-aos-duration="1500"
 						data-aos-once="true"
+						onMouseOver={hoverAnimation}
+						onMouseOut={unHover}
 					>
 						<a
 							href="https://form.jotform.com/PattonUniverCity/coursecatalog"
@@ -81,13 +96,17 @@ const Stories = () => {
 						data-aos-delay="750"
 						data-aos-duration="1500"
 						data-aos-once="true"
+						onMouseOver={hoverAnimation}
+						onMouseOut={unHover}
 					>
-						<img
-							data-testid="image3"
-							src={Cryptobook}
-							className="img-fluid img-thumbnail secondary"
-							alt="Sample spotlight"
-						/>
+						<div>
+							<img
+								data-testid="image3"
+								src={Cryptobook}
+								className="img-fluid img-thumbnail secondary"
+								alt="Sample spotlight"
+							/>
+						</div>
 						<div className="story-text">
 							<h3 data-testid="header-article3">Virtual Book Club</h3>
 							<p data-testid="paragraph-article3">
@@ -105,6 +124,8 @@ const Stories = () => {
 						data-aos-delay="250"
 						data-aos-duration="1500"
 						data-aos-once="true"
+						onMouseOver={hoverAnimation}
+						onMouseOut={unHover}
 					>
 						<a
 							href="https://form.jotform.com/PattonUniverCity/coursecatalog"
@@ -132,13 +153,17 @@ const Stories = () => {
 						data-aos-delay="500"
 						data-aos-duration="1500"
 						data-aos-once="true"
+						onMouseOver={hoverAnimation}
+						onMouseOut={unHover}
 					>
-						<img
-							data-testid="image5"
-							src={PattonReportCover2}
-							className="img-fluid img-thumbnail secondary"
-							alt="Sample spotlight"
-						/>
+						<div>
+							<img
+								data-testid="image5"
+								src={PattonReportCover2}
+								className="img-fluid img-thumbnail secondary"
+								alt="Sample spotlight"
+							/>
+						</div>
 						<div className="story-text">
 							<h3 data-testid="header-article5">Patton Report</h3>
 							<p data-testid="paragraph-article5">
@@ -147,19 +172,17 @@ const Stories = () => {
 							</p>
 						</div>
 					</article>
-					<article
-						className="article-one"
-						data-aos="fade-left"
-						data-aos-offset="0"
-						data-aos-delay="750"
-						data-aos-duration="1500"
-						data-aos-once="true"
-					>
+					<article className="article-one">
 						<img
 							data-testid="image6"
 							src={Vision}
 							className="img-fluid img-thumbnail"
 							alt="Sample spotlight"
+							data-aos="fade-left"
+							data-aos-offset="0"
+							data-aos-delay="750"
+							data-aos-duration="1500"
+							data-aos-once="true"
 						/>
 						{/* <h5 className="article-one-title"><span>UniverCity Affairs</span></h5><br/> */}
 						{/* <h6 className="article-one-subtitle"><span>Patton to continue 11 varsity sports</span></h6><br/> */}
